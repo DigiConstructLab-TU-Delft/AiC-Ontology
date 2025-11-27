@@ -1,0 +1,566 @@
+<https://w3id.org/aic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
+<https://w3id.org/aic> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/aic> .
+<https://w3id.org/aic> <http://purl.org/dc/terms/bibliographicCitation> "Čustović, I., Cao, J., Soman, R. (2025). Agents in Construction (AiC) Ontology - Version 1.0" .
+<https://w3id.org/aic> <http://purl.org/dc/terms/contributor> "Daniel Hall" .
+<https://w3id.org/aic> <http://purl.org/dc/terms/contributor> "Hans Wamelink" .
+<https://w3id.org/aic> <http://purl.org/dc/terms/contributor> "Pieter Pauwels" .
+<https://w3id.org/aic> <http://purl.org/dc/terms/creator> "Irfan Čustović" .
+<https://w3id.org/aic> <http://purl.org/dc/terms/creator> "Jianpeng Cao" .
+<https://w3id.org/aic> <http://purl.org/dc/terms/creator> "Ranjith Soman" .
+<https://w3id.org/aic> <http://purl.org/dc/terms/description> ""@en .
+<https://w3id.org/aic> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
+<https://w3id.org/aic> <http://purl.org/dc/terms/modified> "2025-11-25" .
+<https://w3id.org/aic> <http://purl.org/dc/terms/title> "Agents in Construction (AiC) Ontology"@en .
+# 
+# 
+# #################################################################
+# #
+# #    Annotation properties
+# #
+# #################################################################
+# 
+# 
+# http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AnnotationProperty> .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Object Properties
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#object
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#object> <http://www.w3.org/2000/01/rdf-schema#label> "object of a reified statement"@en .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate> <http://www.w3.org/2000/01/rdf-schema#label> "predicate of a reified statement"@en .
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#subject
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#subject> <http://www.w3.org/2000/01/rdf-schema#label> "subject of a reified statement"@en .
+# 
+# https://w3id.org/aic#belongsTo
+<https://w3id.org/aic#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#OperationMode> .
+<https://w3id.org/aic#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ModeSet> .
+<https://w3id.org/aic#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an operational state to a state set."@en .
+<https://w3id.org/aic#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to"@en .
+# 
+# https://w3id.org/aic#consumes
+<https://w3id.org/aic#consumes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#consumes> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#consumes> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#consumes> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Material> .
+<https://w3id.org/aic#consumes> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the link between a construction agent and a material that it handles and  thereby removes from the pool of available resources."@en .
+<https://w3id.org/aic#consumes> <http://www.w3.org/2000/01/rdf-schema#label> "consumes"@en .
+# 
+# https://w3id.org/aic#containsActivity
+<https://w3id.org/aic#containsActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#containsActivity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#containsActivity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#WorkPackage> .
+<https://w3id.org/aic#containsActivity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Activity> .
+<https://w3id.org/aic#containsActivity> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a work package to an activity that it can be broken down into."@en .
+<https://w3id.org/aic#containsActivity> <http://www.w3.org/2000/01/rdf-schema#label> "contains activity"@en .
+# 
+# https://w3id.org/aic#containsTask
+<https://w3id.org/aic#containsTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#containsTask> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#containsTask> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Activity> .
+<https://w3id.org/aic#containsTask> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Task> .
+<https://w3id.org/aic#containsTask> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an activity to a task that it can be broken down into."@en .
+<https://w3id.org/aic#containsTask> <http://www.w3.org/2000/01/rdf-schema#label> "contains task"@en .
+# 
+# https://w3id.org/aic#correspondsTo
+<https://w3id.org/aic#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
+<https://w3id.org/aic#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#OperationMode> .
+<https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#OperationMode> .
+<https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links two operation states from different state sets to each other to express equivalence."@en .
+<https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "corresponds to"@en .
+# 
+# https://w3id.org/aic#focusesOnElement
+<https://w3id.org/aic#focusesOnElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#focusesOnElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#focusesOnElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#focusesOnElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Element> .
+<https://w3id.org/aic#focusesOnElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a construction agent is dedicating its current operation to a specific physical element."@en .
+<https://w3id.org/aic#focusesOnElement> <http://www.w3.org/2000/01/rdf-schema#label> "focuses on element"@en .
+# 
+# https://w3id.org/aic#focusesOnProcess
+<https://w3id.org/aic#focusesOnProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#focusesOnProcess> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#focusesOnProcess> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#focusesOnProcess> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#focusesOnProcess> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that a construction agent is dedicating its current operation to a specific process instance."@en .
+<https://w3id.org/aic#focusesOnProcess> <http://www.w3.org/2000/01/rdf-schema#label> "focuses on process"@en .
+# 
+# https://w3id.org/aic#generatedBy
+<https://w3id.org/aic#generatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#generatedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#generatedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#InformationID> .
+<https://w3id.org/aic#generatedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Creator> .
+<https://w3id.org/aic#generatedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Relates an Information ID to its Creator."@en .
+<https://w3id.org/aic#generatedBy> <http://www.w3.org/2000/01/rdf-schema#label> "generated by"@en .
+# 
+# https://w3id.org/aic#hasCapability
+<https://w3id.org/aic#hasCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#hasCapability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#hasCapability> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#AgentCapability> .
+<https://w3id.org/aic#hasCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates a capability that a construction agent is able to perform."@en .
+<https://w3id.org/aic#hasCapability> <http://www.w3.org/2000/01/rdf-schema#label> "has capability"@en .
+# 
+# https://w3id.org/aic#hasElement
+<https://w3id.org/aic#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasElement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#hasElement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Zone> .
+<https://w3id.org/aic#hasElement> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Element> .
+<https://w3id.org/aic#hasElement> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates that an element is situated within or associated with a zone. A zone may represent a physical area or a conceptual operational area."@en .
+<https://w3id.org/aic#hasElement> <http://www.w3.org/2000/01/rdf-schema#label> "has element"@en .
+# 
+# https://w3id.org/aic#hasInformationDimension
+<https://w3id.org/aic#hasInformationDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasInformationDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#hasInformationDimension> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#InformationID> .
+<https://w3id.org/aic#hasInformationDimension> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#InformationDimension> .
+<https://w3id.org/aic#hasInformationDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an information ID to an information dimension."@en .
+<https://w3id.org/aic#hasInformationDimension> <http://www.w3.org/2000/01/rdf-schema#label> "has information dimension"@en .
+# 
+# https://w3id.org/aic#hasPredecessor
+<https://w3id.org/aic#hasPredecessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasPredecessor> <http://www.w3.org/2002/07/owl#inverseOf> <https://w3id.org/aic#hasSuccessor> .
+<https://w3id.org/aic#hasPredecessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/aic#hasPredecessor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#hasPredecessor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#hasPredecessor> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a process to its preceding process as defined in the work breakdown structure."@en .
+<https://w3id.org/aic#hasPredecessor> <http://www.w3.org/2000/01/rdf-schema#label> "has predecessor"@en .
+# 
+# https://w3id.org/aic#hasProcessMetric
+<https://w3id.org/aic#hasProcessMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasProcessMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#hasProcessMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#hasProcessMetric> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ProcessMetric> .
+<https://w3id.org/aic#hasProcessMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process with a metric that describes its performance."@en .
+<https://w3id.org/aic#hasProcessMetric> <http://www.w3.org/2000/01/rdf-schema#label> "has process metric"@en .
+# 
+# https://w3id.org/aic#hasQuantity
+<https://w3id.org/aic#hasQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#hasQuantity> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#hasQuantity> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ResourceQuantity> .
+<https://w3id.org/aic#hasQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a resource or resource batch to a quantity."@en .
+<https://w3id.org/aic#hasQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "has quantity"@en .
+# 
+# https://w3id.org/aic#hasResourceType
+<https://w3id.org/aic#hasResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ResourceType> .
+<https://w3id.org/aic#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a resource to a resource type for grouping different kinds of resources with equal characteristics."@en .
+<https://w3id.org/aic#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "has resource type"@en .
+# 
+# https://w3id.org/aic#hasStateMetric
+<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#OperationMode> .
+<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ModeMetric> .
+<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an operation state with a state metric that describes the effect of the operation state."@en .
+<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/2000/01/rdf-schema#label> "has state metric"@en .
+# 
+# https://w3id.org/aic#hasSuccessor
+<https://w3id.org/aic#hasSuccessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasSuccessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
+<https://w3id.org/aic#hasSuccessor> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#hasSuccessor> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#hasSuccessor> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a process to its succeeding process as defined in the work breakdown structure."@en .
+<https://w3id.org/aic#hasSuccessor> <http://www.w3.org/2000/01/rdf-schema#label> "has successor"@en .
+# 
+# https://w3id.org/aic#isAssignedTo
+<https://w3id.org/aic#isAssignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#isAssignedTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#isAssignedTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#isAssignedTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#isAssignedTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the construction agent that a process is assigned to."@en .
+<https://w3id.org/aic#isAssignedTo> <http://www.w3.org/2000/01/rdf-schema#label> "is assigned to"@en .
+# 
+# https://w3id.org/aic#isDescribedBy
+<https://w3id.org/aic#isDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#isDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ModeSet> .
+<https://w3id.org/aic#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a construction agent to a state set that specifies the agent's ways of operation."@en .
+<https://w3id.org/aic#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is described by"@en .
+# 
+# https://w3id.org/aic#isInOperationMode
+<https://w3id.org/aic#isInOperationMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#isInOperationMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#isInOperationMode> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#isInOperationMode> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#OperationMode> .
+<https://w3id.org/aic#isInOperationMode> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a construction agent to an operation mode."@en .
+<https://w3id.org/aic#isInOperationMode> <http://www.w3.org/2000/01/rdf-schema#label> "is in operation mode"@en .
+# 
+# https://w3id.org/aic#isInProcessState
+<https://w3id.org/aic#isInProcessState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#isInProcessState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#isInProcessState> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#isInProcessState> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ProcessState> .
+<https://w3id.org/aic#isInProcessState> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a process to process state."@en .
+<https://w3id.org/aic#isInProcessState> <http://www.w3.org/2000/01/rdf-schema#label> "is in process state"@en .
+# 
+# https://w3id.org/aic#isLocatedIn
+<https://w3id.org/aic#isLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#isLocatedIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Zone> .
+<https://w3id.org/aic#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a resource to a zone in which it is positioned."@en .
+<https://w3id.org/aic#isLocatedIn> <http://www.w3.org/2000/01/rdf-schema#label> "is located in"@en .
+# 
+# https://w3id.org/aic#isOperatingIn
+<https://w3id.org/aic#isOperatingIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#isOperatingIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#isOperatingIn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#isOperatingIn> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Zone> .
+<https://w3id.org/aic#isOperatingIn> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a construction agent to a zone in which it is positioned."@en .
+<https://w3id.org/aic#isOperatingIn> <http://www.w3.org/2000/01/rdf-schema#label> "is operating in"@en .
+# 
+# https://w3id.org/aic#reifiesStatement
+<https://w3id.org/aic#reifiesStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#reifiesStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#FunctionalProperty> .
+<https://w3id.org/aic#reifiesStatement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#reifiesStatement> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#InformationID> .
+<https://w3id.org/aic#reifiesStatement> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> .
+<https://w3id.org/aic#reifiesStatement> <http://www.w3.org/2000/01/rdf-schema#comment> "Links an information ID to the statement that is being reified."@en .
+<https://w3id.org/aic#reifiesStatement> <http://www.w3.org/2000/01/rdf-schema#label> "reifies statement"@en .
+# 
+# https://w3id.org/aic#releasesReusableMaterial
+<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ReusabeMaterial> .
+<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process to a resource that a construction agent makes available during execution of the process."@en .
+<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "releases reusable material"@en .
+# 
+# https://w3id.org/aic#requestsResource
+<https://w3id.org/aic#requestsResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#requestsResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#requestsResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#requestsResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#requestsResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Links the construction agent to a resource that it needs to execute a process."@en .
+<https://w3id.org/aic#requestsResource> <http://www.w3.org/2000/01/rdf-schema#label> "requests resource"@en .
+# 
+# https://w3id.org/aic#requestsZone
+<https://w3id.org/aic#requestsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#requestsZone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#requestsZone> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#requestsZone> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Zone> .
+<https://w3id.org/aic#requestsZone> <http://www.w3.org/2000/01/rdf-schema#comment> "Links the construction agent to a zone that it intends to access."@en .
+<https://w3id.org/aic#requestsZone> <http://www.w3.org/2000/01/rdf-schema#label> "requests zone"@en .
+# 
+# https://w3id.org/aic#requiresCapability
+<https://w3id.org/aic#requiresCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#requiresCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#AgentCapability> .
+<https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process."@en .
+<https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#label> "requires capability"@en .
+# 
+# https://w3id.org/aic#requiresResource
+<https://w3id.org/aic#requiresResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#requiresResource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#requiresResource> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#requiresResource> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#requiresResource> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process to a resource that a construction agent needs to handle in order to execute the process."@en .
+<https://w3id.org/aic#requiresResource> <http://www.w3.org/2000/01/rdf-schema#label> "requires resource"@en .
+# 
+# https://w3id.org/aic#supplies
+<https://w3id.org/aic#supplies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#supplies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#supplies> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#supplies> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ReusabeMaterial> .
+<https://w3id.org/aic#supplies> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the link between a construction agent and a reusable material that it handles and thereby returns back to the pool of available resources."@en .
+<https://w3id.org/aic#supplies> <http://www.w3.org/2000/01/rdf-schema#label> "supplies"@en .
+# 
+# https://w3id.org/aic#targets
+<https://w3id.org/aic#targets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#targets> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#targets> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#targets> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Element> .
+<https://w3id.org/aic#targets> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a process to an element that it has an effect on."@en .
+<https://w3id.org/aic#targets> <http://www.w3.org/2000/01/rdf-schema#label> "targets"@en .
+# 
+# https://w3id.org/aic#uses
+<https://w3id.org/aic#uses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#uses> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#uses> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
+<https://w3id.org/aic#uses> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#Equipment> .
+<https://w3id.org/aic#uses> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the link between a construction agent and equipment that it handles during its operation."@en .
+<https://w3id.org/aic#uses> <http://www.w3.org/2000/01/rdf-schema#label> "uses"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Data properties
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/aic#generatedOn
+<https://w3id.org/aic#generatedOn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/aic#generatedOn> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#InformationID> .
+<https://w3id.org/aic#generatedOn> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/aic#generatedOn> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the point in time at which the reified statement was generated."@en .
+<https://w3id.org/aic#generatedOn> <http://www.w3.org/2000/01/rdf-schema#label> "generated on"@en .
+# 
+# https://w3id.org/aic#hasUnit
+<https://w3id.org/aic#hasUnit> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/aic#hasUnit> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Indicator> .
+<https://w3id.org/aic#hasUnit> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
+<https://w3id.org/aic#hasUnit> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the unit of an indicator."@en .
+<https://w3id.org/aic#hasUnit> <http://www.w3.org/2000/01/rdf-schema#label> "has unit"@en .
+# 
+# https://w3id.org/aic#hasValue
+<https://w3id.org/aic#hasValue> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/aic#hasValue> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Indicator> .
+<https://w3id.org/aic#hasValue> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#decimal> .
+<https://w3id.org/aic#hasValue> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the value of an indicator."@en .
+<https://w3id.org/aic#hasValue> <http://www.w3.org/2000/01/rdf-schema#label> "has value"@en .
+# 
+# https://w3id.org/aic#validAt
+<https://w3id.org/aic#validAt> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/aic#validAt> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#InformationID> .
+<https://w3id.org/aic#validAt> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/aic#validAt> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the point in time at which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site."@en .
+<https://w3id.org/aic#validAt> <http://www.w3.org/2000/01/rdf-schema#label> "valid at"@en .
+# 
+# https://w3id.org/aic#validFrom
+<https://w3id.org/aic#validFrom> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/aic#validFrom> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#InformationID> .
+<https://w3id.org/aic#validFrom> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/aic#validFrom> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the start of the time period during which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site."@en .
+<https://w3id.org/aic#validFrom> <http://www.w3.org/2000/01/rdf-schema#label> "valid from"@en .
+# 
+# https://w3id.org/aic#validUntil
+<https://w3id.org/aic#validUntil> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
+<https://w3id.org/aic#validUntil> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#InformationID> .
+<https://w3id.org/aic#validUntil> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#dateTime> .
+<https://w3id.org/aic#validUntil> <http://www.w3.org/2000/01/rdf-schema#comment> "Specifies the end of the time period during which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site."@en .
+<https://w3id.org/aic#validUntil> <http://www.w3.org/2000/01/rdf-schema#label> "valid until"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Classes
+# #
+# #################################################################
+# 
+# 
+# http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement> <http://www.w3.org/2000/01/rdf-schema#label> "Reified RDF 1.1 statement"@en .
+# 
+# https://w3id.org/aic#Activity
+<https://w3id.org/aic#Activity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Activity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#Activity> <http://www.w3.org/2000/01/rdf-schema#comment> "A subdivision of a process representing a coherent unit of work performed on one or more elements. Activities typically group related tasks and describe work at an intermediate level of detail in the work breakdown structure."@en .
+<https://w3id.org/aic#Activity> <http://www.w3.org/2000/01/rdf-schema#label> "Activity"@en .
+# 
+# https://w3id.org/aic#AgentCapability
+<https://w3id.org/aic#AgentCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#AgentCapability> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#ResourceType> .
+<https://w3id.org/aic#AgentCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Ability or skill of a construction agent to perform certain work."@en .
+<https://w3id.org/aic#AgentCapability> <http://www.w3.org/2000/01/rdf-schema#label> "Agent Capability"@en .
+# 
+# https://w3id.org/aic#ConstructionAgent
+<https://w3id.org/aic#ConstructionAgent> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ConstructionAgent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Element> .
+<https://w3id.org/aic#ConstructionAgent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#ConstructionAgent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#ConstructionAgent> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Zone> .
+<https://w3id.org/aic#ConstructionAgent> <http://www.w3.org/2000/01/rdf-schema#comment> "Human worker, robot or other kinds of autonomous hardware that can execute work on a construction site."@en .
+<https://w3id.org/aic#ConstructionAgent> <http://www.w3.org/2000/01/rdf-schema#label> "Construction Agent"@en .
+# 
+# https://w3id.org/aic#ConsumableMaterial
+<https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Material> .
+<https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#ReusabeMaterial> .
+<https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Material that becomes part of the building structure or becomes wasted during a process and cannot be re-used in another process."@en .
+<https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Consumable Material"@en .
+# 
+# https://w3id.org/aic#Creator
+<https://w3id.org/aic#Creator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Creator> <http://www.w3.org/2000/01/rdf-schema#comment> "Entity or system responsible for generating the information that is represented by a triple statement."@en .
+<https://w3id.org/aic#Creator> <http://www.w3.org/2000/01/rdf-schema#label> "Creator"@en .
+# 
+# https://w3id.org/aic#Element
+<https://w3id.org/aic#Element> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Element> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#Element> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#Element> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Zone> .
+<https://w3id.org/aic#Element> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical object that is part of the building structure."@en .
+<https://w3id.org/aic#Element> <http://www.w3.org/2000/01/rdf-schema#label> "Element"@en .
+# 
+# https://w3id.org/aic#Equipment
+<https://w3id.org/aic#Equipment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Equipment> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#Equipment> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Material> .
+<https://w3id.org/aic#Equipment> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical asset that aids the execution of a construction process. It cannot execute work autonomously and it includes powered (e.g. a drill) and non-powered  (e.g. a concrete bucket) assets."@en .
+<https://w3id.org/aic#Equipment> <http://www.w3.org/2000/01/rdf-schema#label> "Equipment"@en .
+# 
+# https://w3id.org/aic#Indicator
+<https://w3id.org/aic#Indicator> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Indicator> <http://www.w3.org/2000/01/rdf-schema#comment> "Numeric value used to quantify an entity."@en .
+<https://w3id.org/aic#Indicator> <http://www.w3.org/2000/01/rdf-schema#label> "Indicator"@en .
+# 
+# https://w3id.org/aic#InformationID
+<https://w3id.org/aic#InformationID> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#InformationID> <http://www.w3.org/2000/01/rdf-schema#comment> "Functional class that can be used to reify a statement and link metadata."@en .
+<https://w3id.org/aic#InformationID> <http://www.w3.org/2000/01/rdf-schema#label> "Information ID"@en .
+# 
+# https://w3id.org/aic#InformationDimension
+<https://w3id.org/aic#InformationDimension> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#InformationDimension> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the dimension of the information that the Information ID reifies. Allows for specifying that a reified statement belongs to the planned, simulated or performed dimension."@en .
+<https://w3id.org/aic#InformationDimension> <http://www.w3.org/2000/01/rdf-schema#label> "Information Dimension"@en .
+# 
+# https://w3id.org/aic#Material
+<https://w3id.org/aic#Material> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Material> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#Material> <http://www.w3.org/2000/01/rdf-schema#comment> "Passive, non-powered physical object that is embedded in the final product or that provides physical support for a period of time."@en .
+<https://w3id.org/aic#Material> <http://www.w3.org/2000/01/rdf-schema#label> "Material"@en .
+# 
+# https://w3id.org/aic#ModeMetric
+<https://w3id.org/aic#ModeMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ModeMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Indicator> .
+<https://w3id.org/aic#ModeMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Numeric value used to describe the effect of an operation mode. Includes cost, energy consumption, noise, ..."@en .
+<https://w3id.org/aic#ModeMetric> <http://www.w3.org/2000/01/rdf-schema#label> "Mode Metric"@en .
+# 
+# https://w3id.org/aic#ModeSet
+<https://w3id.org/aic#ModeSet> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ModeSet> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#OperationMode> .
+<https://w3id.org/aic#ModeSet> <http://www.w3.org/2000/01/rdf-schema#comment> "A collection of operation modes that describes the possible ways in which a construction agent can operate within a specific scope (e.g., a discipline, technology, or stakeholder perspective). A construction agent may be associated with one or more Mode Sets, depending on the modeling context."@en .
+<https://w3id.org/aic#ModeSet> <http://www.w3.org/2000/01/rdf-schema#label> "Mode Set"@en .
+# 
+# https://w3id.org/aic#OperationMode
+<https://w3id.org/aic#OperationMode> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#OperationMode> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#ProcessState> .
+<https://w3id.org/aic#OperationMode> <http://www.w3.org/2000/01/rdf-schema#comment> "A specific operational condition or behavior of a construction agent. Each mode represents a distinct, mutually recognizable mode, such as operating, idle, charging, or moving."@en .
+<https://w3id.org/aic#OperationMode> <http://www.w3.org/2000/01/rdf-schema#label> "Operation Mode"@en .
+# 
+# https://w3id.org/aic#Process
+<https://w3id.org/aic#Process> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Process> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Resource> .
+<https://w3id.org/aic#Process> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Zone> .
+<https://w3id.org/aic#Process> <http://www.w3.org/2000/01/rdf-schema#comment> "Generic class describing a certain amount of work to be executed on the construction site."@en .
+<https://w3id.org/aic#Process> <http://www.w3.org/2000/01/rdf-schema#label> "Process"@en .
+# 
+# https://w3id.org/aic#ProcessMetric
+<https://w3id.org/aic#ProcessMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ProcessMetric> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Indicator> .
+<https://w3id.org/aic#ProcessMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Numeric value used to describe how a process is being performed."@en .
+<https://w3id.org/aic#ProcessMetric> <http://www.w3.org/2000/01/rdf-schema#label> "Process Metric"@en .
+# 
+# https://w3id.org/aic#ProcessState
+<https://w3id.org/aic#ProcessState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ProcessState> <http://www.w3.org/2000/01/rdf-schema#comment> "A formal representation of a condition in which a process is in."@en .
+<https://w3id.org/aic#ProcessState> <http://www.w3.org/2000/01/rdf-schema#label> "Process State"@en .
+# 
+# https://w3id.org/aic#Resource
+<https://w3id.org/aic#Resource> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Resource> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#Zone> .
+<https://w3id.org/aic#Resource> <http://www.w3.org/2000/01/rdf-schema#comment> "Physical object that is handled for executing a construction process."@en .
+<https://w3id.org/aic#Resource> <http://www.w3.org/2000/01/rdf-schema#label> "Resource"@en .
+# 
+# https://w3id.org/aic#ResourceQuantity
+<https://w3id.org/aic#ResourceQuantity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ResourceQuantity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Indicator> .
+<https://w3id.org/aic#ResourceQuantity> <http://www.w3.org/2000/01/rdf-schema#comment> "Numeric value that describes the amount of a resource or size of a resource batch."@en .
+<https://w3id.org/aic#ResourceQuantity> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Quantity"@en .
+# 
+# https://w3id.org/aic#ResourceType
+<https://w3id.org/aic#ResourceType> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a group of resources with equal characteristics."@en .
+<https://w3id.org/aic#ResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Type"@en .
+# 
+# https://w3id.org/aic#ReusabeMaterial
+<https://w3id.org/aic#ReusabeMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ReusabeMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Material> .
+<https://w3id.org/aic#ReusabeMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Material that can be re-used in another process."@en .
+<https://w3id.org/aic#ReusabeMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Reusable Material"@en .
+# 
+# https://w3id.org/aic#Task
+<https://w3id.org/aic#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Task> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#Task> <http://www.w3.org/2000/01/rdf-schema#comment> "The smallest unit of work in the work breakdown structure, describing work executed on exactly one element. A task cannot be further decomposed within this ontology."@en .
+<https://w3id.org/aic#Task> <http://www.w3.org/2000/01/rdf-schema#label> "Task"@en .
+# 
+# https://w3id.org/aic#WorkPackage
+<https://w3id.org/aic#WorkPackage> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#WorkPackage> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Process> .
+<https://w3id.org/aic#WorkPackage> <http://www.w3.org/2000/01/rdf-schema#comment> "A high-level subdivision of a process representing a manageable collection of activities. Work packages define work at a coarse level of detail, suitable for monthly / weekly planning, resource allocation, and monitoring."@en .
+<https://w3id.org/aic#WorkPackage> <http://www.w3.org/2000/01/rdf-schema#label> "Work Package"@en .
+# 
+# https://w3id.org/aic#Zone
+<https://w3id.org/aic#Zone> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#Zone> <http://www.w3.org/2000/01/rdf-schema#comment> "Dedicated area on the construction site or in the building structure."@en .
+<https://w3id.org/aic#Zone> <http://www.w3.org/2000/01/rdf-schema#label> "Zone"@en .
+# 
+# 
+# 
+# #################################################################
+# #
+# #    Individuals
+# #
+# #################################################################
+# 
+# 
+# https://w3id.org/aic#Performed
+<https://w3id.org/aic#Performed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/aic#Performed> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/aic#InformationDimension> .
+<https://w3id.org/aic#Performed> <http://www.w3.org/2000/01/rdf-schema#comment> "Categorizes statements that convey information about events or situations that have been performed, i.e., have happened."@en .
+<https://w3id.org/aic#Performed> <http://www.w3.org/2000/01/rdf-schema#label> "Performed"@en .
+# 
+# https://w3id.org/aic#Planned
+<https://w3id.org/aic#Planned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/aic#Planned> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/aic#InformationDimension> .
+<https://w3id.org/aic#Planned> <http://www.w3.org/2000/01/rdf-schema#comment> "Categorizes statements that convey information about events or situations that have been planned, i.e., should happen."@en .
+<https://w3id.org/aic#Planned> <http://www.w3.org/2000/01/rdf-schema#label> "Planned"@en .
+# 
+# https://w3id.org/aic#Simulated
+<https://w3id.org/aic#Simulated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
+<https://w3id.org/aic#Simulated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/aic#InformationDimension> .
+<https://w3id.org/aic#Simulated> <http://www.w3.org/2000/01/rdf-schema#comment> "Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen."@en .
+<https://w3id.org/aic#Simulated> <http://www.w3.org/2000/01/rdf-schema#label> "Simulated"@en .
+# 
+# Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

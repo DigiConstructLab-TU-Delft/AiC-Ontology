@@ -1,0 +1,1453 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema", "https://w3id.org/aic" ],
+    "title" : {
+      "en" : "Agents in Construction (AiC) Ontology"
+    },
+    "iri" : "https://w3id.org/aic",
+    "author" : [ "Jianpeng Cao", "Ranjith Soman", "Irfan Čustović" ],
+    "description" : { },
+    "other" : {
+      "license" : [ {
+        "identifier" : "license",
+        "language" : "undefined",
+        "value" : "https://creativecommons.org/licenses/by/4.0/",
+        "type" : "iri"
+      } ],
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Jianpeng Cao",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Ranjith Soman",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
+        "value" : "Irfan Čustović",
+        "type" : "label"
+      } ],
+      "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Daniel Hall",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Hans Wamelink",
+        "type" : "label"
+      }, {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Pieter Pauwels",
+        "type" : "label"
+      } ],
+      "modified" : [ {
+        "identifier" : "modified",
+        "language" : "undefined",
+        "value" : "2025-11-25",
+        "type" : "label"
+      } ],
+      "bibliographicCitation" : [ {
+        "identifier" : "bibliographicCitation",
+        "language" : "undefined",
+        "value" : "Čustović, I., Cao, J., Soman, R. (2025). Agents in Construction (AiC) Ontology - Version 1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Agents in Construction (AiC) Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "41",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "19",
+    "type" : "owl:Class"
+  }, {
+    "id" : "56",
+    "type" : "owl:Class"
+  }, {
+    "id" : "21",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "76",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "52",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "47",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "https://w3id.org/aic#AgentCapability",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AgentCapability",
+      "en" : "Agent Capability"
+    },
+    "comment" : {
+      "en" : "Ability or skill of a construction agent to perform certain work."
+    },
+    "id" : "13"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "30",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "32",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://w3id.org/aic#ConsumableMaterial",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConsumableMaterial",
+      "en" : "Consumable Material"
+    },
+    "comment" : {
+      "en" : "Material that becomes part of the building structure or becomes wasted during a process and cannot be re-used in another process."
+    },
+    "id" : "36",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "44",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#decimal",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "12",
+    "label" : {
+      "IRI-based" : "decimal"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "41",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://w3id.org/aic#InformationDimension",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InformationDimension",
+      "en" : "Information Dimension"
+    },
+    "individuals" : [ {
+      "iri" : "https://w3id.org/aic#Simulated",
+      "baseIri" : "https://w3id.org/aic",
+      "comment" : {
+        "en" : "Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen."
+      },
+      "labels" : {
+        "IRI-based" : "Simulated",
+        "en" : "Simulated"
+      }
+    }, {
+      "iri" : "https://w3id.org/aic#Planned",
+      "baseIri" : "https://w3id.org/aic",
+      "comment" : {
+        "en" : "Categorizes statements that convey information about events or situations that have been planned, i.e., should happen."
+      },
+      "labels" : {
+        "IRI-based" : "Planned",
+        "en" : "Planned"
+      }
+    }, {
+      "iri" : "https://w3id.org/aic#Performed",
+      "baseIri" : "https://w3id.org/aic",
+      "comment" : {
+        "en" : "Categorizes statements that convey information about events or situations that have been performed, i.e., have happened."
+      },
+      "labels" : {
+        "IRI-based" : "Performed",
+        "en" : "Performed"
+      }
+    } ],
+    "comment" : {
+      "en" : "Defines the dimension of the information that the Information ID reifies. Allows for specifying that a reified statement belongs to the planned, simulated or performed dimension."
+    },
+    "id" : "5"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "43",
+    "label" : {
+      "IRI-based" : "dateTime"
+    }
+  }, {
+    "iri" : "https://w3id.org/aic#ResourceQuantity",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceQuantity",
+      "en" : "Resource Quantity"
+    },
+    "comment" : {
+      "en" : "Numeric value that describes the amount of a resource or size of a resource batch."
+    },
+    "id" : "61",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/aic#ConstructionAgent",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ConstructionAgent",
+      "en" : "Construction Agent"
+    },
+    "comment" : {
+      "en" : "Human worker, robot or other kinds of autonomous hardware that can execute work on a construction site."
+    },
+    "id" : "15"
+  }, {
+    "iri" : "https://w3id.org/aic#InformationID",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "InformationID",
+      "en" : "Information ID"
+    },
+    "comment" : {
+      "en" : "Functional class that can be used to reify a statement and link metadata."
+    },
+    "id" : "4"
+  }, {
+    "iri" : "https://w3id.org/aic#Activity",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Activity",
+      "en" : "Activity"
+    },
+    "comment" : {
+      "en" : "A subdivision of a process representing a coherent unit of work performed on one or more elements. Activities typically group related tasks and describe work at an intermediate level of detail in the work breakdown structure."
+    },
+    "id" : "19",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/aic#ProcessState",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProcessState",
+      "en" : "Process State"
+    },
+    "comment" : {
+      "en" : "A formal representation of a condition in which a process is in."
+    },
+    "id" : "56"
+  }, {
+    "iri" : "https://w3id.org/aic#ResourceType",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceType",
+      "en" : "Resource Type"
+    },
+    "comment" : {
+      "en" : "Describes a group of resources with equal characteristics."
+    },
+    "id" : "21"
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Statement",
+      "en" : "Reified RDF 1.1 statement"
+    },
+    "attributes" : [ "external" ],
+    "id" : "39"
+  }, {
+    "iri" : "https://w3id.org/aic#Zone",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Zone",
+      "en" : "Zone"
+    },
+    "comment" : {
+      "en" : "Dedicated area on the construction site or in the building structure."
+    },
+    "id" : "10"
+  }, {
+    "iri" : "https://w3id.org/aic#Material",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Material",
+      "en" : "Material"
+    },
+    "subClasses" : [ "36", "34" ],
+    "comment" : {
+      "en" : "Passive, non-powered physical object that is embedded in the final product or that provides physical support for a period of time."
+    },
+    "id" : "23",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/aic#Resource",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource",
+      "en" : "Resource"
+    },
+    "subClasses" : [ "25", "23" ],
+    "comment" : {
+      "en" : "Physical object that is handled for executing a construction process."
+    },
+    "id" : "9"
+  }, {
+    "iri" : "https://w3id.org/aic#ModeMetric",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModeMetric",
+      "en" : "Mode Metric"
+    },
+    "comment" : {
+      "en" : "Numeric value used to describe the effect of an operation mode. Includes cost, energy consumption, noise, ..."
+    },
+    "id" : "17",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/aic#ProcessMetric",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ProcessMetric",
+      "en" : "Process Metric"
+    },
+    "comment" : {
+      "en" : "Numeric value used to describe how a process is being performed."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "https://w3id.org/aic#Process",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Process",
+      "en" : "Process"
+    },
+    "subClasses" : [ "29", "27", "19" ],
+    "comment" : {
+      "en" : "Generic class describing a certain amount of work to be executed on the construction site."
+    },
+    "id" : "7"
+  }, {
+    "iri" : "https://w3id.org/aic#Creator",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Creator",
+      "en" : "Creator"
+    },
+    "comment" : {
+      "en" : "Entity or system responsible for generating the information that is represented by a triple statement."
+    },
+    "id" : "76"
+  }, {
+    "iri" : "https://w3id.org/aic#WorkPackage",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "WorkPackage",
+      "en" : "Work Package"
+    },
+    "comment" : {
+      "en" : "A high-level subdivision of a process representing a manageable collection of activities. Work packages define work at a coarse level of detail, suitable for monthly / weekly planning, resource allocation, and monitoring."
+    },
+    "id" : "29",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/aic#OperationMode",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OperationMode",
+      "en" : "Operation Mode"
+    },
+    "comment" : {
+      "en" : "A specific operational condition or behavior of a construction agent. Each mode represents a distinct, mutually recognizable mode, such as operating, idle, charging, or moving."
+    },
+    "id" : "53"
+  }, {
+    "iri" : "https://w3id.org/aic#Indicator",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Indicator",
+      "en" : "Indicator"
+    },
+    "subClasses" : [ "17", "1", "61" ],
+    "comment" : {
+      "en" : "Numeric value used to quantify an entity."
+    },
+    "id" : "2"
+  }, {
+    "iri" : "https://w3id.org/aic#Equipment",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Equipment",
+      "en" : "Equipment"
+    },
+    "comment" : {
+      "en" : "Physical asset that aids the execution of a construction process. It cannot execute work autonomously and it includes powered (e.g. a drill) and non-powered  (e.g. a concrete bucket) assets."
+    },
+    "id" : "25",
+    "superClasses" : [ "9" ]
+  }, {
+    "iri" : "https://w3id.org/aic#ReusabeMaterial",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReusabeMaterial",
+      "en" : "Reusable Material"
+    },
+    "comment" : {
+      "en" : "Material that can be re-used in another process."
+    },
+    "id" : "34",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "https://w3id.org/aic#ModeSet",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ModeSet",
+      "en" : "Mode Set"
+    },
+    "comment" : {
+      "en" : "A collection of operation modes that describes the possible ways in which a construction agent can operate within a specific scope (e.g., a discipline, technology, or stakeholder perspective). A construction agent may be associated with one or more Mode Sets, depending on the modeling context."
+    },
+    "id" : "52"
+  }, {
+    "iri" : "https://w3id.org/aic#Task",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Task",
+      "en" : "Task"
+    },
+    "comment" : {
+      "en" : "The smallest unit of work in the work breakdown structure, describing work executed on exactly one element. A task cannot be further decomposed within this ontology."
+    },
+    "id" : "27",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "https://w3id.org/aic#Element",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Element",
+      "en" : "Element"
+    },
+    "comment" : {
+      "en" : "Physical object that is part of the building structure."
+    },
+    "id" : "47"
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "3",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "8",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "11",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "16",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "28",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "40",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "42",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "46",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "48",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "49",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "51",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "54",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "55",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "57",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "60",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "62",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "63",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "64",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "65",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "66",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "67",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "71",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "72",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "75",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "77",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "79",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "80",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "82",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "83",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "84",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "85",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "86",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "87",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "88",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "89",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "90",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "91",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "92",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "93",
+    "type" : "owl:disjointWith"
+  }, {
+    "id" : "94",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "95",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "96",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "97",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "iri" : "https://w3id.org/aic#hasInformationDimension",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "hasInformationDimension",
+      "en" : "has information dimension"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links an information ID to an information dimension."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "3"
+  }, {
+    "iri" : "https://w3id.org/aic#hasProcessMetric",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasProcessMetric",
+      "en" : "has process metric"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Connects a process with a metric that describes its performance."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "6"
+  }, {
+    "iri" : "https://w3id.org/aic#isLocatedIn",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "isLocatedIn",
+      "en" : "is located in"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Connects a resource to a zone in which it is positioned."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "8"
+  }, {
+    "iri" : "https://w3id.org/aic#hasValue",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "12",
+    "label" : {
+      "IRI-based" : "hasValue",
+      "en" : "has value"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Defines the value of an indicator."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "11"
+  }, {
+    "iri" : "https://w3id.org/aic#focusesOnProcess",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "focusesOnProcess",
+      "en" : "focuses on process"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Indicates that a construction agent is dedicating its current operation to a specific process instance."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "14"
+  }, {
+    "range" : "2",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "16"
+  }, {
+    "range" : "7",
+    "domain" : "19",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "18"
+  }, {
+    "iri" : "https://w3id.org/aic#hasResourceType",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "21",
+    "label" : {
+      "IRI-based" : "hasResourceType",
+      "en" : "has resource type"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Connects a resource to a resource type for grouping different kinds of resources with equal characteristics."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "20"
+  }, {
+    "range" : "9",
+    "domain" : "23",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "22"
+  }, {
+    "range" : "9",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "24"
+  }, {
+    "range" : "7",
+    "domain" : "27",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "26"
+  }, {
+    "range" : "7",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "28"
+  }, {
+    "iri" : "https://w3id.org/aic#isAssignedTo",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "isAssignedTo",
+      "en" : "is assigned to"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Specifies the construction agent that a process is assigned to."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "31"
+  }, {
+    "range" : "23",
+    "domain" : "34",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "33"
+  }, {
+    "range" : "23",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "35"
+  }, {
+    "iri" : "https://w3id.org/aic#requestsResource",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "requestsResource",
+      "en" : "requests resource"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Links the construction agent to a resource that it needs to execute a process."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "37"
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#subject",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "subject",
+      "en" : "subject of a reified statement"
+    },
+    "domain" : "39",
+    "attributes" : [ "object", "external" ],
+    "id" : "38"
+  }, {
+    "iri" : "https://w3id.org/aic#validFrom",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "41",
+    "label" : {
+      "IRI-based" : "validFrom",
+      "en" : "valid from"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Specifies the start of the time period during which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "40"
+  }, {
+    "iri" : "https://w3id.org/aic#generatedOn",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "43",
+    "label" : {
+      "IRI-based" : "generatedOn",
+      "en" : "generated on"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Specifies the point in time at which the reified statement was generated."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "42"
+  }, {
+    "iri" : "https://w3id.org/aic#supplies",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "supplies",
+      "en" : "supplies"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Defines the link between a construction agent and a reusable material that it handles and thereby returns back to the pool of available resources."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "45"
+  }, {
+    "iri" : "https://w3id.org/aic#focusesOnElement",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "focusesOnElement",
+      "en" : "focuses on element"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Indicates that a construction agent is dedicating its current operation to a specific physical element."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "46"
+  }, {
+    "range" : "10",
+    "domain" : "9",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "9",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "range" : "53",
+    "domain" : "52",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "51"
+  }, {
+    "range" : "10",
+    "domain" : "7",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "54"
+  }, {
+    "range" : "56",
+    "domain" : "53",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "55"
+  }, {
+    "iri" : "https://w3id.org/aic#containsTask",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "27",
+    "label" : {
+      "IRI-based" : "containsTask",
+      "en" : "contains task"
+    },
+    "domain" : "19",
+    "comment" : {
+      "en" : "Links an activity to a task that it can be broken down into."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "57"
+  }, {
+    "iri" : "https://w3id.org/aic#hasPredecessor",
+    "inverse" : "59",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasPredecessor",
+      "en" : "has predecessor"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links a process to its preceding process as defined in the work breakdown structure."
+    },
+    "attributes" : [ "object", "transitive" ],
+    "id" : "58"
+  }, {
+    "iri" : "https://w3id.org/aic#requestsZone",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "requestsZone",
+      "en" : "requests zone"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Links the construction agent to a zone that it intends to access."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "60"
+  }, {
+    "iri" : "https://w3id.org/aic#belongsTo",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "belongsTo",
+      "en" : "belongs to"
+    },
+    "domain" : "53",
+    "comment" : {
+      "en" : "Connects an operational state to a state set."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "62"
+  }, {
+    "iri" : "https://w3id.org/aic#validUntil",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "32",
+    "label" : {
+      "IRI-based" : "validUntil",
+      "en" : "valid until"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Specifies the end of the time period during which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "63"
+  }, {
+    "iri" : "https://w3id.org/aic#requiresCapability",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "requiresCapability",
+      "en" : "requires capability"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "64"
+  }, {
+    "iri" : "https://w3id.org/aic#isOperatingIn",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "10",
+    "label" : {
+      "IRI-based" : "isOperatingIn",
+      "en" : "is operating in"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Connects a construction agent to a zone in which it is positioned."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "65"
+  }, {
+    "iri" : "https://w3id.org/aic#hasSuccessor",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasSuccessor",
+      "en" : "has successor"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links a process to its succeeding process as defined in the work breakdown structure."
+    },
+    "attributes" : [ "object", "transitive" ],
+    "id" : "59"
+  }, {
+    "iri" : "https://w3id.org/aic#releasesReusableMaterial",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "34",
+    "label" : {
+      "IRI-based" : "releasesReusableMaterial",
+      "en" : "releases reusable material"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Connects a process to a resource that a construction agent makes available during execution of the process."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "66"
+  }, {
+    "iri" : "https://w3id.org/aic#correspondsTo",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "correspondsTo",
+      "en" : "corresponds to"
+    },
+    "domain" : "53",
+    "comment" : {
+      "en" : "Links two operation states from different state sets to each other to express equivalence."
+    },
+    "attributes" : [ "object", "symmetric", "transitive" ],
+    "id" : "67"
+  }, {
+    "range" : "2",
+    "domain" : "61",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "iri" : "https://w3id.org/aic#targets",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "targets",
+      "en" : "targets"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links a process to an element that it has an effect on."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "69"
+  }, {
+    "iri" : "https://w3id.org/aic#uses",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "uses",
+      "en" : "uses"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Defines the link between a construction agent and equipment that it handles during its operation."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "70"
+  }, {
+    "iri" : "https://w3id.org/aic#hasUnit",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "hasUnit",
+      "en" : "has unit"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "Defines the unit of an indicator."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "71"
+  }, {
+    "iri" : "https://w3id.org/aic#hasQuantity",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "hasQuantity",
+      "en" : "has quantity"
+    },
+    "domain" : "9",
+    "comment" : {
+      "en" : "Links a resource or resource batch to a quantity."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "72"
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#object",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "object",
+      "en" : "object of a reified statement"
+    },
+    "domain" : "39",
+    "attributes" : [ "object", "external" ],
+    "id" : "73"
+  }, {
+    "iri" : "https://w3id.org/aic#containsActivity",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "19",
+    "label" : {
+      "IRI-based" : "containsActivity",
+      "en" : "contains activity"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "Links a work package to an activity that it can be broken down into."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "74"
+  }, {
+    "iri" : "https://w3id.org/aic#validAt",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "44",
+    "label" : {
+      "IRI-based" : "validAt",
+      "en" : "valid at"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Specifies the point in time at which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "75"
+  }, {
+    "iri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate",
+    "baseIri" : "http://www.w3.org/1999/02/22-rdf-syntax-ns",
+    "range" : "30",
+    "label" : {
+      "IRI-based" : "predicate",
+      "en" : "predicate of a reified statement"
+    },
+    "domain" : "39",
+    "attributes" : [ "object", "external" ],
+    "id" : "77"
+  }, {
+    "iri" : "https://w3id.org/aic#hasStateMetric",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "17",
+    "label" : {
+      "IRI-based" : "hasStateMetric",
+      "en" : "has state metric"
+    },
+    "domain" : "53",
+    "comment" : {
+      "en" : "Connects an operation state with a state metric that describes the effect of the operation state."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "78"
+  }, {
+    "iri" : "https://w3id.org/aic#requiresResource",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "9",
+    "label" : {
+      "IRI-based" : "requiresResource",
+      "en" : "requires resource"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Connects a process to a resource that a construction agent needs to handle in order to execute the process."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "79"
+  }, {
+    "iri" : "https://w3id.org/aic#generatedBy",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "76",
+    "label" : {
+      "IRI-based" : "generatedBy",
+      "en" : "generated by"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Relates an Information ID to its Creator."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "80"
+  }, {
+    "iri" : "https://w3id.org/aic#consumes",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "consumes",
+      "en" : "consumes"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Defines the link between a construction agent and a material that it handles and  thereby removes from the pool of available resources."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "81"
+  }, {
+    "iri" : "https://w3id.org/aic#isInOperationMode",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "isInOperationMode",
+      "en" : "is in operation mode"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Links a construction agent to an operation mode."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "82"
+  }, {
+    "range" : "10",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "83"
+  }, {
+    "range" : "9",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "84"
+  }, {
+    "range" : "7",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "85"
+  }, {
+    "range" : "34",
+    "domain" : "36",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "86"
+  }, {
+    "range" : "9",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "87"
+  }, {
+    "range" : "7",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "88"
+  }, {
+    "iri" : "https://w3id.org/aic#hasCapability",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "13",
+    "label" : {
+      "IRI-based" : "hasCapability",
+      "en" : "has capability"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Indicates a capability that a construction agent is able to perform."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "89"
+  }, {
+    "range" : "10",
+    "domain" : "47",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "90"
+  }, {
+    "range" : "23",
+    "domain" : "25",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "91"
+  }, {
+    "range" : "21",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "92"
+  }, {
+    "range" : "47",
+    "domain" : "15",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "93"
+  }, {
+    "iri" : "https://w3id.org/aic#hasElement",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "47",
+    "label" : {
+      "IRI-based" : "hasElement",
+      "en" : "has element"
+    },
+    "domain" : "10",
+    "comment" : {
+      "en" : "Indicates that an element is situated within or associated with a zone. A zone may represent a physical area or a conceptual operational area."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "94"
+  }, {
+    "iri" : "https://w3id.org/aic#isDescribedBy",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "52",
+    "label" : {
+      "IRI-based" : "isDescribedBy",
+      "en" : "is described by"
+    },
+    "domain" : "15",
+    "comment" : {
+      "en" : "Links a construction agent to a state set that specifies the agent's ways of operation."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "95"
+  }, {
+    "iri" : "https://w3id.org/aic#isInProcessState",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "56",
+    "label" : {
+      "IRI-based" : "isInProcessState",
+      "en" : "is in process state"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Links a process to process state."
+    },
+    "attributes" : [ "object", "asymmetric" ],
+    "id" : "96"
+  }, {
+    "iri" : "https://w3id.org/aic#reifiesStatement",
+    "baseIri" : "https://w3id.org/aic",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "reifiesStatement",
+      "en" : "reifies statement"
+    },
+    "domain" : "4",
+    "comment" : {
+      "en" : "Links an information ID to the statement that is being reified."
+    },
+    "attributes" : [ "object", "functional", "asymmetric" ],
+    "id" : "97"
+  } ]
+}

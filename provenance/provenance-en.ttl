@@ -1,0 +1,22 @@
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix dc: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix : <> .
+<https://w3id.org/aic/v-1-0> a prov:Entity;
+	 dc:title "Agents in Construction (AiC) Ontology";
+	 prov:wasAttributedTo :agent0;
+	 prov:wasAttributedTo :agent1;
+	 prov:wasAttributedTo :agent2;
+	 prov:wasAttributedTo :agent3;
+	 prov:wasAttributedTo :agent4;
+	 prov:wasAttributedTo :agent5;
+	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
+	 prov:specializationOf <https://w3id.org/aic#>;
+	 prov:wasGeneratedAt "25.11.2025";
+.
+:agent0 a prov:Agent; foaf:name "Irfan Čustović".
+:agent1 a prov:Agent; foaf:name "Jianpeng Cao".
+:agent2 a prov:Agent; foaf:name "Ranjith Soman".
+:agent3 a prov:Agent; foaf:name "Pieter Pauwels".
+:agent4 a prov:Agent; foaf:name "Daniel Hall".
+:agent5 a prov:Agent; foaf:name "Hans Wamelink".

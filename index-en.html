@@ -1,0 +1,2358 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+   <link rel="stylesheet" href="resources/primer.css" media="screen" />
+   <link rel="stylesheet" href="resources/rec.css" media="screen" />
+   <link rel="stylesheet" href="resources/extra.css" media="screen" />
+   <link rel="stylesheet" href="resources/owl.css" media="screen" />
+   <link rel="stylesheet" href="resources/custom.css" media="screen" />
+   <link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)" />
+   <link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)" />
+   <link rel="stylesheet" href="resources/slider.css" media="screen" />
+   <meta name="color-scheme" content="dark light">
+   <script type="module" src="resources/dark-mode-toggle.mjs"></script>
+   <div class="darkmode">
+      <dark-mode-toggle class="slider"></dark-mode-toggle>
+   </div>
+   <title>Agents in Construction (AiC) Ontology</title>
+
+
+   <!-- SCHEMA.ORG METADATA -->
+   <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/aic#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/aic#","name":"Agents in Construction (AiC) Ontology", "headline":"Document describing the ontology https://w3id.org/aic#", "dateReleased":"25.11.2025", "dateModified":"25.11.2025", "license":"null", "author":[{"@type":"Person","name":"Irfan Čustović"},{"@type":"Person","name":" Jianpeng Cao"},{"@type":"Person","name":" Ranjith Soman"}], "contributor":[{"@type":"Person","name":"Pieter Pauwels"},{"@type":"Person","name":" Daniel Hall"},{"@type":"Person","name":" Hans Wamelink"}]}</script>
+
+   <script src="resources/jquery.js"></script>
+   <script src="resources/marked.min.js"></script>
+   <script>
+      function loadHash() {
+         jQuery(".markdown").each(function (el) { jQuery(this).after(marked.parse(jQuery(this).text())).remove() });
+         var hash = location.hash;
+         if ($(hash).offset() != null) {
+            $('html, body').animate({ scrollTop: $(hash).offset().top }, 0);
+         }
+         loadTOC();
+      }
+      function loadTOC() {
+         //process toc dynamically
+         var t = '<h2>Table of contents</h2><ul>'; i = 1; j = 0;
+         jQuery(".list").each(function () {
+            if (jQuery(this).is('h2')) {
+               if (j > 0) {
+                  t += '</ul>';
+                  j = 0;
+               }
+               t += '<li>' + i + '. <a href=#' + jQuery(this).attr('id') + '>' + jQuery(this).ignore("span").text() + '</a></li>';
+               i++;
+            }
+            if (jQuery(this).is('h3')) {
+               if (j == 0) {
+                  t += '<ul>';
+               }
+               j++;
+               t += '<li>' + (i - 1) + '.' + j + '. ' + '<a href=#' + jQuery(this).attr('id') + '>' + jQuery(this).ignore("span").text() + '</a></li>';
+            }
+         });
+         t += '</ul>';
+         $("#toc").html(t);
+      }
+      $(function () {
+         loadHash();
+      }); $.fn.ignore = function (sel) {
+         return this.clone().find(sel || ">*").remove().end();
+      }; 
+   </script>
+</head>
+
+<body>
+   <div class="container">
+      <div class="head">
+         <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
+         <h1>Agents in Construction (AiC) Ontology</h1>
+         <h2>Release: 25.11.2025</h2>
+
+
+         <dl>
+            <dt>Modified on: 25.11.2025</dt>
+            <dt>This version:</dt>
+            <dd><a href="https://w3id.org/aic/v-1-0">https://w3id.org/aic/v-1-0</a></dd>
+            <dt>Latest version:</dt>
+            <dd><a href="https://w3id.org/aic#">https://w3id.org/aic#</a></dd>
+            <dt>Issued on:</dt>
+            <dd>25.11.2025</dd>
+            <dt>Authors:</dt>
+            <dd>Irfan Čustović, TU Delft</dd>
+            <dd> Jianpeng Cao, HKU</dd>
+            <dd> Ranjith Soman, TU Delft</dd>
+
+            <dt>Contributors:</dt>
+            <dd>Pieter Pauwels, TU Eindhoven</dd>
+            <dd> Daniel Hall, TU Delft</dd>
+            <dd> Hans Wamelink, TU Delft</dd>
+
+            <dt>Download serialization:</dt>
+            <dd><span><a href="ontology.jsonld" target="_blank"><img src="https://img.shields.io/badge/Format-JSON_LD-blue.svg" alt="JSON-LD" /></a> </span><span><a href="ontology.owl" target="_blank"><img src="https://img.shields.io/badge/Format-RDF/XML-blue.svg" alt="RDF/XML" /></a> </span><span><a href="ontology.nt" target="_blank"><img src="https://img.shields.io/badge/Format-N_Triples-blue.svg" alt="N-Triples" /></a> </span><span><a href="ontology.ttl" target="_blank"><img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" /></a> </span></dd>
+            <dt>License:</dt>
+            <dd><a href="https://creativecommons.org/licenses/by/4.0/" target="_blank"><img src="https://img.shields.io/badge/License-CC%20BY%204.0-blue.svg" alt="null" /></a>
+               <a href="https://creativecommons.org/licenses/by/4.0/" rel="license" target="_blank">
+                  <img src="https://licensebuttons.net/l/by/3.0/88x31.png" style="border-width:0" alt="License" />
+               </a>
+               <br />
+            </dd>
+            <dt>Visualization:</dt>
+            <dd><a href="webvowl/index.html#" target="_blank"><img src="https://img.shields.io/badge/Visualize_with-WebVowl-blue.svg" alt="Visualize with WebVowl" /></a></dd>
+            <dt>Evaluation:</dt>
+            <dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd>
+            <dt>Cite as:</dt>
+            <dd>Čustović, I., Cao, J., Soman, R. (2025). Agents in Construction (AiC) Ontology - Version 1.0</dd>
+            <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+         </dl>
+
+         <hr />
+      </div>
+      <div class="status">
+         <div>
+            <span>Ontology Specification Draft</span>
+         </div>
+      </div>
+      <div id="abstract">
+         <h2>Abstract</h2>
+
+
+         <p>The <b>Agents in Construction (AiC)</b> ontology is a lightweight semantic model for coordinating on-site production in construction. It represents construction agents (human workers, robots, and other autonomous hardware) as they operate on a site: the processes they carry out, the elements they modify, the resources they handle, and the operational modes and metrics used to assess their performance and impact. To express how agent activities evolve over time, AiC introduces meta-properties that specify when a statement holds (at an instant or over an interval), what dimension of information it represents (planned, simulated, or performed), and who generated it. The ontology emphasizes generic, trade-agnostic concepts to ensure broad applicability across project types and delivery methods.</p>
+         <p><br></p>
+         <div align="center">
+            <p>The namespace for <b>AiC</b> terms is <code>https://w3id.org/aic#</code></p>
+         </div>
+
+         <div align="center">
+            <p>The suggested prefix for the <b>AiC</b> namespace is <code>aic</code></p>
+         </div>
+         <p><br></p>
+         <p>The <b>AiC</b> ontology is a deliverable of the research project <img src="resources/SMF4INFRA_Icon_Color_32x32.png" alt="SMF4INFRA Icon" style="width:32px; height:auto; padding: 0 5px"><b><span style="color: #2788AF">Smart</span> <span style="color: #528A4A">Mobile</span> <span style="color: #324F5B">Factory</span> <span style="color: #585C5E">for Infrastructure Projects</span> <a href="https://www.smf4infra.net/" target="_blank">(SMF4INFRA)</a></b>.</p>
+
+
+      </div>
+      <div id="toc"></div>
+
+      <!--INTRODUCTION SECTION-->
+      <div id="introduction">
+         <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+         <p>Coordinating production on construction sites requires a shared, machine-readable representation of key operational facts: who is acting (agents), what they are working on (processes and elements), where work is taking place (zones), which resources are being used or affected (equipment and materials), and how well the work is being executed (modes and metrics). These facts are dynamic - changing as the project progresses - and must therefore be expressed with explicit temporal and contextual information.</p>
+
+         <div id="namespacedeclarations">
+            <h3 id="ns" class="list">Namespace declarations</h3>
+            <div id="ns" align="center">
+               <table>
+                  <caption> <a href="#ns"> Table 1</a>: Namespaces used in the document </caption>
+                  <tbody>
+                     <tr>
+                        <td><b>aic</b></td>
+                        <td>&lt;https://w3id.org/aic#&gt;</td>
+                     </tr>
+                     <tr>
+                        <td><b>owl</b></td>
+                        <td>&lt;http://www.w3.org/2002/07/owl#&gt;</td>
+                     </tr>
+                     <tr>
+                        <td><b>rdf</b></td>
+                        <td>&lt;http://www.w3.org/1999/02/22-rdf-syntax-ns#&gt;</td>
+                     </tr>
+                     <tr>
+                        <td><b>rdfs</b></td>
+                        <td>&lt;http://www.w3.org/2000/01/rdf-schema#&gt;</td>
+                     </tr>
+                     <tr>
+                        <td><b>terms</b></td>
+                        <td>&lt;http://purl.org/dc/terms/&gt;</td>
+                     </tr>
+                     <tr>
+                        <td><b>xml</b></td>
+                        <td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td>
+                     </tr>
+                     <tr>
+                        <td><b>xsd</b></td>
+                        <td>&lt;http://www.w3.org/2001/XMLSchema#&gt;</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+
+
+      </div>
+
+
+      <!--OVERVIEW SECTION-->
+      <div id="overview">
+         <h2 id="overv" class="list">AiC Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+         <span>
+            This ontology has the following classes and properties.</span>
+         <h4>Classes</h4>
+         <ul xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+            <li>
+               <a href="#Activity" title="https://w3id.org/aic#Activity">Activity</a>
+            </li>
+            <li>
+               <a href="#AgentCapability" title="https://w3id.org/aic#AgentCapability">Agent Capability</a>
+            </li>
+            <li>
+               <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a>
+            </li>
+            <li>
+               <a href="#ConsumableMaterial" title="https://w3id.org/aic#ConsumableMaterial">Consumable Material</a>
+            </li>
+            <li>
+               <a href="#Creator" title="https://w3id.org/aic#Creator">Creator</a>
+            </li>
+            <li>
+               <a href="#Element" title="https://w3id.org/aic#Element">Element</a>
+            </li>
+            <li>
+               <a href="#Equipment" title="https://w3id.org/aic#Equipment">Equipment</a>
+            </li>
+            <li>
+               <a href="#Indicator" title="https://w3id.org/aic#Indicator">Indicator</a>
+            </li>
+            <li>
+               <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a>
+            </li>
+            <li>
+               <a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a>
+            </li>
+            <li>
+               <a href="#Material" title="https://w3id.org/aic#Material">Material</a>
+            </li>
+            <li>
+               <a href="#ModeMetric" title="https://w3id.org/aic#ModeMetric">Mode Metric</a>
+            </li>
+            <li>
+               <a href="#ModeSet" title="https://w3id.org/aic#ModeSet">Mode Set</a>
+            </li>
+            <li>
+               <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a>
+            </li>
+            <li>
+               <a href="#Process" title="https://w3id.org/aic#Process">Process</a>
+            </li>
+            <li>
+               <a href="#ProcessMetric" title="https://w3id.org/aic#ProcessMetric">Process Metric</a>
+            </li>
+            <li>
+               <a href="#ProcessState" title="https://w3id.org/aic#ProcessState">Process State</a>
+            </li>
+            <li>
+               <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">Reified RDF 1.1 statement</a>
+            </li>
+            <li>
+               <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a>
+            </li>
+            <li>
+               <a href="#ResourceQuantity" title="https://w3id.org/aic#ResourceQuantity">Resource Quantity</a>
+            </li>
+            <li>
+               <a href="#ResourceType" title="https://w3id.org/aic#ResourceType">Resource Type</a>
+            </li>
+            <li>
+               <a href="#ReusabeMaterial" title="https://w3id.org/aic#ReusabeMaterial">Reusable Material</a>
+            </li>
+            <li>
+               <a href="#Task" title="https://w3id.org/aic#Task">Task</a>
+            </li>
+            <li>
+               <a href="#WorkPackage" title="https://w3id.org/aic#WorkPackage">Work Package</a>
+            </li>
+            <li>
+               <a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a>
+            </li>
+         </ul>
+         <h4>Object Properties</h4>
+         <ul xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+            <li>
+               <a href="#belongsTo" title="https://w3id.org/aic#belongsTo">belongs to</a>
+            </li>
+            <li>
+               <a href="#consumes" title="https://w3id.org/aic#consumes">consumes</a>
+            </li>
+            <li>
+               <a href="#containsActivity" title="https://w3id.org/aic#containsActivity">contains activity</a>
+            </li>
+            <li>
+               <a href="#containsTask" title="https://w3id.org/aic#containsTask">contains task</a>
+            </li>
+            <li>
+               <a href="#correspondsTo" title="https://w3id.org/aic#correspondsTo">corresponds to</a>
+            </li>
+            <li>
+               <a href="#focusesOnElement" title="https://w3id.org/aic#focusesOnElement">focuses on element</a>
+            </li>
+            <li>
+               <a href="#focusesOnProcess" title="https://w3id.org/aic#focusesOnProcess">focuses on process</a>
+            </li>
+            <li>
+               <a href="#generatedBy" title="https://w3id.org/aic#generatedBy">generated by</a>
+            </li>
+            <li>
+               <a href="#hasCapability" title="https://w3id.org/aic#hasCapability">has capability</a>
+            </li>
+            <li>
+               <a href="#hasElement" title="https://w3id.org/aic#hasElement">has element</a>
+            </li>
+            <li>
+               <a href="#hasInformationDimension" title="https://w3id.org/aic#hasInformationDimension">has information dimension</a>
+            </li>
+            <li>
+               <a href="#hasPredecessor" title="https://w3id.org/aic#hasPredecessor">has predecessor</a>
+            </li>
+            <li>
+               <a href="#hasProcessMetric" title="https://w3id.org/aic#hasProcessMetric">has process metric</a>
+            </li>
+            <li>
+               <a href="#hasQuantity" title="https://w3id.org/aic#hasQuantity">has quantity</a>
+            </li>
+            <li>
+               <a href="#hasResourceType" title="https://w3id.org/aic#hasResourceType">has resource type</a>
+            </li>
+            <li>
+               <a href="#hasStateMetric" title="https://w3id.org/aic#hasStateMetric">has state metric</a>
+            </li>
+            <li>
+               <a href="#hasSuccessor" title="https://w3id.org/aic#hasSuccessor">has successor</a>
+            </li>
+            <li>
+               <a href="#isAssignedTo" title="https://w3id.org/aic#isAssignedTo">is assigned to</a>
+            </li>
+            <li>
+               <a href="#isDescribedBy" title="https://w3id.org/aic#isDescribedBy">is described by</a>
+            </li>
+            <li>
+               <a href="#isInOperationMode" title="https://w3id.org/aic#isInOperationMode">is in operation mode</a>
+            </li>
+            <li>
+               <a href="#isInProcessState" title="https://w3id.org/aic#isInProcessState">is in process state</a>
+            </li>
+            <li>
+               <a href="#isLocatedIn" title="https://w3id.org/aic#isLocatedIn">is located in</a>
+            </li>
+            <li>
+               <a href="#isOperatingIn" title="https://w3id.org/aic#isOperatingIn">is operating in</a>
+            </li>
+            <li>
+               <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#object" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">object of a reified statement</a>
+            </li>
+            <li>
+               <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate">predicate of a reified statement</a>
+            </li>
+            <li>
+               <a href="#reifiesStatement" title="https://w3id.org/aic#reifiesStatement">reifies statement</a>
+            </li>
+            <li>
+               <a href="#releasesReusableMaterial" title="https://w3id.org/aic#releasesReusableMaterial">releases reusable material</a>
+            </li>
+            <li>
+               <a href="#requestsResource" title="https://w3id.org/aic#requestsResource">requests resource</a>
+            </li>
+            <li>
+               <a href="#requestsZone" title="https://w3id.org/aic#requestsZone">requests zone</a>
+            </li>
+            <li>
+               <a href="#requiresCapability" title="https://w3id.org/aic#requiresCapability">requires capability</a>
+            </li>
+            <li>
+               <a href="#requiresResource" title="https://w3id.org/aic#requiresResource">requires resource</a>
+            </li>
+            <li>
+               <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#subject" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">subject of a reified statement</a>
+            </li>
+            <li>
+               <a href="#supplies" title="https://w3id.org/aic#supplies">supplies</a>
+            </li>
+            <li>
+               <a href="#targets" title="https://w3id.org/aic#targets">targets</a>
+            </li>
+            <li>
+               <a href="#uses" title="https://w3id.org/aic#uses">uses</a>
+            </li>
+         </ul>
+         <h4>Data Properties</h4>
+         <ul xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+            <li>
+               <a href="#generatedOn" title="https://w3id.org/aic#generatedOn">generated on</a>
+            </li>
+            <li>
+               <a href="#hasUnit" title="https://w3id.org/aic#hasUnit">has unit</a>
+            </li>
+            <li>
+               <a href="#hasValue" title="https://w3id.org/aic#hasValue">has value</a>
+            </li>
+            <li>
+               <a href="#validAt" title="https://w3id.org/aic#validAt">valid at</a>
+            </li>
+            <li>
+               <a href="#validFrom" title="https://w3id.org/aic#validFrom">valid from</a>
+            </li>
+            <li>
+               <a href="#validUntil" title="https://w3id.org/aic#validUntil">valid until</a>
+            </li>
+         </ul>
+         <h4>Named Individuals</h4>
+         <ul xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
+            <li>
+               <a href="#Performed" title="https://w3id.org/aic#Performed">Performed</a>
+            </li>
+            <li>
+               <a href="#Planned" title="https://w3id.org/aic#Planned">Planned</a>
+            </li>
+            <li>
+               <a href="#Simulated" title="https://w3id.org/aic#Simulated">Simulated</a>
+            </li>
+         </ul><iframe src="webvowl/index.html"></iframe>
+      </div>
+
+
+      <!--DESCRIPTION SECTION-->
+      <div id="description">
+         <h2 id="desc" class="list">AiC Ontology: Description <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+
+         <div id="competencyquestions">
+            <h3 id="cqs" class="list">Competency questions</h3>
+            <div id="cqs" align="center">
+               <table style="width:80%; max-width:800px;">
+                  <caption style="padding-bottom: 10px"> <a href="#cqs"> Table 2</a>: Overview of competency questions for the AiC ontology </caption>
+                  <tbody>
+                     <tr>
+                        <td><b>No.</b></td>
+                        <td><b>Competency question</b></td>
+                        <td><b>Reason for posing this question</b></td>
+                     </tr>
+                     <tr>
+                        <td colspan="3" style="border-top: 1px solid black; border-bottom: 1px solid black; padding: 10px">Questions about continuant statements</td>
+                     </tr>
+                     <tr>
+                        <td>1.1</td>
+                        <td>What are the mode sets used to describe agent ABC? How do the modes from different mode sets correspond to each other?</td>
+                        <td>Understand different ways to formally express the operation of an agent.</td>
+                     </tr>
+                     <tr>
+                        <td>1.2</td>
+                        <td>Which metric measures the performance of agent ABC when in operation mode XYZ?</td>
+                        <td>Understand how the performance of an agent operating in a particular mode can be expressed.</td>
+                     </tr>
+                     <tr>
+                        <td>1.3</td>
+                        <td>Which metric is describing the performance of process 456?</td>
+                        <td>Understand how the performance of a process can be expressed.</td>
+                     </tr>
+
+                     <tr>
+                        <td colspan="3" style="border-top: 1px solid black; border-bottom: 1px solid black; padding: 10px">Questions about statements at a point in time</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td><i>At time T<sub>1</sub>, ...</i></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>2.1</td>
+                        <td>… what is the mode of agent ABC and since when has it been operating in that mode?</td>
+                        <td>Find out the operation mode of the agent at any given point in time.</td>
+                     </tr>
+                     <tr>
+                        <td>2.2</td>
+                        <td>... what element is agent ABC focusing on and since when has it been focusing on that?</td>
+                        <td>Find out the physical elements that an agent is focusing on at any given point in time.</td>
+                     </tr>
+                     <tr>
+                        <td>2.3</td>
+                        <td>... what process is agent ABC focusing on and what is the state of the process?</td>
+                        <td>Find out the process and its process state that an agent is focusing on at any given point in time.</td>
+                     </tr>
+                     <tr>
+                        <td>2.4</td>
+                        <td>... where is agent ABC operating, and since when has it been operating there?</td>
+                        <td>Find out the location of the agent at any given point in time.</td>
+                     </tr>
+                     <tr>
+                        <td>2.5</td>
+                        <td>... which process is assigned to agent ABC?</td>
+                        <td>Find out what an agent has to work on at any given point in time.</td>
+                     </tr>
+                     <tr>
+                        <td>2.6</td>
+                        <td>... what resources / zone is agent ABC requesting, and since when has it been requesting them?</td>
+                        <td>Find out what an agent needs to execute its work at any given point in time.</td>
+                     </tr>
+                     <tr>
+                        <td>2.7</td>
+                        <td>... what equipment is agent ABC working with and since when has it been working with it?</td>
+                        <td>Find out the equipment usage of the agent at any given point in time.</td>
+                     </tr>
+                     <tr>
+                        <td>2.8</td>
+                        <td>… what is the value of the process metric of process 456?</td>
+                        <td>Find out the dynamic performance of a process at any given point in time.</td>
+                     </tr>
+
+                     <tr>
+                        <td colspan="3" style="border-top: 1px solid black; border-bottom: 1px solid black; padding: 10px">Questions about statements spanning periods of time</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td><i>In the period up until time T<sub>2</sub>, ...</i></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>3.1</td>
+                        <td>... what material and in what quantity has agent ABC consumed already and when has agent ABC consumed it?</td>
+                        <td>Find out how much material an agent has consumed that is not available anymore up until a given point in time.</td>
+                     </tr>
+                     <tr>
+                        <td>3.2</td>
+                        <td>... what reusable material and in what quantity has agent ABC already provided, and when?</td>
+                        <td>Find out how much material an agent has provided, which is available once again up until a given point in time.</td>
+                     </tr>
+                     <tr>
+                        <td></td>
+                        <td><i>In the period between time T<sub>3</sub> and time T<sub>4</sub>, …</i></td>
+                        <td></td>
+                     </tr>
+                     <tr>
+                        <td>3.3</td>
+                        <td>… in which modes was agent ABC operating, and for which time periods?</td>
+                        <td>Find out the operation mode history of an agent in a specific period.</td>
+                     </tr>
+                     <tr>
+                        <td>3.4</td>
+                        <td>… what is the total time that agent ABC was operating in mode XYZ?</td>
+                        <td>Quantify the agent's operating time in a specific mode.</td>
+                     </tr>
+                     <tr>
+                        <td>3.5</td>
+                        <td>… how often and how long was agent ABC requesting resource 123?</td>
+                        <td>Quantify the frequency and duration of an agent's resource requests within a specific period.</td>
+                     </tr>
+                     <tr>
+                        <td>3.6</td>
+                        <td>… what is the total time that agent ABC was working with equipment 789 and focusing on process 456?</td>
+                        <td>Find out the equipment usage of an agent dedicated to a particular process.</td>
+                     </tr>
+                  </tbody>
+               </table>
+            </div>
+         </div>
+
+
+
+         <div id="modules">
+            <h3 id="modules" class="list">Ontology modules</h3>
+            <p>
+               The <b>AiC</b> ontology is organized into three modules - Agent, Focus, and Resource - that together describe the dynamics of agent operation on construction sites.
+            </p>
+
+            <h3>Agent module</h3>
+            <p>The Agent module models construction agents, their capabilities, their operational modes and their locations. It enables expressing who the agents are, what they are capable of doing, their mode or condition and where they are operating at any point in time.</p>
+
+            <figure style="text-align: center;">
+               <img src="resources/AiC-Ontology_Agent-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the agent module" style="width:700px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <figcaption style="margin-top: 0.5em; font-style: italic;">
+                  <strong>Visual overview:</strong> Agent Module
+               </figcaption>
+            </figure>
+
+            <h3>Focus module</h3>
+            <p>The Focus module describes what agents direct their effort toward - either construction processes or building elements. Processes are decomposed into work packages, activities, and tasks, and linked to the elements they target. The module also represents process states and process metrics, supporting coordination and progress analysis across a project.</p>
+
+            <figure style="text-align: center;">
+               <img src="resources/AiC-Ontology_Focus-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the focus module" style="width:900px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <figcaption style="margin-top: 0.5em; font-style: italic;">
+                  <strong>Visual overview:</strong> Focus Module
+               </figcaption>
+            </figure>
+
+            <h3>Resource module</h3>
+            <p>The Resource module represents the materials and equipment handled by agents. It links resources to their types, quantities, and locations, and distinguishes between consumable and reusable materials. The module supports describing material and equipment requirements (for operation planning) and what is used, consumed, or supplied by agents during operation.</p>
+
+            <figure style="text-align: center;">
+               <img src="resources/AiC-Ontology_Resource-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the resource module" style="width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <figcaption style="margin-top: 0.5em; font-style: italic;">
+                  <strong>Visual overview:</strong> Resource Module
+               </figcaption>
+            </figure>
+
+            <h3>Including metadata about AiC statements (<i>temporal validity, planned vs. performed, creators, ...</i>) </h3>
+            <p>Metadata in <b>AiC</b> is modeled using the class <code>aic:InformationID</code>. An instance of <code>aic:InformationID</code> represents this particular piece of information about a statement and is linked to the statement it describes via the object property <code>aic:reifiesStatement</code>. The statement itself is represented using standard RDF 1.1 reification (an instance of <code>rdf:Statement</code> with <code>rdf:subject</code>, <code>rdf:predicate</code>, and <code>rdf:object</code>).</p>
+
+            <figure style="text-align: center;">
+               <img src="resources/AiC-Ontology_RDF-1-1-Reification.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of RDF 1.1 compliant reification" style="width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <figcaption style="margin-top: 0.5em; font-style: italic;">
+                  <strong>Visual overview:</strong> RDF 1.1 compliant reification of AiC statements using the <code>aic:InformationID</code> class
+               </figcaption>
+            </figure>
+
+            <p>Each <code>aic:InformationID</code> can capture temporal validity via three properties that describe when the reified statement holds. These temporal properties describe the validity of the statement itself (as reified by <code>rdf:Statement</code>), not the time when the data was entered into the knowledge base (i.e. transaction time).</p>
+            <ul>
+               <li><code>aic:validAt</code> - an instant at which the statement is valid.</li>
+               <li><code>aic:validFrom</code> - the start of an interval during which the statement is valid.</li>
+               <li><code>aic:validUntil</code> - the end of that interval.</li>
+            </ul>
+            <p>Beyond temporal validity, <code>aic:InformationID</code> can be used to attach additional contextual metadata to the same statement, such as:</p>
+            <ul>
+               <li><code>aic:informationDimension</code> - the dimension of the information (e.g., <i>planned</i>, <i>simulated</i>, or <i>performed</i>).</li>
+               <li><code>aic:generatedOn</code> - the time at which the information was generated.</li>
+               <li><code>aic:generatedBy</code> - the entity or system that created it.</li>
+            </ul>
+            <p>This provides a unified mechanism for expressing provenance, data-quality categories, workflow stages, and similar annotations about a statement.</p>
+
+
+            <p>RDF 1.2 introduces triple terms and quoted triples - formerly known as RDF-star - which allow triples to be used directly as subjects or objects of other triples. This enables attaching metadata such as temporal validity or provenance directly to quoted triples, without using explicit reification structures.</p>
+
+            <figure style="text-align: center;">
+               <img src="resources/AiC-Ontology_RDF-1-2-Reification.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of RDF 1.2 compliant reification" style="width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <figcaption style="margin-top: 0.5em; font-style: italic;">
+                  <strong>Visual overview:</strong> RDF 1.2 compliant reification of AiC statements using the <code>aic:InformationID</code> class
+               </figcaption>
+            </figure>
+
+            <p>When the <b>AiC</b> ontology was designed, RDF 1.2 was still a W3C Working Draft and support for triple terms and SPARQL 1.2 quoted triple syntax was not yet consistent across RDF stores, SPARQL engines, and OWL reasoners. To ensure interoperability with existing RDF 1.1 tools, <b>AiC</b> therefore provides the <code>aic:reifiesStatement</code> object property to model bespoke RDF 1.1 reification.</p>
+
+            <p>In tools that fully support RDF 1.2 and SPARQL 1.2, the reification structures used in <b>AiC</b> can be systematically mapped to quoted triples (RDF-star syntax). In that case, a <code>aic:InformationID</code> instance refers to a triple term using the <code>rdf:reifies</code> object property. This yields more concise data and often simpler SPARQL queries. The two representations are intended to be semantically equivalent and can be transformed into one another where tooling permits.</p>
+
+            <!-- <p>A list of RDF frameworks and triple stores that already support RDF 1.2 can be found here: [].</p> -->
+         </div>
+
+      </div>
+
+
+      <!--CROSSREF SECTION-->
+      <div id="crossref">
+         <h2 id="crossreference" class="list">Cross-reference for AiC Ontology classes, object properties and data properties <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+         This section provides details for each class and property defined by AiC Ontology.
+         <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="classes">
+            <h3 id="classes-headline" class="list">Classes</h3>
+            <ul class="hlist">
+               <li><a href="#Activity" title="https://w3id.org/aic#Activity">Activity</a></li>
+               <li><a href="#AgentCapability" title="https://w3id.org/aic#AgentCapability">Agent Capability</a></li>
+               <li><a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a></li>
+               <li><a href="#ConsumableMaterial" title="https://w3id.org/aic#ConsumableMaterial">Consumable Material</a></li>
+               <li><a href="#Creator" title="https://w3id.org/aic#Creator">Creator</a></li>
+               <li><a href="#Element" title="https://w3id.org/aic#Element">Element</a></li>
+               <li><a href="#Equipment" title="https://w3id.org/aic#Equipment">Equipment</a></li>
+               <li><a href="#Indicator" title="https://w3id.org/aic#Indicator">Indicator</a></li>
+               <li><a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a></li>
+               <li><a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a></li>
+               <li><a href="#Material" title="https://w3id.org/aic#Material">Material</a></li>
+               <li><a href="#ModeMetric" title="https://w3id.org/aic#ModeMetric">Mode Metric</a></li>
+               <li><a href="#ModeSet" title="https://w3id.org/aic#ModeSet">Mode Set</a></li>
+               <li><a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a></li>
+               <li><a href="#Process" title="https://w3id.org/aic#Process">Process</a></li>
+               <li><a href="#ProcessMetric" title="https://w3id.org/aic#ProcessMetric">Process Metric</a></li>
+               <li><a href="#ProcessState" title="https://w3id.org/aic#ProcessState">Process State</a></li>
+               <li><a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">Reified RDF 1.1 statement</a></li>
+               <li><a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a></li>
+               <li><a href="#ResourceQuantity" title="https://w3id.org/aic#ResourceQuantity">Resource Quantity</a></li>
+               <li><a href="#ResourceType" title="https://w3id.org/aic#ResourceType">Resource Type</a></li>
+               <li><a href="#ReusabeMaterial" title="https://w3id.org/aic#ReusabeMaterial">Reusable Material</a></li>
+               <li><a href="#Task" title="https://w3id.org/aic#Task">Task</a></li>
+               <li><a href="#WorkPackage" title="https://w3id.org/aic#WorkPackage">Work Package</a></li>
+               <li><a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a></li>
+            </ul>
+            <div class="entity" id="Activity">
+               <h3>Activity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Activity</p>
+               <div class="comment">
+                  <span class="markdown">A subdivision of a process representing a coherent unit of work performed on one or more elements. Activities typically group related tasks and describe work at an intermediate level of detail in the work breakdown structure.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#containsTask" title="https://w3id.org/aic#containsTask">contains task</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#containsActivity" title="https://w3id.org/aic#containsActivity">contains activity</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="AgentCapability">
+               <h3>Agent Capability<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#AgentCapability</p>
+               <div class="comment">
+                  <span class="markdown">Ability or skill of a construction agent to perform certain work.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#hasCapability" title="https://w3id.org/aic#hasCapability">has capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresCapability" title="https://w3id.org/aic#requiresCapability">requires capability</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#ResourceType" title="https://w3id.org/aic#ResourceType">Resource Type</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="ConstructionAgent">
+               <h3>Construction Agent<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#ConstructionAgent</p>
+               <div class="comment">
+                  <span class="markdown">Human worker, robot or other kinds of autonomous hardware that can execute work on a construction site.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#consumes" title="https://w3id.org/aic#consumes">consumes</a> <sup class="type-op" title="object property">op</sup>, <a href="#focusesOnElement" title="https://w3id.org/aic#focusesOnElement">focuses on element</a> <sup class="type-op" title="object property">op</sup>, <a href="#focusesOnProcess" title="https://w3id.org/aic#focusesOnProcess">focuses on process</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCapability" title="https://w3id.org/aic#hasCapability">has capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDescribedBy" title="https://w3id.org/aic#isDescribedBy">is described by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInOperationMode" title="https://w3id.org/aic#isInOperationMode">is in operation mode</a> <sup class="type-op" title="object property">op</sup>, <a href="#isOperatingIn" title="https://w3id.org/aic#isOperatingIn">is operating in</a> <sup class="type-op" title="object property">op</sup>, <a href="#requestsResource" title="https://w3id.org/aic#requestsResource">requests resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#requestsZone" title="https://w3id.org/aic#requestsZone">requests zone</a> <sup class="type-op" title="object property">op</sup>, <a href="#supplies" title="https://w3id.org/aic#supplies">supplies</a> <sup class="type-op" title="object property">op</sup>, <a href="#uses" title="https://w3id.org/aic#uses">uses</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#isAssignedTo" title="https://w3id.org/aic#isAssignedTo">is assigned to</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#Element" title="https://w3id.org/aic#Element">Element</a> <sup class="type-c" title="class">c</sup>, <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>, <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>, <a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="ConsumableMaterial">
+               <h3>Consumable Material<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#ConsumableMaterial</p>
+               <div class="comment">
+                  <span class="markdown">Material that becomes part of the building structure or becomes wasted during a process and cannot be re-used in another process.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Material" title="https://w3id.org/aic#Material">Material</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#ReusabeMaterial" title="https://w3id.org/aic#ReusabeMaterial">Reusable Material</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Creator">
+               <h3>Creator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Creator</p>
+               <div class="comment">
+                  <span class="markdown">Entity or system responsible for generating the information that is represented by a triple statement.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#generatedBy" title="https://w3id.org/aic#generatedBy">generated by</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Element">
+               <h3>Element<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Element</p>
+               <div class="comment">
+                  <span class="markdown">Physical object that is part of the building structure.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#focusesOnElement" title="https://w3id.org/aic#focusesOnElement">focuses on element</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasElement" title="https://w3id.org/aic#hasElement">has element</a> <sup class="type-op" title="object property">op</sup>, <a href="#targets" title="https://w3id.org/aic#targets">targets</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>, <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>, <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>, <a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Equipment">
+               <h3>Equipment<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Equipment</p>
+               <div class="comment">
+                  <span class="markdown">Physical asset that aids the execution of a construction process. It cannot execute work autonomously and it includes powered (e.g. a drill) and non-powered (e.g. a concrete bucket) assets.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#uses" title="https://w3id.org/aic#uses">uses</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#Material" title="https://w3id.org/aic#Material">Material</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Indicator">
+               <h3>Indicator<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Indicator</p>
+               <div class="comment">
+                  <span class="markdown">Numeric value used to quantify an entity.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has sub-classes
+                  </dt>
+                  <dd>
+                     <a href="#ModeMetric" title="https://w3id.org/aic#ModeMetric">Mode Metric</a> <sup class="type-c" title="class">c</sup>, <a href="#ProcessMetric" title="https://w3id.org/aic#ProcessMetric">Process Metric</a> <sup class="type-c" title="class">c</sup>, <a href="#ResourceQuantity" title="https://w3id.org/aic#ResourceQuantity">Resource Quantity</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#hasUnit" title="https://w3id.org/aic#hasUnit">has unit</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasValue" title="https://w3id.org/aic#hasValue">has value</a> <sup class="type-dp" title="data property">dp</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="InformationID">
+               <h3>Information ID<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#InformationID</p>
+               <div class="comment">
+                  <span class="markdown">Functional class that can be used to reify a statement and link metadata.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#generatedBy" title="https://w3id.org/aic#generatedBy">generated by</a> <sup class="type-op" title="object property">op</sup>, <a href="#generatedOn" title="https://w3id.org/aic#generatedOn">generated on</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasInformationDimension" title="https://w3id.org/aic#hasInformationDimension">has information dimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#reifiesStatement" title="https://w3id.org/aic#reifiesStatement">reifies statement</a> <sup class="type-op" title="object property">op</sup>, <a href="#validAt" title="https://w3id.org/aic#validAt">valid at</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#validFrom" title="https://w3id.org/aic#validFrom">valid from</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#validUntil" title="https://w3id.org/aic#validUntil">valid until</a> <sup class="type-dp" title="data property">dp</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="InformationDimension">
+               <h3>Information Dimension<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#InformationDimension</p>
+               <div class="comment">
+                  <span class="markdown">Defines the dimension of the information that the Information ID reifies. Allows for specifying that a reified statement belongs to the planned, simulated or performed dimension.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#hasInformationDimension" title="https://w3id.org/aic#hasInformationDimension">has information dimension</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     has members
+                  </dt>
+                  <dd>
+                     <a href="#Performed" title="https://w3id.org/aic#Performed">Performed</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Planned" title="https://w3id.org/aic#Planned">Planned</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Simulated" title="https://w3id.org/aic#Simulated">Simulated</a> <sup class="type-ni" title="named individual">ni</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Material">
+               <h3>Material<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Material</p>
+               <div class="comment">
+                  <span class="markdown">Passive, non-powered physical object that is embedded in the final product or that provides physical support for a period of time.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     has sub-classes
+                  </dt>
+                  <dd>
+                     <a href="#ConsumableMaterial" title="https://w3id.org/aic#ConsumableMaterial">Consumable Material</a> <sup class="type-c" title="class">c</sup>, <a href="#ReusabeMaterial" title="https://w3id.org/aic#ReusabeMaterial">Reusable Material</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#consumes" title="https://w3id.org/aic#consumes">consumes</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#Equipment" title="https://w3id.org/aic#Equipment">Equipment</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="ModeMetric">
+               <h3>Mode Metric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#ModeMetric</p>
+               <div class="comment">
+                  <span class="markdown">Numeric value used to describe the effect of an operation mode. Includes cost, energy consumption, noise, ...</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Indicator" title="https://w3id.org/aic#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#hasStateMetric" title="https://w3id.org/aic#hasStateMetric">has state metric</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="ModeSet">
+               <h3>Mode Set<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#ModeSet</p>
+               <div class="comment">
+                  <span class="markdown">A collection of operation modes that describes the possible ways in which a construction agent can operate within a specific scope (e.g., a discipline, technology, or stakeholder perspective). A construction agent may be associated with one or more Mode Sets, depending on the modeling context.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#belongsTo" title="https://w3id.org/aic#belongsTo">belongs to</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDescribedBy" title="https://w3id.org/aic#isDescribedBy">is described by</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="OperationMode">
+               <h3>Operation Mode<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#OperationMode</p>
+               <div class="comment">
+                  <span class="markdown">A specific operational condition or behavior of a construction agent. Each mode represents a distinct, mutually recognizable mode, such as operating, idle, charging, or moving.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#belongsTo" title="https://w3id.org/aic#belongsTo">belongs to</a> <sup class="type-op" title="object property">op</sup>, <a href="#correspondsTo" title="https://w3id.org/aic#correspondsTo">corresponds to</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStateMetric" title="https://w3id.org/aic#hasStateMetric">has state metric</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#correspondsTo" title="https://w3id.org/aic#correspondsTo">corresponds to</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInOperationMode" title="https://w3id.org/aic#isInOperationMode">is in operation mode</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#ModeSet" title="https://w3id.org/aic#ModeSet">Mode Set</a> <sup class="type-c" title="class">c</sup>, <a href="#ProcessState" title="https://w3id.org/aic#ProcessState">Process State</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Process">
+               <h3>Process<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Process</p>
+               <div class="comment">
+                  <span class="markdown">Generic class describing a certain amount of work to be executed on the construction site.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has sub-classes
+                  </dt>
+                  <dd>
+                     <a href="#Activity" title="https://w3id.org/aic#Activity">Activity</a> <sup class="type-c" title="class">c</sup>, <a href="#Task" title="https://w3id.org/aic#Task">Task</a> <sup class="type-c" title="class">c</sup>, <a href="#WorkPackage" title="https://w3id.org/aic#WorkPackage">Work Package</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#hasPredecessor" title="https://w3id.org/aic#hasPredecessor">has predecessor</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasProcessMetric" title="https://w3id.org/aic#hasProcessMetric">has process metric</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSuccessor" title="https://w3id.org/aic#hasSuccessor">has successor</a> <sup class="type-op" title="object property">op</sup>, <a href="#isAssignedTo" title="https://w3id.org/aic#isAssignedTo">is assigned to</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInProcessState" title="https://w3id.org/aic#isInProcessState">is in process state</a> <sup class="type-op" title="object property">op</sup>, <a href="#releasesReusableMaterial" title="https://w3id.org/aic#releasesReusableMaterial">releases reusable material</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresCapability" title="https://w3id.org/aic#requiresCapability">requires capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresResource" title="https://w3id.org/aic#requiresResource">requires resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#targets" title="https://w3id.org/aic#targets">targets</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#focusesOnProcess" title="https://w3id.org/aic#focusesOnProcess">focuses on process</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasPredecessor" title="https://w3id.org/aic#hasPredecessor">has predecessor</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasSuccessor" title="https://w3id.org/aic#hasSuccessor">has successor</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>, <a href="#Element" title="https://w3id.org/aic#Element">Element</a> <sup class="type-c" title="class">c</sup>, <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>, <a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="ProcessMetric">
+               <h3>Process Metric<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#ProcessMetric</p>
+               <div class="comment">
+                  <span class="markdown">Numeric value used to describe how a process is being performed.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Indicator" title="https://w3id.org/aic#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#hasProcessMetric" title="https://w3id.org/aic#hasProcessMetric">has process metric</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="ProcessState">
+               <h3>Process State<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#ProcessState</p>
+               <div class="comment">
+                  <span class="markdown">A formal representation of a condition in which a process is in.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#isInProcessState" title="https://w3id.org/aic#isInProcessState">is in process state</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">
+               <h3>Reified RDF 1.1 statement<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement</p>
+               <dl class="description">
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#object" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">object of a reified statement</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate">predicate of a reified statement</a> <sup class="type-op" title="object property">op</sup>, <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#subject" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">subject of a reified statement</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#reifiesStatement" title="https://w3id.org/aic#reifiesStatement">reifies statement</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Resource">
+               <h3>Resource<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Resource</p>
+               <div class="comment">
+                  <span class="markdown">Physical object that is handled for executing a construction process.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has sub-classes
+                  </dt>
+                  <dd>
+                     <a href="#Equipment" title="https://w3id.org/aic#Equipment">Equipment</a> <sup class="type-c" title="class">c</sup>, <a href="#Material" title="https://w3id.org/aic#Material">Material</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#hasQuantity" title="https://w3id.org/aic#hasQuantity">has quantity</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasResourceType" title="https://w3id.org/aic#hasResourceType">has resource type</a> <sup class="type-op" title="object property">op</sup>, <a href="#isLocatedIn" title="https://w3id.org/aic#isLocatedIn">is located in</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#requestsResource" title="https://w3id.org/aic#requestsResource">requests resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresResource" title="https://w3id.org/aic#requiresResource">requires resource</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>, <a href="#Element" title="https://w3id.org/aic#Element">Element</a> <sup class="type-c" title="class">c</sup>, <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>, <a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="ResourceQuantity">
+               <h3>Resource Quantity<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#ResourceQuantity</p>
+               <div class="comment">
+                  <span class="markdown">Numeric value that describes the amount of a resource or size of a resource batch.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Indicator" title="https://w3id.org/aic#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#hasQuantity" title="https://w3id.org/aic#hasQuantity">has quantity</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="ResourceType">
+               <h3>Resource Type<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#ResourceType</p>
+               <div class="comment">
+                  <span class="markdown">Describes a group of resources with equal characteristics.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#hasResourceType" title="https://w3id.org/aic#hasResourceType">has resource type</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#AgentCapability" title="https://w3id.org/aic#AgentCapability">Agent Capability</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="ReusabeMaterial">
+               <h3>Reusable Material<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#ReusabeMaterial</p>
+               <div class="comment">
+                  <span class="markdown">Material that can be re-used in another process.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Material" title="https://w3id.org/aic#Material">Material</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#releasesReusableMaterial" title="https://w3id.org/aic#releasesReusableMaterial">releases reusable material</a> <sup class="type-op" title="object property">op</sup>, <a href="#supplies" title="https://w3id.org/aic#supplies">supplies</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#ConsumableMaterial" title="https://w3id.org/aic#ConsumableMaterial">Consumable Material</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Task">
+               <h3>Task<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Task</p>
+               <div class="comment">
+                  <span class="markdown">The smallest unit of work in the work breakdown structure, describing work executed on exactly one element. A task cannot be further decomposed within this ontology.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#containsTask" title="https://w3id.org/aic#containsTask">contains task</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="WorkPackage">
+               <h3>Work Package<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#WorkPackage</p>
+               <div class="comment">
+                  <span class="markdown">A high-level subdivision of a process representing a manageable collection of activities. Work packages define work at a coarse level of detail, suitable for monthly / weekly planning, resource allocation, and monitoring.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     has super-classes
+                  </dt>
+                  <dd>
+                     <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#containsActivity" title="https://w3id.org/aic#containsActivity">contains activity</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Zone">
+               <h3>Zone<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Zone</p>
+               <div class="comment">
+                  <span class="markdown">Dedicated area on the construction site or in the building structure.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#hasElement" title="https://w3id.org/aic#hasElement">has element</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is in range of
+                  </dt>
+                  <dd>
+                     <a href="#isLocatedIn" title="https://w3id.org/aic#isLocatedIn">is located in</a> <sup class="type-op" title="object property">op</sup>, <a href="#isOperatingIn" title="https://w3id.org/aic#isOperatingIn">is operating in</a> <sup class="type-op" title="object property">op</sup>, <a href="#requestsZone" title="https://w3id.org/aic#requestsZone">requests zone</a> <sup class="type-op" title="object property">op</sup>
+                  </dd>
+                  <dt>
+                     is disjoint with
+                  </dt>
+                  <dd>
+                     <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>, <a href="#Element" title="https://w3id.org/aic#Element">Element</a> <sup class="type-c" title="class">c</sup>, <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>, <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+         </div>
+         <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="objectproperties">
+            <h3 id="properties" class="list">Object Properties</h3>
+            <ul class="hlist">
+               <li><a href="#belongsTo" title="https://w3id.org/aic#belongsTo">belongs to</a></li>
+               <li><a href="#consumes" title="https://w3id.org/aic#consumes">consumes</a></li>
+               <li><a href="#containsActivity" title="https://w3id.org/aic#containsActivity">contains activity</a></li>
+               <li><a href="#containsTask" title="https://w3id.org/aic#containsTask">contains task</a></li>
+               <li><a href="#correspondsTo" title="https://w3id.org/aic#correspondsTo">corresponds to</a></li>
+               <li><a href="#focusesOnElement" title="https://w3id.org/aic#focusesOnElement">focuses on element</a></li>
+               <li><a href="#focusesOnProcess" title="https://w3id.org/aic#focusesOnProcess">focuses on process</a></li>
+               <li><a href="#generatedBy" title="https://w3id.org/aic#generatedBy">generated by</a></li>
+               <li><a href="#hasCapability" title="https://w3id.org/aic#hasCapability">has capability</a></li>
+               <li><a href="#hasElement" title="https://w3id.org/aic#hasElement">has element</a></li>
+               <li><a href="#hasInformationDimension" title="https://w3id.org/aic#hasInformationDimension">has information dimension</a></li>
+               <li><a href="#hasPredecessor" title="https://w3id.org/aic#hasPredecessor">has predecessor</a></li>
+               <li><a href="#hasProcessMetric" title="https://w3id.org/aic#hasProcessMetric">has process metric</a></li>
+               <li><a href="#hasQuantity" title="https://w3id.org/aic#hasQuantity">has quantity</a></li>
+               <li><a href="#hasResourceType" title="https://w3id.org/aic#hasResourceType">has resource type</a></li>
+               <li><a href="#hasStateMetric" title="https://w3id.org/aic#hasStateMetric">has state metric</a></li>
+               <li><a href="#hasSuccessor" title="https://w3id.org/aic#hasSuccessor">has successor</a></li>
+               <li><a href="#isAssignedTo" title="https://w3id.org/aic#isAssignedTo">is assigned to</a></li>
+               <li><a href="#isDescribedBy" title="https://w3id.org/aic#isDescribedBy">is described by</a></li>
+               <li><a href="#isInOperationMode" title="https://w3id.org/aic#isInOperationMode">is in operation mode</a></li>
+               <li><a href="#isInProcessState" title="https://w3id.org/aic#isInProcessState">is in process state</a></li>
+               <li><a href="#isLocatedIn" title="https://w3id.org/aic#isLocatedIn">is located in</a></li>
+               <li><a href="#isOperatingIn" title="https://w3id.org/aic#isOperatingIn">is operating in</a></li>
+               <li><a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#object" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">object of a reified statement</a></li>
+               <li><a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate">predicate of a reified statement</a></li>
+               <li><a href="#reifiesStatement" title="https://w3id.org/aic#reifiesStatement">reifies statement</a></li>
+               <li><a href="#releasesReusableMaterial" title="https://w3id.org/aic#releasesReusableMaterial">releases reusable material</a></li>
+               <li><a href="#requestsResource" title="https://w3id.org/aic#requestsResource">requests resource</a></li>
+               <li><a href="#requestsZone" title="https://w3id.org/aic#requestsZone">requests zone</a></li>
+               <li><a href="#requiresCapability" title="https://w3id.org/aic#requiresCapability">requires capability</a></li>
+               <li><a href="#requiresResource" title="https://w3id.org/aic#requiresResource">requires resource</a></li>
+               <li><a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#subject" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">subject of a reified statement</a></li>
+               <li><a href="#supplies" title="https://w3id.org/aic#supplies">supplies</a></li>
+               <li><a href="#targets" title="https://w3id.org/aic#targets">targets</a></li>
+               <li><a href="#uses" title="https://w3id.org/aic#uses">uses</a></li>
+            </ul>
+            <div class="entity" id="belongsTo">
+               <h3>belongs to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#belongsTo</p>
+               <div class="comment">
+                  <span class="markdown">Connects an operational state to a state set.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ModeSet" title="https://w3id.org/aic#ModeSet">Mode Set</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="consumes">
+               <h3>consumes<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#consumes</p>
+               <div class="comment">
+                  <span class="markdown">Defines the link between a construction agent and a material that it handles and thereby removes from the pool of available resources.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Material" title="https://w3id.org/aic#Material">Material</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="containsActivity">
+               <h3>contains activity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#containsActivity</p>
+               <div class="comment">
+                  <span class="markdown">Links a work package to an activity that it can be broken down into.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#WorkPackage" title="https://w3id.org/aic#WorkPackage">Work Package</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Activity" title="https://w3id.org/aic#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="containsTask">
+               <h3>contains task<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#containsTask</p>
+               <div class="comment">
+                  <span class="markdown">Links an activity to a task that it can be broken down into.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Activity" title="https://w3id.org/aic#Activity">Activity</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Task" title="https://w3id.org/aic#Task">Task</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="correspondsTo">
+               <h3>corresponds to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#correspondsTo</p>
+               <div class="comment">
+                  <span class="markdown">Links two operation states from different state sets to each other to express equivalence.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> symmetric, transitive</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="focusesOnElement">
+               <h3>focuses on element<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#focusesOnElement</p>
+               <div class="comment">
+                  <span class="markdown">Indicates that a construction agent is dedicating its current operation to a specific physical element.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Element" title="https://w3id.org/aic#Element">Element</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="focusesOnProcess">
+               <h3>focuses on process<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#focusesOnProcess</p>
+               <div class="comment">
+                  <span class="markdown">Indicates that a construction agent is dedicating its current operation to a specific process instance.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="generatedBy">
+               <h3>generated by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#generatedBy</p>
+               <div class="comment">
+                  <span class="markdown">Relates an Information ID to its Creator.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Creator" title="https://w3id.org/aic#Creator">Creator</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasCapability">
+               <h3>has capability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasCapability</p>
+               <div class="comment">
+                  <span class="markdown">Indicates a capability that a construction agent is able to perform.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#AgentCapability" title="https://w3id.org/aic#AgentCapability">Agent Capability</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasElement">
+               <h3>has element<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasElement</p>
+               <div class="comment">
+                  <span class="markdown">Indicates that an element is situated within or associated with a zone. A zone may represent a physical area or a conceptual operational area.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Element" title="https://w3id.org/aic#Element">Element</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasInformationDimension">
+               <h3>has information dimension<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasInformationDimension</p>
+               <div class="comment">
+                  <span class="markdown">Links an information ID to an information dimension.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasPredecessor">
+               <h3>has predecessor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasPredecessor</p>
+               <div class="comment">
+                  <span class="markdown">Links a process to its preceding process as defined in the work breakdown structure.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> transitive</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        is inverse of
+                     </dt>
+                     <dd>
+                        <a href="#hasSuccessor" title="https://w3id.org/aic#hasSuccessor">has successor</a> <sup class="type-op" title="object property">op</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasProcessMetric">
+               <h3>has process metric<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasProcessMetric</p>
+               <div class="comment">
+                  <span class="markdown">Connects a process with a metric that describes its performance.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ProcessMetric" title="https://w3id.org/aic#ProcessMetric">Process Metric</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasQuantity">
+               <h3>has quantity<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasQuantity</p>
+               <div class="comment">
+                  <span class="markdown">Links a resource or resource batch to a quantity.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ResourceQuantity" title="https://w3id.org/aic#ResourceQuantity">Resource Quantity</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasResourceType">
+               <h3>has resource type<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasResourceType</p>
+               <div class="comment">
+                  <span class="markdown">Connects a resource to a resource type for grouping different kinds of resources with equal characteristics.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ResourceType" title="https://w3id.org/aic#ResourceType">Resource Type</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasStateMetric">
+               <h3>has state metric<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasStateMetric</p>
+               <div class="comment">
+                  <span class="markdown">Connects an operation state with a state metric that describes the effect of the operation state.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ModeMetric" title="https://w3id.org/aic#ModeMetric">Mode Metric</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasSuccessor">
+               <h3>has successor<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasSuccessor</p>
+               <div class="comment">
+                  <span class="markdown">Links a process to its succeeding process as defined in the work breakdown structure.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> transitive</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        is inverse of
+                     </dt>
+                     <dd>
+                        <a href="#hasPredecessor" title="https://w3id.org/aic#hasPredecessor">has predecessor</a> <sup class="type-op" title="object property">op</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="isAssignedTo">
+               <h3>is assigned to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#isAssignedTo</p>
+               <div class="comment">
+                  <span class="markdown">Specifies the construction agent that a process is assigned to.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="isDescribedBy">
+               <h3>is described by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#isDescribedBy</p>
+               <div class="comment">
+                  <span class="markdown">Links a construction agent to a state set that specifies the agent's ways of operation.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ModeSet" title="https://w3id.org/aic#ModeSet">Mode Set</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="isInOperationMode">
+               <h3>is in operation mode<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#isInOperationMode</p>
+               <div class="comment">
+                  <span class="markdown">Links a construction agent to an operation mode.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="isInProcessState">
+               <h3>is in process state<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#isInProcessState</p>
+               <div class="comment">
+                  <span class="markdown">Links a process to process state.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ProcessState" title="https://w3id.org/aic#ProcessState">Process State</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="isLocatedIn">
+               <h3>is located in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#isLocatedIn</p>
+               <div class="comment">
+                  <span class="markdown">Connects a resource to a zone in which it is positioned.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="isOperatingIn">
+               <h3>is operating in<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#isOperatingIn</p>
+               <div class="comment">
+                  <span class="markdown">Connects a construction agent to a zone in which it is positioned.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">
+               <h3>object of a reified statement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#object</p>
+               <div class="description">
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">Reified RDF 1.1 statement</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate">
+               <h3>predicate of a reified statement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate</p>
+               <div class="description">
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">Reified RDF 1.1 statement</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="reifiesStatement">
+               <h3>reifies statement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#reifiesStatement</p>
+               <div class="comment">
+                  <span class="markdown">Links an information ID to the statement that is being reified.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> functional, asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">Reified RDF 1.1 statement</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="releasesReusableMaterial">
+               <h3>releases reusable material<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#releasesReusableMaterial</p>
+               <div class="comment">
+                  <span class="markdown">Connects a process to a resource that a construction agent makes available during execution of the process.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ReusabeMaterial" title="https://w3id.org/aic#ReusabeMaterial">Reusable Material</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="requestsResource">
+               <h3>requests resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#requestsResource</p>
+               <div class="comment">
+                  <span class="markdown">Links the construction agent to a resource that it needs to execute a process.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="requestsZone">
+               <h3>requests zone<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#requestsZone</p>
+               <div class="comment">
+                  <span class="markdown">Links the construction agent to a zone that it intends to access.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Zone" title="https://w3id.org/aic#Zone">Zone</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="requiresCapability">
+               <h3>requires capability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#requiresCapability</p>
+               <div class="comment">
+                  <span class="markdown">Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#AgentCapability" title="https://w3id.org/aic#AgentCapability">Agent Capability</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="requiresResource">
+               <h3>requires resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#requiresResource</p>
+               <div class="comment">
+                  <span class="markdown">Connects a process to a resource that a construction agent needs to handle in order to execute the process.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">
+               <h3>subject of a reified statement<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> http://www.w3.org/1999/02/22-rdf-syntax-ns#subject</p>
+               <div class="description">
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement" title="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">Reified RDF 1.1 statement</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="http://www.w3.org/2002/07/owl#Thing" target="_blank" title="http://www.w3.org/2002/07/owl#Thing">Thing</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="supplies">
+               <h3>supplies<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#supplies</p>
+               <div class="comment">
+                  <span class="markdown">Defines the link between a construction agent and a reusable material that it handles and thereby returns back to the pool of available resources.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ReusabeMaterial" title="https://w3id.org/aic#ReusabeMaterial">Reusable Material</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="targets">
+               <h3>targets<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#targets</p>
+               <div class="comment">
+                  <span class="markdown">Links a process to an element that it has an effect on.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Process" title="https://w3id.org/aic#Process">Process</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Element" title="https://w3id.org/aic#Element">Element</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="uses">
+               <h3>uses<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#uses</p>
+               <div class="comment">
+                  <span class="markdown">Defines the link between a construction agent and equipment that it handles during its operation.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Equipment" title="https://w3id.org/aic#Equipment">Equipment</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+         </div>
+         <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="dataproperties">
+            <h3 id="dataproperties-headline" class="list">Data Properties</h3>
+            <ul class="hlist">
+               <li><a href="#generatedOn" title="https://w3id.org/aic#generatedOn">generated on</a></li>
+               <li><a href="#hasUnit" title="https://w3id.org/aic#hasUnit">has unit</a></li>
+               <li><a href="#hasValue" title="https://w3id.org/aic#hasValue">has value</a></li>
+               <li><a href="#validAt" title="https://w3id.org/aic#validAt">valid at</a></li>
+               <li><a href="#validFrom" title="https://w3id.org/aic#validFrom">valid from</a></li>
+               <li><a href="#validUntil" title="https://w3id.org/aic#validUntil">valid until</a></li>
+            </ul>
+            <div class="entity" id="generatedOn">
+               <h3>generated on<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#generatedOn</p>
+               <div class="comment">
+                  <span class="markdown">Specifies the point in time at which the reified statement was generated.</span>
+               </div>
+               <div class="description">
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasUnit">
+               <h3>has unit<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasUnit</p>
+               <div class="comment">
+                  <span class="markdown">Defines the unit of an indicator.</span>
+               </div>
+               <div class="description">
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Indicator" title="https://w3id.org/aic#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="http://www.w3.org/2001/XMLSchema#string" target="_blank" title="http://www.w3.org/2001/XMLSchema#string">string</a>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasValue">
+               <h3>has value<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasValue</p>
+               <div class="comment">
+                  <span class="markdown">Defines the value of an indicator.</span>
+               </div>
+               <div class="description">
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#Indicator" title="https://w3id.org/aic#Indicator">Indicator</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="http://www.w3.org/2001/XMLSchema#decimal" target="_blank" title="http://www.w3.org/2001/XMLSchema#decimal">decimal</a>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="validAt">
+               <h3>valid at<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#validAt</p>
+               <div class="comment">
+                  <span class="markdown">Specifies the point in time at which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site.</span>
+               </div>
+               <div class="description">
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="validFrom">
+               <h3>valid from<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#validFrom</p>
+               <div class="comment">
+                  <span class="markdown">Specifies the start of the time period during which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site.</span>
+               </div>
+               <div class="description">
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="validUntil">
+               <h3>valid until<sup class="type-dp" title="data property">dp</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#dataproperties">Data Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#validUntil</p>
+               <div class="comment">
+                  <span class="markdown">Specifies the end of the time period during which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site.</span>
+               </div>
+               <div class="description">
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="http://www.w3.org/2001/XMLSchema#dateTime" target="_blank" title="http://www.w3.org/2001/XMLSchema#dateTime">date Time</a>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+         </div>
+         <div xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" id="namedindividuals">
+            <h3 id="namedindividuals" class="list">Named Individuals</h3>
+            <ul class="hlist">
+               <li><a href="#Performed" title="https://w3id.org/aic#Performed">Performed</a></li>
+               <li><a href="#Planned" title="https://w3id.org/aic#Planned">Planned</a></li>
+               <li><a href="#Simulated" title="https://w3id.org/aic#Simulated">Simulated</a></li>
+            </ul>
+            <div class="entity" id="Performed">
+               <h3>Performed<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Performed</p>
+               <div class="comment">
+                  <span class="markdown">Categorizes statements that convey information about events or situations that have been performed, i.e., have happened.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     belongs to
+                  </dt>
+                  <dd>
+                     <a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Planned">
+               <h3>Planned<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Planned</p>
+               <div class="comment">
+                  <span class="markdown">Categorizes statements that convey information about events or situations that have been planned, i.e., should happen.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     belongs to
+                  </dt>
+                  <dd>
+                     <a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="Simulated">
+               <h3>Simulated<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#Simulated</p>
+               <div class="comment">
+                  <span class="markdown">Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     belongs to
+                  </dt>
+                  <dd>
+                     <a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a> <sup class="type-c" title="class">c</sup>
+                  </dd>
+               </dl>
+            </div>
+         </div>
+         <div id="legend">
+            <h2>Legend <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+            <div class="entity">
+               <sup class="type-c" title="Classes">c</sup>: Classes <br />
+               <sup class="type-op" title="Object Properties">op</sup>: Object Properties <br />
+               <sup class="type-dp" title="Data Properties">dp</sup>: Data Properties <br />
+               <sup class="type-ni" title="Named Individuals">ni</sup>: Named Individuals <br />
+            </div>
+         </div>
+      </div>
+
+
+      <!--REFERENCES SECTION-->
+      <!-- <div id="references">
+         <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+         <span class="markdown">
+            Add your references here. It is recommended to have them as a list.</span>
+
+      </div> -->
+      <div id="acknowledgments">
+         <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
+         <p>
+            This work is supported by the <a href="https://data.snf.ch/grants/grant/204852" target="_blank">Swiss National Science Foundation [grant no. 204852]</a>.
+         </p>
+
+         <p>
+            The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.
+         </p>
+      </div>
+
+
+   </div>
+</body>
+
+</html>

@@ -1,0 +1,970 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/aic#"
+     xml:base="https://w3id.org/aic"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/aic">
+        <owl:versionIRI rdf:resource="https://w3id.org/aic"/>
+        <terms:bibliographicCitation>Čustović, I., Cao, J., Soman, R. (2025). Agents in Construction (AiC) Ontology - Version 1.0</terms:bibliographicCitation>
+        <terms:contributor>Daniel Hall</terms:contributor>
+        <terms:contributor>Hans Wamelink</terms:contributor>
+        <terms:contributor>Pieter Pauwels</terms:contributor>
+        <terms:creator>Irfan Čustović</terms:creator>
+        <terms:creator>Jianpeng Cao</terms:creator>
+        <terms:creator>Ranjith Soman</terms:creator>
+        <terms:description xml:lang="en"></terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified>2025-11-25</terms:modified>
+        <terms:title xml:lang="en">Agents in Construction (AiC) Ontology</terms:title>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#object -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">object of a reified statement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">predicate of a reified statement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#subject -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">
+        <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+        <rdfs:label xml:lang="en">subject of a reified statement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#belongsTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#belongsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#OperationMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ModeSet"/>
+        <rdfs:comment xml:lang="en">Connects an operational state to a state set.</rdfs:comment>
+        <rdfs:label xml:lang="en">belongs to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#consumes -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#consumes">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Material"/>
+        <rdfs:comment xml:lang="en">Defines the link between a construction agent and a material that it handles and  thereby removes from the pool of available resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">consumes</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#containsActivity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#containsActivity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#WorkPackage"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Activity"/>
+        <rdfs:comment xml:lang="en">Links a work package to an activity that it can be broken down into.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains activity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#containsTask -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#containsTask">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Activity"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Task"/>
+        <rdfs:comment xml:lang="en">Links an activity to a task that it can be broken down into.</rdfs:comment>
+        <rdfs:label xml:lang="en">contains task</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#correspondsTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#correspondsTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#OperationMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#OperationMode"/>
+        <rdfs:comment xml:lang="en">Links two operation states from different state sets to each other to express equivalence.</rdfs:comment>
+        <rdfs:label xml:lang="en">corresponds to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#focusesOnElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#focusesOnElement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Element"/>
+        <rdfs:comment xml:lang="en">Indicates that a construction agent is dedicating its current operation to a specific physical element.</rdfs:comment>
+        <rdfs:label xml:lang="en">focuses on element</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#focusesOnProcess -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#focusesOnProcess">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:comment xml:lang="en">Indicates that a construction agent is dedicating its current operation to a specific process instance.</rdfs:comment>
+        <rdfs:label xml:lang="en">focuses on process</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#generatedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#generatedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Creator"/>
+        <rdfs:comment xml:lang="en">Relates an Information ID to its Creator.</rdfs:comment>
+        <rdfs:label xml:lang="en">generated by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasCapability -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasCapability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#AgentCapability"/>
+        <rdfs:comment xml:lang="en">Indicates a capability that a construction agent is able to perform.</rdfs:comment>
+        <rdfs:label xml:lang="en">has capability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasElement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasElement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Zone"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Element"/>
+        <rdfs:comment xml:lang="en">Indicates that an element is situated within or associated with a zone. A zone may represent a physical area or a conceptual operational area.</rdfs:comment>
+        <rdfs:label xml:lang="en">has element</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasInformationDimension -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasInformationDimension">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#InformationDimension"/>
+        <rdfs:comment xml:lang="en">Links an information ID to an information dimension.</rdfs:comment>
+        <rdfs:label xml:lang="en">has information dimension</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasPredecessor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasPredecessor">
+        <owl:inverseOf rdf:resource="https://w3id.org/aic#hasSuccessor"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:comment xml:lang="en">Links a process to its preceding process as defined in the work breakdown structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">has predecessor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasProcessMetric -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasProcessMetric">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ProcessMetric"/>
+        <rdfs:comment xml:lang="en">Connects a process with a metric that describes its performance.</rdfs:comment>
+        <rdfs:label xml:lang="en">has process metric</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasQuantity -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasQuantity">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ResourceQuantity"/>
+        <rdfs:comment xml:lang="en">Links a resource or resource batch to a quantity.</rdfs:comment>
+        <rdfs:label xml:lang="en">has quantity</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasResourceType -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasResourceType">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ResourceType"/>
+        <rdfs:comment xml:lang="en">Connects a resource to a resource type for grouping different kinds of resources with equal characteristics.</rdfs:comment>
+        <rdfs:label xml:lang="en">has resource type</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasStateMetric -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasStateMetric">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#OperationMode"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ModeMetric"/>
+        <rdfs:comment xml:lang="en">Connects an operation state with a state metric that describes the effect of the operation state.</rdfs:comment>
+        <rdfs:label xml:lang="en">has state metric</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasSuccessor -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasSuccessor">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:comment xml:lang="en">Links a process to its succeeding process as defined in the work breakdown structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">has successor</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#isAssignedTo -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#isAssignedTo">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:comment xml:lang="en">Specifies the construction agent that a process is assigned to.</rdfs:comment>
+        <rdfs:label xml:lang="en">is assigned to</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#isDescribedBy -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#isDescribedBy">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ModeSet"/>
+        <rdfs:comment xml:lang="en">Links a construction agent to a state set that specifies the agent&apos;s ways of operation.</rdfs:comment>
+        <rdfs:label xml:lang="en">is described by</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#isInOperationMode -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#isInOperationMode">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#OperationMode"/>
+        <rdfs:comment xml:lang="en">Links a construction agent to an operation mode.</rdfs:comment>
+        <rdfs:label xml:lang="en">is in operation mode</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#isInProcessState -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#isInProcessState">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ProcessState"/>
+        <rdfs:comment xml:lang="en">Links a process to process state.</rdfs:comment>
+        <rdfs:label xml:lang="en">is in process state</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#isLocatedIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#isLocatedIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Resource"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Zone"/>
+        <rdfs:comment xml:lang="en">Connects a resource to a zone in which it is positioned.</rdfs:comment>
+        <rdfs:label xml:lang="en">is located in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#isOperatingIn -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#isOperatingIn">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Zone"/>
+        <rdfs:comment xml:lang="en">Connects a construction agent to a zone in which it is positioned.</rdfs:comment>
+        <rdfs:label xml:lang="en">is operating in</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#reifiesStatement -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#reifiesStatement">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
+        <rdfs:comment xml:lang="en">Links an information ID to the statement that is being reified.</rdfs:comment>
+        <rdfs:label xml:lang="en">reifies statement</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#releasesReusableMaterial -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#releasesReusableMaterial">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ReusabeMaterial"/>
+        <rdfs:comment xml:lang="en">Connects a process to a resource that a construction agent makes available during execution of the process.</rdfs:comment>
+        <rdfs:label xml:lang="en">releases reusable material</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#requestsResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#requestsResource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Resource"/>
+        <rdfs:comment xml:lang="en">Links the construction agent to a resource that it needs to execute a process.</rdfs:comment>
+        <rdfs:label xml:lang="en">requests resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#requestsZone -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#requestsZone">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Zone"/>
+        <rdfs:comment xml:lang="en">Links the construction agent to a zone that it intends to access.</rdfs:comment>
+        <rdfs:label xml:lang="en">requests zone</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#requiresCapability -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#requiresCapability">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#AgentCapability"/>
+        <rdfs:comment xml:lang="en">Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process.</rdfs:comment>
+        <rdfs:label xml:lang="en">requires capability</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#requiresResource -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#requiresResource">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Resource"/>
+        <rdfs:comment xml:lang="en">Connects a process to a resource that a construction agent needs to handle in order to execute the process.</rdfs:comment>
+        <rdfs:label xml:lang="en">requires resource</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#supplies -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#supplies">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ReusabeMaterial"/>
+        <rdfs:comment xml:lang="en">Defines the link between a construction agent and a reusable material that it handles and thereby returns back to the pool of available resources.</rdfs:comment>
+        <rdfs:label xml:lang="en">supplies</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#targets -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#targets">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Element"/>
+        <rdfs:comment xml:lang="en">Links a process to an element that it has an effect on.</rdfs:comment>
+        <rdfs:label xml:lang="en">targets</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#uses -->
+
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#uses">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#Equipment"/>
+        <rdfs:comment xml:lang="en">Defines the link between a construction agent and equipment that it handles during its operation.</rdfs:comment>
+        <rdfs:label xml:lang="en">uses</rdfs:label>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/aic#generatedOn -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/aic#generatedOn">
+        <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Specifies the point in time at which the reified statement was generated.</rdfs:comment>
+        <rdfs:label xml:lang="en">generated on</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasUnit -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/aic#hasUnit">
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Indicator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment xml:lang="en">Defines the unit of an indicator.</rdfs:comment>
+        <rdfs:label xml:lang="en">has unit</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/aic#hasValue -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/aic#hasValue">
+        <rdfs:domain rdf:resource="https://w3id.org/aic#Indicator"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+        <rdfs:comment xml:lang="en">Defines the value of an indicator.</rdfs:comment>
+        <rdfs:label xml:lang="en">has value</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/aic#validAt -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/aic#validAt">
+        <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Specifies the point in time at which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site.</rdfs:comment>
+        <rdfs:label xml:lang="en">valid at</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/aic#validFrom -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/aic#validFrom">
+        <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Specifies the start of the time period during which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site.</rdfs:comment>
+        <rdfs:label xml:lang="en">valid from</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- https://w3id.org/aic#validUntil -->
+
+
+    <owl:DatatypeProperty rdf:about="https://w3id.org/aic#validUntil">
+        <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+        <rdfs:comment xml:lang="en">Specifies the end of the time period during which the reified statement is valid. Can be used to define the temporal dynamics of construction agents operating on a site.</rdfs:comment>
+        <rdfs:label xml:lang="en">valid until</rdfs:label>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
+
+
+    <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">
+        <rdfs:label xml:lang="en">Reified RDF 1.1 statement</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Activity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Activity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:comment xml:lang="en">A subdivision of a process representing a coherent unit of work performed on one or more elements. Activities typically group related tasks and describe work at an intermediate level of detail in the work breakdown structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Activity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#AgentCapability -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#AgentCapability">
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#ResourceType"/>
+        <rdfs:comment xml:lang="en">Ability or skill of a construction agent to perform certain work.</rdfs:comment>
+        <rdfs:label xml:lang="en">Agent Capability</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ConstructionAgent -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#ConstructionAgent">
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Element"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Process"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Resource"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Zone"/>
+        <rdfs:comment xml:lang="en">Human worker, robot or other kinds of autonomous hardware that can execute work on a construction site.</rdfs:comment>
+        <rdfs:label xml:lang="en">Construction Agent</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ConsumableMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#ConsumableMaterial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Material"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#ReusabeMaterial"/>
+        <rdfs:comment xml:lang="en">Material that becomes part of the building structure or becomes wasted during a process and cannot be re-used in another process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Consumable Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Creator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Creator">
+        <rdfs:comment xml:lang="en">Entity or system responsible for generating the information that is represented by a triple statement.</rdfs:comment>
+        <rdfs:label xml:lang="en">Creator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Element -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Element">
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Process"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Resource"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Zone"/>
+        <rdfs:comment xml:lang="en">Physical object that is part of the building structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Element</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Equipment -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Equipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Resource"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Material"/>
+        <rdfs:comment xml:lang="en">Physical asset that aids the execution of a construction process. It cannot execute work autonomously and it includes powered (e.g. a drill) and non-powered  (e.g. a concrete bucket) assets.</rdfs:comment>
+        <rdfs:label xml:lang="en">Equipment</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Indicator -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Indicator">
+        <rdfs:comment xml:lang="en">Numeric value used to quantify an entity.</rdfs:comment>
+        <rdfs:label xml:lang="en">Indicator</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#InformationID -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#InformationID">
+        <rdfs:comment xml:lang="en">Functional class that can be used to reify a statement and link metadata.</rdfs:comment>
+        <rdfs:label xml:lang="en">Information ID</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#InformationDimension -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#InformationDimension">
+        <rdfs:comment xml:lang="en">Defines the dimension of the information that the Information ID reifies. Allows for specifying that a reified statement belongs to the planned, simulated or performed dimension.</rdfs:comment>
+        <rdfs:label xml:lang="en">Information Dimension</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Material -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Material">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Resource"/>
+        <rdfs:comment xml:lang="en">Passive, non-powered physical object that is embedded in the final product or that provides physical support for a period of time.</rdfs:comment>
+        <rdfs:label xml:lang="en">Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ModeMetric -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#ModeMetric">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Indicator"/>
+        <rdfs:comment xml:lang="en">Numeric value used to describe the effect of an operation mode. Includes cost, energy consumption, noise, ...</rdfs:comment>
+        <rdfs:label xml:lang="en">Mode Metric</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ModeSet -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#ModeSet">
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#OperationMode"/>
+        <rdfs:comment xml:lang="en">A collection of operation modes that describes the possible ways in which a construction agent can operate within a specific scope (e.g., a discipline, technology, or stakeholder perspective). A construction agent may be associated with one or more Mode Sets, depending on the modeling context.</rdfs:comment>
+        <rdfs:label xml:lang="en">Mode Set</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#OperationMode -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#OperationMode">
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#ProcessState"/>
+        <rdfs:comment xml:lang="en">A specific operational condition or behavior of a construction agent. Each mode represents a distinct, mutually recognizable mode, such as operating, idle, charging, or moving.</rdfs:comment>
+        <rdfs:label xml:lang="en">Operation Mode</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Process -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Process">
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Resource"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Zone"/>
+        <rdfs:comment xml:lang="en">Generic class describing a certain amount of work to be executed on the construction site.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ProcessMetric -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#ProcessMetric">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Indicator"/>
+        <rdfs:comment xml:lang="en">Numeric value used to describe how a process is being performed.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process Metric</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ProcessState -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#ProcessState">
+        <rdfs:comment xml:lang="en">A formal representation of a condition in which a process is in.</rdfs:comment>
+        <rdfs:label xml:lang="en">Process State</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Resource -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Resource">
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#Zone"/>
+        <rdfs:comment xml:lang="en">Physical object that is handled for executing a construction process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Resource</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ResourceQuantity -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#ResourceQuantity">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Indicator"/>
+        <rdfs:comment xml:lang="en">Numeric value that describes the amount of a resource or size of a resource batch.</rdfs:comment>
+        <rdfs:label xml:lang="en">Resource Quantity</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ResourceType -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#ResourceType">
+        <rdfs:comment xml:lang="en">Describes a group of resources with equal characteristics.</rdfs:comment>
+        <rdfs:label xml:lang="en">Resource Type</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ReusabeMaterial -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#ReusabeMaterial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Material"/>
+        <rdfs:comment xml:lang="en">Material that can be re-used in another process.</rdfs:comment>
+        <rdfs:label xml:lang="en">Reusable Material</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Task -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Task">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:comment xml:lang="en">The smallest unit of work in the work breakdown structure, describing work executed on exactly one element. A task cannot be further decomposed within this ontology.</rdfs:comment>
+        <rdfs:label xml:lang="en">Task</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#WorkPackage -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#WorkPackage">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Process"/>
+        <rdfs:comment xml:lang="en">A high-level subdivision of a process representing a manageable collection of activities. Work packages define work at a coarse level of detail, suitable for monthly / weekly planning, resource allocation, and monitoring.</rdfs:comment>
+        <rdfs:label xml:lang="en">Work Package</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Zone -->
+
+
+    <owl:Class rdf:about="https://w3id.org/aic#Zone">
+        <rdfs:comment xml:lang="en">Dedicated area on the construction site or in the building structure.</rdfs:comment>
+        <rdfs:label xml:lang="en">Zone</rdfs:label>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- https://w3id.org/aic#Performed -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/aic#Performed">
+        <rdf:type rdf:resource="https://w3id.org/aic#InformationDimension"/>
+        <rdfs:comment xml:lang="en">Categorizes statements that convey information about events or situations that have been performed, i.e., have happened.</rdfs:comment>
+        <rdfs:label xml:lang="en">Performed</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/aic#Planned -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/aic#Planned">
+        <rdf:type rdf:resource="https://w3id.org/aic#InformationDimension"/>
+        <rdfs:comment xml:lang="en">Categorizes statements that convey information about events or situations that have been planned, i.e., should happen.</rdfs:comment>
+        <rdfs:label xml:lang="en">Planned</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- https://w3id.org/aic#Simulated -->
+
+
+    <owl:NamedIndividual rdf:about="https://w3id.org/aic#Simulated">
+        <rdf:type rdf:resource="https://w3id.org/aic#InformationDimension"/>
+        <rdfs:comment xml:lang="en">Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen.</rdfs:comment>
+        <rdfs:label xml:lang="en">Simulated</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+
