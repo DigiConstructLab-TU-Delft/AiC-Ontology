@@ -7,7 +7,7 @@
       "en" : "Agents in Construction (AiC) Ontology"
     },
     "iri" : "https://w3id.org/aic",
-    "author" : [ "Jianpeng Cao", "Ranjith Soman", "Irfan Čustović" ],
+    "author" : [ "Irfan Čustović", "Jianpeng Cao", "Ranjith Soman" ],
     "description" : { },
     "other" : {
       "license" : [ {
@@ -19,6 +19,11 @@
       "creator" : [ {
         "identifier" : "creator",
         "language" : "undefined",
+        "value" : "Irfan Čustović",
+        "type" : "label"
+      }, {
+        "identifier" : "creator",
+        "language" : "undefined",
         "value" : "Jianpeng Cao",
         "type" : "label"
       }, {
@@ -26,13 +31,13 @@
         "language" : "undefined",
         "value" : "Ranjith Soman",
         "type" : "label"
-      }, {
-        "identifier" : "creator",
-        "language" : "undefined",
-        "value" : "Irfan Čustović",
-        "type" : "label"
-      } ],
+      }],
       "contributor" : [ {
+        "identifier" : "contributor",
+        "language" : "undefined",
+        "value" : "Pieter Pauwels",
+        "type" : "label"
+      }, {
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Daniel Hall",
@@ -41,11 +46,6 @@
         "identifier" : "contributor",
         "language" : "undefined",
         "value" : "Hans Wamelink",
-        "type" : "label"
-      }, {
-        "identifier" : "contributor",
-        "language" : "undefined",
-        "value" : "Pieter Pauwels",
         "type" : "label"
       } ],
       "modified" : [ {
