@@ -129,7 +129,7 @@
             <p>The suggested prefix for the <b>AiC</b> namespace is <code>aic</code></p>
          </div>
          <p><br></p>
-         <p>The <b>AiC</b> ontology is a deliverable of the research project <img src="resources/SMF4INFRA_Icon_Color_32x32.png" alt="SMF4INFRA Icon" style="width:32px; height:auto; padding: 0 5px"><b><span style="color: #2788AF">Smart</span> <span style="color: #528A4A">Mobile</span> <span style="color: #324F5B">Factory</span> <span style="color: #585C5E">for Infrastructure Projects</span> <a href="https://www.smf4infra.net/" target="_blank">(SMF4INFRA)</a></b>.</p>
+         <p id="deliverable">The <b>AiC</b> ontology is a deliverable of the research project <img src="resources/SMF4INFRA_Icon_Color_White_256x256.png" alt="SMF4INFRA Icon" style="width:32px; height:auto; padding: 0 5px"><span class="smf4infraLabel"><span style="color: #2788AF">Smart</span> <span style="color: #528A4A">Mobile</span> <span style="color: #324F5B">Factory</span> <span style="color: #585C5E">for Infrastructure Projects</span></span> <a href="https://www.smf4infra.net/" target="_blank">(SMF4INFRA)</a>.</p>
 
 
       </div>
@@ -553,7 +553,7 @@
             <p>The Agent module models construction agents, their capabilities, their operational modes and their locations. It enables expressing who the agents are, what they are capable of doing, their mode or condition and where they are operating at any point in time.</p>
 
             <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_Agent-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the agent module" style="width:700px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <img src="resources/AiC-Ontology_Agent-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the agent module" style="max-width: 100%; width:700px; height:auto; display: inline-block; border:1px solid #ccc;" />
                <figcaption style="margin-top: 0.5em; font-style: italic;">
                   <strong>Visual overview:</strong> Agent Module
                </figcaption>
@@ -563,7 +563,7 @@
             <p>The Focus module describes what agents direct their effort toward - either construction processes or building elements. Processes are decomposed into work packages, activities, and tasks, and linked to the elements they target. The module also represents process states and process metrics, supporting coordination and progress analysis across a project.</p>
 
             <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_Focus-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the focus module" style="width:900px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <img src="resources/AiC-Ontology_Focus-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the focus module" style="max-width: 100%; width:900px; height:auto; display: inline-block; border:1px solid #ccc;" />
                <figcaption style="margin-top: 0.5em; font-style: italic;">
                   <strong>Visual overview:</strong> Focus Module
                </figcaption>
@@ -573,7 +573,7 @@
             <p>The Resource module represents the materials and equipment handled by agents. It links resources to their types, quantities, and locations, and distinguishes between consumable and reusable materials. The module supports describing material and equipment requirements (for operation planning) and what is used, consumed, or supplied by agents during operation.</p>
 
             <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_Resource-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the resource module" style="width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <img src="resources/AiC-Ontology_Resource-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the resource module" style="max-width: 100%; width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
                <figcaption style="margin-top: 0.5em; font-style: italic;">
                   <strong>Visual overview:</strong> Resource Module
                </figcaption>
@@ -583,7 +583,7 @@
             <p>Metadata in <b>AiC</b> is modeled using the class <code>aic:InformationID</code>. An instance of <code>aic:InformationID</code> represents this particular piece of information about a statement and is linked to the statement it describes via the object property <code>aic:reifiesStatement</code>. The statement itself is represented using standard RDF 1.1 reification (an instance of <code>rdf:Statement</code> with <code>rdf:subject</code>, <code>rdf:predicate</code>, and <code>rdf:object</code>).</p>
 
             <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_RDF-1-1-Reification.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of RDF 1.1 compliant reification" style="width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <img src="resources/AiC-Ontology_RDF-1-1-Reification.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of RDF 1.1 compliant reification" style="max-width: 100%; width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
                <figcaption style="margin-top: 0.5em; font-style: italic;">
                   <strong>Visual overview:</strong> RDF 1.1 compliant reification of AiC statements using the <code>aic:InformationID</code> class
                </figcaption>
@@ -607,7 +607,7 @@
             <p>RDF 1.2 introduces triple terms and quoted triples - formerly known as RDF-star - which allow triples to be used directly as subjects or objects of other triples. This enables attaching metadata such as temporal validity or provenance directly to quoted triples, without using explicit reification structures.</p>
 
             <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_RDF-1-2-Reification.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of RDF 1.2 compliant reification" style="width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
+               <img src="resources/AiC-Ontology_RDF-1-2-Reification.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of RDF 1.2 compliant reification" style="max-width: 100%; width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
                <figcaption style="margin-top: 0.5em; font-style: italic;">
                   <strong>Visual overview:</strong> RDF 1.2 compliant reification of AiC statements using the <code>aic:InformationID</code> class
                </figcaption>
