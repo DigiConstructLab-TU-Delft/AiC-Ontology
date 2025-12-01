@@ -44,7 +44,7 @@ AiC-Ontology/
 If you use the AiC ontology in academic work or software, please cite as:
 
 ```text
-Čustović, I., Cao, J., Soman, R. (2025). *Agents in Construction (AiC) Ontology – Version 1.0*.
+Čustović, I., Cao, J., Soman, R. (2025). Agents in Construction (AiC) Ontology – Version 1.0.
 ```
 
 BibTeX:
