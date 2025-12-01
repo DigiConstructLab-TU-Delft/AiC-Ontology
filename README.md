@@ -1,6 +1,7 @@
 # Agents in Construction (AiC) Ontology – Documentation
 
 This repository hosts the published documentation and machine-readable serializations of the **Agents in Construction (AiC)** ontology.  
+
 The canonical namespace for AiC terms is `https://w3id.org/aic#` and the suggested prefix is `aic`.
 
 ---
@@ -32,7 +33,7 @@ AiC-Ontology/
 ├── OOPSevaluation/      # Results and HTML page of the OntOlogy Pitfall Scanner! (OOPS!)
 ├── provenance/          # Provenance metadata about how the page was generated
 ├── resources/           # Images, CSS, JS used by documentation
-├── webvowl/             # HTML, CSS and JS for WebVOVL visualisation
+├── webvowl/             # HTML, CSS and JS for WebVOWL visualisation
 ├── README.md            # This file
 ```
 
@@ -42,7 +43,9 @@ AiC-Ontology/
 
 If you use the AiC ontology in academic work or software, please cite as:
 
+```text
 Čustović, I., Cao, J., Soman, R. (2025). *Agents in Construction (AiC) Ontology – Version 1.0*.
+```
 
 BibTeX:
 

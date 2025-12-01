@@ -137,7 +137,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#OperationMode"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#ModeSet"/>
-        <rdfs:comment xml:lang="en">Connects an operational state to a state set.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Connects an operation mode to a mode set.</rdfs:comment>
         <rdfs:label xml:lang="en">belongs to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -190,7 +190,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#OperationMode"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#OperationMode"/>
-        <rdfs:comment xml:lang="en">Links two operation states from different state sets to each other to express equivalence.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links two operation modes from different mode sets to each other to express equivalence.</rdfs:comment>
         <rdfs:label xml:lang="en">corresponds to</rdfs:label>
     </owl:ObjectProperty>
     
@@ -327,15 +327,15 @@
     
 
 
-    <!-- https://w3id.org/aic#hasStateMetric -->
+    <!-- https://w3id.org/aic#hasModeMetric -->
 
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasStateMetric">
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasModeMetric">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#OperationMode"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#ModeMetric"/>
-        <rdfs:comment xml:lang="en">Connects an operation state with a state metric that describes the effect of the operation state.</rdfs:comment>
-        <rdfs:label xml:lang="en">has state metric</rdfs:label>
+        <rdfs:comment xml:lang="en">Connects an operation mode with a mode metric that describes the effect of the operation mode.</rdfs:comment>
+        <rdfs:label xml:lang="en">has mode metric</rdfs:label>
     </owl:ObjectProperty>
     
 
@@ -373,7 +373,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#ModeSet"/>
-        <rdfs:comment xml:lang="en">Links a construction agent to a state set that specifies the agent&apos;s ways of operation.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a construction agent to a mode set that specifies the agent&apos;s ways of operation.</rdfs:comment>
         <rdfs:label xml:lang="en">is described by</rdfs:label>
     </owl:ObjectProperty>
     
@@ -399,7 +399,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#ProcessState"/>
-        <rdfs:comment xml:lang="en">Links a process to process state.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Links a process to a process state.</rdfs:comment>
         <rdfs:label xml:lang="en">is in process state</rdfs:label>
     </owl:ObjectProperty>
     
@@ -491,7 +491,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#AgentCapability"/>
-        <rdfs:comment xml:lang="en">Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Connects a process to a capability that a constructionn agent needs to possess in order to execute the process.</rdfs:comment>
         <rdfs:label xml:lang="en">requires capability</rdfs:label>
     </owl:ObjectProperty>
     
@@ -958,7 +958,7 @@
 
     <owl:NamedIndividual rdf:about="https://w3id.org/aic#Simulated">
         <rdf:type rdf:resource="https://w3id.org/aic#InformationDimension"/>
-        <rdfs:comment xml:lang="en">Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Categorizes statements that convey information about events or situations that have been simulated, i.e., might happen.</rdfs:comment>
         <rdfs:label xml:lang="en">Simulated</rdfs:label>
     </owl:NamedIndividual>
 </rdf:RDF>

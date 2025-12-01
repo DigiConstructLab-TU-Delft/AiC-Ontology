@@ -73,7 +73,7 @@
 <https://w3id.org/aic#belongsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/aic#belongsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#OperationMode> .
 <https://w3id.org/aic#belongsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ModeSet> .
-<https://w3id.org/aic#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an operational state to a state set."@en .
+<https://w3id.org/aic#belongsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an operation mode to a mode set."@en .
 <https://w3id.org/aic#belongsTo> <http://www.w3.org/2000/01/rdf-schema#label> "belongs to"@en .
 # 
 # https://w3id.org/aic#consumes
@@ -106,7 +106,7 @@
 <https://w3id.org/aic#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#OperationMode> .
 <https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#OperationMode> .
-<https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links two operation states from different state sets to each other to express equivalence."@en .
+<https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links two operation modes from different mode sets to each other to express equivalence."@en .
 <https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#label> "corresponds to"@en .
 # 
 # https://w3id.org/aic#focusesOnElement
@@ -190,13 +190,13 @@
 <https://w3id.org/aic#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a resource to a resource type for grouping different kinds of resources with equal characteristics."@en .
 <https://w3id.org/aic#hasResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "has resource type"@en .
 # 
-# https://w3id.org/aic#hasStateMetric
-<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
-<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#OperationMode> .
-<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ModeMetric> .
-<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an operation state with a state metric that describes the effect of the operation state."@en .
-<https://w3id.org/aic#hasStateMetric> <http://www.w3.org/2000/01/rdf-schema#label> "has state metric"@en .
+# https://w3id.org/aic#hasModeMetric
+<https://w3id.org/aic#hasModeMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://w3id.org/aic#hasModeMetric> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
+<https://w3id.org/aic#hasModeMetric> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#OperationMode> .
+<https://w3id.org/aic#hasModeMetric> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ModeMetric> .
+<https://w3id.org/aic#hasModeMetric> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects an operation mode with a mode metric that describes the effect of the operation mode."@en .
+<https://w3id.org/aic#hasModeMetric> <http://www.w3.org/2000/01/rdf-schema#label> "has mode metric"@en .
 # 
 # https://w3id.org/aic#hasSuccessor
 <https://w3id.org/aic#hasSuccessor> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -219,7 +219,7 @@
 <https://w3id.org/aic#isDescribedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/aic#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
 <https://w3id.org/aic#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ModeSet> .
-<https://w3id.org/aic#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a construction agent to a state set that specifies the agent's ways of operation."@en .
+<https://w3id.org/aic#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a construction agent to a mode set that specifies the agent's ways of operation."@en .
 <https://w3id.org/aic#isDescribedBy> <http://www.w3.org/2000/01/rdf-schema#label> "is described by"@en .
 # 
 # https://w3id.org/aic#isInOperationMode
@@ -235,7 +235,7 @@
 <https://w3id.org/aic#isInProcessState> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/aic#isInProcessState> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
 <https://w3id.org/aic#isInProcessState> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ProcessState> .
-<https://w3id.org/aic#isInProcessState> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a process to process state."@en .
+<https://w3id.org/aic#isInProcessState> <http://www.w3.org/2000/01/rdf-schema#comment> "Links a process to a process state."@en .
 <https://w3id.org/aic#isInProcessState> <http://www.w3.org/2000/01/rdf-schema#label> "is in process state"@en .
 # 
 # https://w3id.org/aic#isLocatedIn
@@ -292,7 +292,7 @@
 <https://w3id.org/aic#requiresCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
 <https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#AgentCapability> .
-<https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process."@en .
+<https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process to a capability that a constructionn agent needs to possess in order to execute the process."@en .
 <https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#label> "requires capability"@en .
 # 
 # https://w3id.org/aic#requiresResource
@@ -560,7 +560,7 @@
 # https://w3id.org/aic#Simulated
 <https://w3id.org/aic#Simulated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#NamedIndividual> .
 <https://w3id.org/aic#Simulated> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <https://w3id.org/aic#InformationDimension> .
-<https://w3id.org/aic#Simulated> <http://www.w3.org/2000/01/rdf-schema#comment> "Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen."@en .
+<https://w3id.org/aic#Simulated> <http://www.w3.org/2000/01/rdf-schema#comment> "Categorizes statements that convey information about events or situations that have been simulated, i.e., might happen."@en .
 <https://w3id.org/aic#Simulated> <http://www.w3.org/2000/01/rdf-schema#label> "Simulated"@en .
 # 
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

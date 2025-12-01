@@ -314,7 +314,7 @@
                <a href="#hasResourceType" title="https://w3id.org/aic#hasResourceType">has resource type</a>
             </li>
             <li>
-               <a href="#hasStateMetric" title="https://w3id.org/aic#hasStateMetric">has state metric</a>
+               <a href="#hasModeMetric" title="https://w3id.org/aic#hasModeMetric">has mode metric</a>
             </li>
             <li>
                <a href="#hasSuccessor" title="https://w3id.org/aic#hasSuccessor">has successor</a>
@@ -922,7 +922,7 @@
                      is in range of
                   </dt>
                   <dd>
-                     <a href="#hasStateMetric" title="https://w3id.org/aic#hasStateMetric">has state metric</a> <sup class="type-op" title="object property">op</sup>
+                     <a href="#hasModeMetric" title="https://w3id.org/aic#hasModeMetric">has mode metric</a> <sup class="type-op" title="object property">op</sup>
                   </dd>
                </dl>
             </div>
@@ -958,7 +958,7 @@
                      is in domain of
                   </dt>
                   <dd>
-                     <a href="#belongsTo" title="https://w3id.org/aic#belongsTo">belongs to</a> <sup class="type-op" title="object property">op</sup>, <a href="#correspondsTo" title="https://w3id.org/aic#correspondsTo">corresponds to</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasStateMetric" title="https://w3id.org/aic#hasStateMetric">has state metric</a> <sup class="type-op" title="object property">op</sup>
+                     <a href="#belongsTo" title="https://w3id.org/aic#belongsTo">belongs to</a> <sup class="type-op" title="object property">op</sup>, <a href="#correspondsTo" title="https://w3id.org/aic#correspondsTo">corresponds to</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasModeMetric" title="https://w3id.org/aic#hasModeMetric">has mode metric</a> <sup class="type-op" title="object property">op</sup>
                   </dd>
                   <dt>
                      is in range of
@@ -1257,7 +1257,7 @@
                <li><a href="#hasProcessMetric" title="https://w3id.org/aic#hasProcessMetric">has process metric</a></li>
                <li><a href="#hasQuantity" title="https://w3id.org/aic#hasQuantity">has quantity</a></li>
                <li><a href="#hasResourceType" title="https://w3id.org/aic#hasResourceType">has resource type</a></li>
-               <li><a href="#hasStateMetric" title="https://w3id.org/aic#hasStateMetric">has state metric</a></li>
+               <li><a href="#hasModeMetric" title="https://w3id.org/aic#hasModeMetric">has mode metric</a></li>
                <li><a href="#hasSuccessor" title="https://w3id.org/aic#hasSuccessor">has successor</a></li>
                <li><a href="#isAssignedTo" title="https://w3id.org/aic#isAssignedTo">is assigned to</a></li>
                <li><a href="#isDescribedBy" title="https://w3id.org/aic#isDescribedBy">is described by</a></li>
@@ -1282,7 +1282,7 @@
                <h3>belongs to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
                <p><strong>IRI:</strong> https://w3id.org/aic#belongsTo</p>
                <div class="comment">
-                  <span class="markdown">Connects an operational state to a state set.</span>
+                  <span class="markdown">Connects an operation mode to a mode set.</span>
                </div>
                <div class="description">
                   <p><strong>has characteristics: </strong> asymmetric</p>
@@ -1378,7 +1378,7 @@
                <h3>corresponds to<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
                <p><strong>IRI:</strong> https://w3id.org/aic#correspondsTo</p>
                <div class="comment">
-                  <span class="markdown">Links two operation states from different state sets to each other to express equivalence.</span>
+                  <span class="markdown">Links two operation modes from different mode sets to each other to express equivalence.</span>
                </div>
                <div class="description">
                   <p><strong>has characteristics: </strong> symmetric, transitive</p>
@@ -1644,11 +1644,11 @@
                   </dl>
                </div>
             </div>
-            <div class="entity" id="hasStateMetric">
-               <h3>has state metric<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-               <p><strong>IRI:</strong> https://w3id.org/aic#hasStateMetric</p>
+            <div class="entity" id="hasModeMetric">
+               <h3>has mode metric<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasModeMetric</p>
                <div class="comment">
-                  <span class="markdown">Connects an operation state with a state metric that describes the effect of the operation state.</span>
+                  <span class="markdown">Connects an operation mode with a mode metric that describes the effect of the operation mode.</span>
                </div>
                <div class="description">
                   <p><strong>has characteristics: </strong> asymmetric</p>
@@ -1726,7 +1726,7 @@
                <h3>is described by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
                <p><strong>IRI:</strong> https://w3id.org/aic#isDescribedBy</p>
                <div class="comment">
-                  <span class="markdown">Links a construction agent to a state set that specifies the agent's ways of operation.</span>
+                  <span class="markdown">Links a construction agent to a mode set that specifies the agent's ways of operation.</span>
                </div>
                <div class="description">
                   <p><strong>has characteristics: </strong> asymmetric</p>
@@ -1774,7 +1774,7 @@
                <h3>is in process state<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
                <p><strong>IRI:</strong> https://w3id.org/aic#isInProcessState</p>
                <div class="comment">
-                  <span class="markdown">Links a process to process state.</span>
+                  <span class="markdown">Links a process to a process state.</span>
                </div>
                <div class="description">
                   <p><strong>has characteristics: </strong> asymmetric</p>
@@ -1982,7 +1982,7 @@
                <h3>requires capability<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
                <p><strong>IRI:</strong> https://w3id.org/aic#requiresCapability</p>
                <div class="comment">
-                  <span class="markdown">Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process.</span>
+                  <span class="markdown">Connects a process to a capability that a constructionn agent needs to possess in order to execute the process.</span>
                </div>
                <div class="description">
                   <p><strong>has characteristics: </strong> asymmetric</p>
@@ -2309,7 +2309,7 @@
                <h3>Simulated<sup class="type-ni" title="named individual">ni</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#namedindividuals">Named Individual ToC</a> </span></h3>
                <p><strong>IRI:</strong> https://w3id.org/aic#Simulated</p>
                <div class="comment">
-                  <span class="markdown">Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen.</span>
+                  <span class="markdown">Categorizes statements that convey information about events or situations that have been simulated, i.e., might happen.</span>
                </div>
                <dl class="description">
                   <dt>

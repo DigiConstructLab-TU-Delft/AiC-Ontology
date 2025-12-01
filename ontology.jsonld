@@ -432,7 +432,7 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen."
+    "@value" : "Categorizes statements that convey information about events or situations that have been simulated, i.e., might happen."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -482,7 +482,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Connects an operational state to a state set."
+    "@value" : "Connects an operation mode to a mode set."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/aic#OperationMode"
@@ -550,7 +550,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links two operation states from different state sets to each other to express equivalence."
+    "@value" : "Links two operation modes from different mode sets to each other to express equivalence."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/aic#OperationMode"
@@ -753,18 +753,18 @@
     "@id" : "https://w3id.org/aic#ResourceType"
   } ]
 }, {
-  "@id" : "https://w3id.org/aic#hasStateMetric",
+  "@id" : "https://w3id.org/aic#hasModeMetric",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Connects an operation state with a state metric that describes the effect of the operation state."
+    "@value" : "Connects an operation mode with a mode metric that describes the effect of the operation mode."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/aic#OperationMode"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
-    "@value" : "has state metric"
+    "@value" : "has mode metric"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://w3id.org/aic#ModeMetric"
@@ -842,7 +842,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a construction agent to a state set that specifies the agent's ways of operation."
+    "@value" : "Links a construction agent to a mode set that specifies the agent's ways of operation."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/aic#ConstructionAgent"
@@ -876,7 +876,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Links a process to process state."
+    "@value" : "Links a process to a process state."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/aic#Process"
@@ -995,7 +995,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process."
+    "@value" : "Connects a process to a capability that a constructionn agent needs to possess in order to execute the process."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/aic#Process"

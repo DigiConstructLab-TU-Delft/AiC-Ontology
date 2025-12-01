@@ -30,11 +30,11 @@ caption {
 	color: #000000;
 }
 
-p#deliverable {
+#deliverable {
 	line-height: 40px;
 }
 
-p#deliverable img {
+#deliverable img {
 	width: 40px;
 	height: auto;
 	padding: 0 5px;

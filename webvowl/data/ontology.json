@@ -238,7 +238,7 @@
       "iri" : "https://w3id.org/aic#Simulated",
       "baseIri" : "https://w3id.org/aic",
       "comment" : {
-        "en" : "Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen."
+        "en" : "Categorizes statements that convey information about events or situations that have been simulated, i.e., might happen."
       },
       "labels" : {
         "IRI-based" : "Simulated",
@@ -1060,7 +1060,7 @@
     },
     "domain" : "53",
     "comment" : {
-      "en" : "Connects an operational state to a state set."
+      "en" : "Connects an operation mode to a mode set."
     },
     "attributes" : [ "object", "asymmetric" ],
     "id" : "62"
@@ -1088,7 +1088,7 @@
     },
     "domain" : "7",
     "comment" : {
-      "en" : "Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process."
+      "en" : "Connects a process to a capability that a constructionn agent needs to possess in order to execute the process."
     },
     "attributes" : [ "object", "asymmetric" ],
     "id" : "64"
@@ -1144,7 +1144,7 @@
     },
     "domain" : "53",
     "comment" : {
-      "en" : "Links two operation states from different state sets to each other to express equivalence."
+      "en" : "Links two operation modes from different mode sets to each other to express equivalence."
     },
     "attributes" : [ "object", "symmetric", "transitive" ],
     "id" : "67"
@@ -1260,16 +1260,16 @@
     "attributes" : [ "object", "external" ],
     "id" : "77"
   }, {
-    "iri" : "https://w3id.org/aic#hasStateMetric",
+    "iri" : "https://w3id.org/aic#hasModeMetric",
     "baseIri" : "https://w3id.org/aic",
     "range" : "17",
     "label" : {
-      "IRI-based" : "hasStateMetric",
-      "en" : "has state metric"
+      "IRI-based" : "hasModeMetric",
+      "en" : "has mode metric"
     },
     "domain" : "53",
     "comment" : {
-      "en" : "Connects an operation state with a state metric that describes the effect of the operation state."
+      "en" : "Connects an operation mode with a mode metric that describes the effect of the operation mode."
     },
     "attributes" : [ "object", "asymmetric" ],
     "id" : "78"
@@ -1417,7 +1417,7 @@
     },
     "domain" : "15",
     "comment" : {
-      "en" : "Links a construction agent to a state set that specifies the agent's ways of operation."
+      "en" : "Links a construction agent to a mode set that specifies the agent's ways of operation."
     },
     "attributes" : [ "object", "asymmetric" ],
     "id" : "95"
@@ -1431,7 +1431,7 @@
     },
     "domain" : "7",
     "comment" : {
-      "en" : "Links a process to process state."
+      "en" : "Links a process to a process state."
     },
     "attributes" : [ "object", "asymmetric" ],
     "id" : "96"

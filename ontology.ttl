@@ -82,7 +82,7 @@ rdf:subject rdf:type owl:ObjectProperty ;
                     owl:AsymmetricProperty ;
            rdfs:domain :OperationMode ;
            rdfs:range :ModeSet ;
-           rdfs:comment "Connects an operational state to a state set."@en ;
+           rdfs:comment "Connects an operation mode to a mode set."@en ;
            rdfs:label "belongs to"@en .
 
 
@@ -119,7 +119,7 @@ rdf:subject rdf:type owl:ObjectProperty ;
                         owl:TransitiveProperty ;
                rdfs:domain :OperationMode ;
                rdfs:range :OperationMode ;
-               rdfs:comment "Links two operation states from different state sets to each other to express equivalence."@en ;
+               rdfs:comment "Links two operation modes from different mode sets to each other to express equivalence."@en ;
                rdfs:label "corresponds to"@en .
 
 
@@ -214,13 +214,13 @@ rdf:subject rdf:type owl:ObjectProperty ;
                  rdfs:label "has resource type"@en .
 
 
-###  https://w3id.org/aic#hasStateMetric
-:hasStateMetric rdf:type owl:ObjectProperty ,
+###  https://w3id.org/aic#hasModeMetric
+:hasModeMetric rdf:type owl:ObjectProperty ,
                          owl:AsymmetricProperty ;
                 rdfs:domain :OperationMode ;
                 rdfs:range :ModeMetric ;
-                rdfs:comment "Connects an operation state with a state metric that describes the effect of the operation state."@en ;
-                rdfs:label "has state metric"@en .
+                rdfs:comment "Connects an operation mode with a mode metric that describes the effect of the operation mode."@en ;
+                rdfs:label "has mode metric"@en .
 
 
 ###  https://w3id.org/aic#hasSuccessor
@@ -246,7 +246,7 @@ rdf:subject rdf:type owl:ObjectProperty ;
                         owl:AsymmetricProperty ;
                rdfs:domain :ConstructionAgent ;
                rdfs:range :ModeSet ;
-               rdfs:comment "Links a construction agent to a state set that specifies the agent's ways of operation."@en ;
+               rdfs:comment "Links a construction agent to a mode set that specifies the agent's ways of operation."@en ;
                rdfs:label "is described by"@en .
 
 
@@ -264,7 +264,7 @@ rdf:subject rdf:type owl:ObjectProperty ;
                            owl:AsymmetricProperty ;
                   rdfs:domain :Process ;
                   rdfs:range :ProcessState ;
-                  rdfs:comment "Links a process to process state."@en ;
+                  rdfs:comment "Links a process to a process state."@en ;
                   rdfs:label "is in process state"@en .
 
 
@@ -328,7 +328,7 @@ rdf:subject rdf:type owl:ObjectProperty ;
                              owl:AsymmetricProperty ;
                     rdfs:domain :Process ;
                     rdfs:range :AgentCapability ;
-                    rdfs:comment "Connects a process to a capability that a constructionn agent needs to possesses in order to execute the process."@en ;
+                    rdfs:comment "Connects a process to a capability that a constructionn agent needs to possess in order to execute the process."@en ;
                     rdfs:label "requires capability"@en .
 
 
@@ -619,7 +619,7 @@ rdf:Statement rdf:type owl:Class ;
 ###  https://w3id.org/aic#Simulated
 :Simulated rdf:type owl:NamedIndividual ,
                     :InformationDimension ;
-           rdfs:comment "Categorizes statements that convey information about events or situations that have been simulated,i.e., might happen."@en ;
+           rdfs:comment "Categorizes statements that convey information about events or situations that have been simulated, i.e., might happen."@en ;
            rdfs:label "Simulated"@en .
 
 
