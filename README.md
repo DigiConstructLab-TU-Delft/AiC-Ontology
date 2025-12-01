@@ -54,7 +54,7 @@ BibTeX:
   author       = {Irfan {\v{C}}ustovi{\'c} and Jianpeng Cao and Ranjith Soman},
   title        = {Agents in Construction (AiC) Ontology -- Version 1.0},
   year         = {2025},
-  howpublished = {\url{https://w3id.org/aic/v-1-0}},
+  howpublished = {\url{https://w3id.org/aic}},
   note         = {Ontology specification and documentation. Licensed under CC BY 4.0.}
 }
 ```
