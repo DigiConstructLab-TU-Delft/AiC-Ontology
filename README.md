@@ -27,13 +27,14 @@ AiC-Ontology/
 ├── index-en.html        # Main WIDOCO-generated HTML page (English)
 ├── index.html           # Main WIDOCO-generated HTML page
 ├── LICENSE              # License information
-├── ontology.jsonld      # JSON-LD serialization
-├── ontology.nt          # N-Triples serialization
-├── ontology.owl         # RDF/XML serialization
-├── ontology.rdf         # RDF/XML serialization
-├── ontology.ttl         # Turtle serialization of AiC Ontology
+├── ontology.jsonld      # Latest JSON-LD serialization
+├── ontology.nt          # Latest N-Triples serialization
+├── ontology.owl         # Latest RDF/XML serialization
+├── ontology.rdf         # Latest RDF/XML serialization
+├── ontology.ttl         # Latest Turtle serialization
 ├── OOPSevaluation/      # Results and HTML page of the OntOlogy Pitfall Scanner! (OOPS!)
-├── alignments/          # Ontology alignment modules
+├── alignments/          # Alignment modules
+    ├── versions/        # Published alignment versions
 ├── provenance/          # Provenance metadata about how the page was generated
 ├── resources/           # Images, CSS, JS used by documentation
 ├── versions/            # Published ontology versions
