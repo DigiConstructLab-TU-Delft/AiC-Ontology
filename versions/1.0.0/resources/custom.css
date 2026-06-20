@@ -1,0 +1,49 @@
+.container {
+    max-width: 1000px;
+}
+
+caption {
+  padding-bottom: 10px
+}
+
+#abstract p,
+#introduction p,
+#description p {
+	line-height: 1.5;
+}
+
+#abstract p code {
+	font-family: monospace;
+	font-size: 16px;
+	padding: 2px 4px 1px;
+	background: #e4e4e4;
+	border-radius: 5px;
+	color:  #000000;
+}
+
+#description code {
+	font-family: monospace;
+	font-size: 14px;
+	padding: 1px 4px 0px;
+	background: #e4e4e4;
+	border-radius: 5px;
+	color: #000000;
+}
+
+#deliverable {
+	line-height: 40px;
+}
+
+#deliverable img {
+	width: 40px;
+	height: auto;
+	padding: 0 5px;
+	vertical-align: middle;
+}
+
+.smf4infraLabel {
+	padding: 4px 5px 2px;
+	background: #ffffff;
+	font-weight: bold;
+	border-radius: 5px;
+}

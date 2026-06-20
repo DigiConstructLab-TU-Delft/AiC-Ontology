@@ -11,6 +11,14 @@
    <link rel="stylesheet" href="resources/dark.css" media="(prefers-color-scheme: dark)" />
    <link rel="stylesheet" href="resources/light.css" media="(prefers-color-scheme: light)" />
    <link rel="stylesheet" href="resources/slider.css" media="screen" />
+
+   <link rel="icon" href="resources/AiC_Logo_transparent_16.png" sizes="16x16" type="image/png">
+   <link rel="icon" href="resources/AiC_Logo_transparent_32.png" sizes="32x32" type="image/png">
+   <link rel="icon" href="resources/AiC_Logo_transparent_72.png" sizes="72x72" type="image/png">
+   <link rel="icon" href="resources/AiC_Logo_transparent_96.png" sizes="96x96" type="image/png">
+   <link rel="icon" href="resources/AiC_Logo_transparent_192.png" sizes="192x192" type="image/png">
+   <link rel="apple-touch-icon" href="resources/AiC_Logo_transparent_180.png">
+
    <meta name="color-scheme" content="dark light">
    <script type="module" src="resources/dark-mode-toggle.mjs"></script>
    <div class="darkmode">
@@ -20,7 +28,7 @@
 
 
    <!-- SCHEMA.ORG METADATA -->
-   <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/aic#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/aic#","name":"Agents in Construction (AiC) Ontology", "headline":"Document describing the ontology https://w3id.org/aic#", "dateReleased":"25.11.2025", "dateModified":"25.11.2025", "license":"null", "author":[{"@type":"Person","name":"Irfan Čustović"},{"@type":"Person","name":" Jianpeng Cao"},{"@type":"Person","name":" Ranjith Soman"}], "contributor":[{"@type":"Person","name":"Pieter Pauwels"},{"@type":"Person","name":" Daniel Hall"},{"@type":"Person","name":" Hans Wamelink"}]}</script>
+   <script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","url":"https://w3id.org/aic#","image":"http://vowl.visualdataweb.org/webvowl/#iri=https://w3id.org/aic#","name":"Agents in Construction (AiC) Ontology", "headline":"Document describing the ontology https://w3id.org/aic#", "dateReleased":"20.06.2026", "dateModified":"20.06.2026", "version":"1.1.0", "license":"CC BY 4.0", "author":[{"@type":"Person","name":"Irfan Čustović"},{"@type":"Person","name":" Jianpeng Cao"},{"@type":"Person","name":" Ranjith Soman"}], "contributor":[{"@type":"Person","name":"Pieter Pauwels"},{"@type":"Person","name":" Daniel Hall"},{"@type":"Person","name":" Hans Wamelink"}]}</script>
 
    <script src="resources/jquery.js"></script>
    <script src="resources/marked.min.js"></script>
@@ -68,18 +76,25 @@
    <div class="container">
       <div class="head">
          <div style="float:right">language <a href="index-en.html"><b>en</b></a> </div>
-         <h1>Agents in Construction (AiC) Ontology</h1>
-         <h2>Release: 25.11.2025</h2>
+
+         <div class="title-row">
+            <img src="resources/AiC_Logo_transparent_192.png" alt="Agents in Construction (AiC) Ontology Logo" class="title-logo" />
+            <h1>Agents in Construction (AiC) Ontology</h1>
+         </div>
+         <h2>Release: 20.06.2026</h2>
 
 
          <dl>
-            <dt>Modified on: 25.11.2025</dt>
             <dt>This version:</dt>
-            <dd><a href="https://w3id.org/aic#">https://w3id.org/aic#</a></dd>
+            <dd><a href="https://w3id.org/aic/1.1.0">https://w3id.org/aic/1.1.0</a></dd>
             <dt>Latest version:</dt>
             <dd><a href="https://w3id.org/aic#">https://w3id.org/aic#</a></dd>
+            <dt>Previous version:</dt>
+            <dd><a href="https://w3id.org/aic/1.0.0">https://w3id.org/aic/1.0.0</a></dd>
+            <dt>Revision:</dt>
+            <dd>1.1.0</dd>
             <dt>Issued on:</dt>
-            <dd>25.11.2025</dd>
+            <dd>20.06.2026</dd>
             <dt>Authors:</dt>
             <dd>Irfan Čustović, TU Delft</dd>
             <dd> Jianpeng Cao, HKU</dd>
@@ -104,10 +119,10 @@
             <dt>Evaluation:</dt>
             <dd><a href="OOPSevaluation/oopsEval.html#" target="_blank"><img src="https://img.shields.io/badge/Evaluate_with-OOPS! (OntOlogy Pitfall Scanner!)-blue.svg" alt="Evaluate with OOPS!" /></a></dd>
             <dt>Cite as:</dt>
-            <dd>Čustović, I., Cao, J., Soman, R. (2025). Agents in Construction (AiC) Ontology - Version 1.0</dd>
-            <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a><hr/>
+            <dd>Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.1.0</dd>
          </dl>
 
+         <a href="provenance/provenance-en.html" target="_blank">Provenance of this page</a>
          <hr />
       </div>
       <div class="status">
@@ -118,8 +133,7 @@
       <div id="abstract">
          <h2>Abstract</h2>
 
-
-         <p>The <b>Agents in Construction (AiC)</b> ontology is a lightweight semantic model for coordinating on-site production in construction. It represents construction agents (human workers, robots, and other autonomous hardware) as they operate on a site: the processes they carry out, the elements they modify, the resources they handle, and the operational modes and metrics used to assess their performance and impact. To express how agent activities evolve over time, AiC introduces meta-properties that specify when a statement holds (at an instant or over an interval), what dimension of information it represents (planned, simulated, or performed), and who generated it. The ontology emphasizes generic, trade-agnostic concepts to ensure broad applicability across project types and delivery methods.</p>
+         <p>The <b>Agents in Construction (AiC)</b> ontology is a lightweight semantic model for coordinating on-site production in construction. It represents construction agents (human workers, robots, and other autonomous hardware) and their state as they operate on a site: the processes they carry out, the elements they modify, the resources they handle, and the operational modes and metrics used to assess their performance and impact. To express how agents' operations evolve over time, <b>AiC</b> introduces meta-properties that specify when a statement holds (at an instant or over an interval), what dimension of information it represents (planned, simulated, or performed), and who generated it. The ontology emphasizes generic, trade-agnostic concepts to ensure broad applicability across project types and delivery methods.</p>
          <p><br></p>
          <div align="center">
             <p>The namespace for <b>AiC</b> terms is <code>https://w3id.org/aic#</code></p>
@@ -130,15 +144,29 @@
          </div>
          <p><br></p>
          <p id="deliverable">The <b>AiC</b> ontology is a deliverable of the research project <img src="resources/SMF4INFRA_Icon_Color_White_256x256.png" alt="SMF4INFRA Icon" style="width:32px; height:auto; padding: 0 5px"><span class="smf4infraLabel"><span style="color: #2788AF">Smart</span> <span style="color: #528A4A">Mobile</span> <span style="color: #324F5B">Factory</span> <span style="color: #585C5E">for Infrastructure Projects</span></span> <a href="https://www.smf4infra.net/" target="_blank">(SMF4INFRA)</a>.</p>
-
-
       </div>
       <div id="toc"></div>
 
       <!--INTRODUCTION SECTION-->
       <div id="introduction">
          <h2 id="intro" class="list">Introduction <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-         <p>Coordinating production on construction sites requires a shared, machine-readable representation of key operational facts: who is acting (agents), what they are working on (processes and elements), where work is taking place (zones), which resources are being used or affected (equipment and materials), and how well the work is being executed (modes and metrics). These facts are dynamic - changing as the project progresses - and must therefore be expressed with explicit temporal and contextual information.</p>
+
+         <p>
+            The <b>AiC</b> is designed to formalize and describe how various agents execute work during construction. Its primary objective is to enable a consistent digital representation of agents on the site (human workers, robots and other autonomous machines), their states and their interactions with other entities. These interactions may be physical, such as handling materials or equipment and occupying work zones, or non-physical, such as requesting materials or directing attention toward a specific element, material, or task.
+         </p>
+
+         <h3 id="ns" class="list">Scope</h3>
+         <p>
+            <a href="#aicScene">Figure 1</a> illustrates a typical construction-site situation and exemplifies the type of information that the <b>AiC</b> ontology is intended to capture. In this example, two workers are preparing rebar and mounting components for a concrete wall. Their internal state can be represented as follows: Worker 1, shown on the left, is in a “transporting” mode, while Worker 2, shown on the right, is in a “working” mode. Their interactions with other entities are also represented. Worker 1 is using a wheelbarrow, with its operational focus on the material instance “ConduitRoll-32” and the element “Wall_3_F8”. Worker 2 is using a ladder to position rebar beams, with its operational focus directed toward the same element, “Wall_3_F8”.
+         </p>
+
+
+         <figure style="text-align: center;" id="aicScene">
+            <img src="resources/AiC-Ontology_Scene.jpg" alt="Agents in Construction (AiC) Ontology - Schematic representation of a construction scene with overlaid AiC ontology concepts and relationships" style="width:800px; height:auto; display: inline-block; margin: 10px 0" />
+            <figcaption style="margin-top: 0.5em; margin-bottom: 1.5em; font-style: italic;">
+               <strong>Figure 1:</strong> Schematic representation of a construction scene with overlaid AiC ontology concepts and relationships, illustrating the scope of agent-centered site information captured by the ontology
+            </figcaption>
+         </figure>
 
          <div id="namespacedeclarations">
             <h3 id="ns" class="list">Namespace declarations</h3>
@@ -167,6 +195,10 @@
                         <td>&lt;http://purl.org/dc/terms/&gt;</td>
                      </tr>
                      <tr>
+                        <td><b>vann</b></td>
+                        <td>&lt;http://purl.org/vocab/vann/&gt;</td>
+                     </tr>
+                     <tr>
                         <td><b>xml</b></td>
                         <td>&lt;http://www.w3.org/XML/1998/namespace&gt;</td>
                      </tr>
@@ -178,16 +210,12 @@
                </table>
             </div>
          </div>
-
-
       </div>
 
 
       <!--OVERVIEW SECTION-->
       <div id="overview">
          <h2 id="overv" class="list">AiC Ontology: Overview <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-         <span>
-            This ontology has the following classes and properties.</span>
          <h4>Classes</h4>
          <ul xmlns:widoco="https://w3id.org/widoco/vocab#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" class="hlist">
             <li>
@@ -215,10 +243,10 @@
                <a href="#Indicator" title="https://w3id.org/aic#Indicator">Indicator</a>
             </li>
             <li>
-               <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a>
+               <a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a>
             </li>
             <li>
-               <a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a>
+               <a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a>
             </li>
             <li>
                <a href="#Material" title="https://w3id.org/aic#Material">Material</a>
@@ -290,6 +318,9 @@
                <a href="#focusesOnProcess" title="https://w3id.org/aic#focusesOnProcess">focuses on process</a>
             </li>
             <li>
+               <a href="#focusesOnResource" title="https://w3id.org/aic#focusesOnResource">focuses on resource</a>
+            </li>
+            <li>
                <a href="#generatedBy" title="https://w3id.org/aic#generatedBy">generated by</a>
             </li>
             <li>
@@ -302,6 +333,9 @@
                <a href="#hasInformationDimension" title="https://w3id.org/aic#hasInformationDimension">has information dimension</a>
             </li>
             <li>
+               <a href="#hasModeMetric" title="https://w3id.org/aic#hasModeMetric">has mode metric</a>
+            </li>
+            <li>
                <a href="#hasPredecessor" title="https://w3id.org/aic#hasPredecessor">has predecessor</a>
             </li>
             <li>
@@ -312,9 +346,6 @@
             </li>
             <li>
                <a href="#hasResourceType" title="https://w3id.org/aic#hasResourceType">has resource type</a>
-            </li>
-            <li>
-               <a href="#hasModeMetric" title="https://w3id.org/aic#hasModeMetric">has mode metric</a>
             </li>
             <li>
                <a href="#hasSuccessor" title="https://w3id.org/aic#hasSuccessor">has successor</a>
@@ -418,7 +449,7 @@
             <h3 id="cqs" class="list">Competency questions</h3>
             <div id="cqs" align="center">
                <table style="width:80%; max-width:800px;">
-                  <caption style="padding-bottom: 10px"> <a href="#cqs"> Table 2</a>: Overview of competency questions for the AiC ontology </caption>
+                  <caption style="padding-bottom: 10px"> <a href="#cqs"> Table 2</a>: Overview of competency questions for the AiC ontology</caption>
                   <tbody>
                      <tr>
                         <td><b>No.</b></td>
@@ -426,7 +457,7 @@
                         <td><b>Reason for posing this question</b></td>
                      </tr>
                      <tr>
-                        <td colspan="3" style="border-top: 1px solid black; border-bottom: 1px solid black; padding: 10px">Questions about continuant statements</td>
+                        <td colspan="3" style="border-top: 1px solid black; border-bottom: 1px solid black; padding: 10px">Questions about statements valid irrelevant of time</td>
                      </tr>
                      <tr>
                         <td>1.1</td>
@@ -449,8 +480,7 @@
                      </tr>
                      <tr>
                         <td></td>
-                        <td><i>At time T<sub>1</sub>, ...</i></td>
-                        <td></td>
+                        <td colspan="2"><i>At time T<sub>1</sub>, ...</i></td>
                      </tr>
                      <tr>
                         <td>2.1</td>
@@ -498,8 +528,7 @@
                      </tr>
                      <tr>
                         <td></td>
-                        <td><i>In the period up until time T<sub>2</sub>, ...</i></td>
-                        <td></td>
+                        <td colspan="2"><i>In the period up until time T<sub>2</sub>, ...</i></td>
                      </tr>
                      <tr>
                         <td>3.1</td>
@@ -541,86 +570,56 @@
             </div>
          </div>
 
+         <div id="structure">
+            <h3 id="structure" class="list">Structure and Concepts</h3>
 
-
-         <div id="modules">
-            <h3 id="modules" class="list">Ontology modules</h3>
             <p>
-               The <b>AiC</b> ontology is organized into three modules - Agent, Focus, and Resource - that together describe the dynamics of agent operation on construction sites.
+               <a href="#classDiagram">Figure 2</a> provides an overview of the classes and properties of the <b>AiC</b> ontology. They are organized into three groups that describe how agents operate on the site, execute processes and handle resources. An additional set of classes and properties is included to capture meta-information essential for representing the dynamic aspects of construction information.
             </p>
 
-            <h3>Agent module</h3>
-            <p>The Agent module models construction agents, their capabilities, their operational modes and their locations. It enables expressing who the agents are, what they are capable of doing, their mode or condition and where they are operating at any point in time.</p>
-
-            <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_Agent-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the agent module" style="max-width: 100%; width:700px; height:auto; display: inline-block; border:1px solid #ccc;" />
-               <figcaption style="margin-top: 0.5em; font-style: italic;">
-                  <strong>Visual overview:</strong> Agent Module
-               </figcaption>
-            </figure>
-
-            <h3>Focus module</h3>
-            <p>The Focus module describes what agents direct their effort toward - either construction processes or building elements. Processes are decomposed into work packages, activities, and tasks, and linked to the elements they target. The module also represents process states and process metrics, supporting coordination and progress analysis across a project.</p>
-
-            <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_Focus-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the focus module" style="max-width: 100%; width:900px; height:auto; display: inline-block; border:1px solid #ccc;" />
-               <figcaption style="margin-top: 0.5em; font-style: italic;">
-                  <strong>Visual overview:</strong> Focus Module
-               </figcaption>
-            </figure>
-
-            <h3>Resource module</h3>
-            <p>The Resource module represents the materials and equipment handled by agents. It links resources to their types, quantities, and locations, and distinguishes between consumable and reusable materials. The module supports describing material and equipment requirements (for operation planning) and what is used, consumed, or supplied by agents during operation.</p>
-
-            <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_Resource-Module.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of the resource module" style="max-width: 100%; width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
-               <figcaption style="margin-top: 0.5em; font-style: italic;">
-                  <strong>Visual overview:</strong> Resource Module
+            <figure style="text-align: center;" id="classDiagram">
+               <img src="resources/AiC-Ontology_Class-Diagram.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of AiC classes and relationships" style="width:900px; height:auto; display: inline-block; margin: 10px 0" />
+               <figcaption style="margin-top: 0.5em; margin-bottom: 1.5em; font-style: italic;">
+                  <strong>Figure 2:</strong> Visual overview of AiC classes and relationships
                </figcaption>
             </figure>
 
             <h3>Including metadata about AiC statements (<i>temporal validity, planned vs. performed, creators, ...</i>) </h3>
-            <p>Metadata in <b>AiC</b> is modeled using the class <code>aic:InformationID</code>. An instance of <code>aic:InformationID</code> represents this particular piece of information about a statement and is linked to the statement it describes via the object property <code>aic:reifiesStatement</code>. The statement itself is represented using standard RDF 1.1 reification (an instance of <code>rdf:Statement</code> with <code>rdf:subject</code>, <code>rdf:predicate</code>, and <code>rdf:object</code>).</p>
 
-            <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_RDF-1-1-Reification.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of RDF 1.1 compliant reification" style="max-width: 100%; width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
-               <figcaption style="margin-top: 0.5em; font-style: italic;">
-                  <strong>Visual overview:</strong> RDF 1.1 compliant reification of AiC statements using the <code>aic:InformationID</code> class
+
+            <p>The <b>AiC</b> ontology formalizes statement-level metadata management through the class <code>aic:InformationID</code>, which acts as a reification construct linking factual assertions to contextual and provenance information. Each <code>aic:InformationID</code> instance links to a reified RDF statement via <code>aic:reifiesStatement</code>, where the statement itself follows standard RDF 1.1 reification using rdf:Statement with its <code>rdf:subject</code>, <code>rdf:predicate</code>, and <code>rdf:object</code> properties (see <a href="#reification">Figure 3</a>, top). The <b>AiC</b> ontology supports statement-level metadata in a way that remains compatible with both RDF 1.1 toolchains and emerging RDF 1.2 features. RDF 1.2 introduces triple terms (quoted triples, previously known as ‘RDF-star’), which allow a triple to be referenced directly as the object of another triple. At the time when <b>AiC</b> was designed, RDF 1.2 and SPARQL 1.2 standardization was still maturing and not yet consistently implemented across RDF stores, SPARQL processors and OWL reasoning infrastructures [78]. While preserving a systematic mapping to RDF 1.2 quoted triples using <code>rdf:reifies</code> where supported (see <a href="#reification">Figure 3</a>, bottom), the <b>AiC</b> ontology also allows <code>aic:reifiesStatement</code> to serve as a stable attachment point for statement-scoped metadata in RDF 1.1.</p>
+
+            <figure style="text-align: center;" id="reification">
+               <img src="resources/AiC-Ontology_Reification.jpg" alt="Agents in Construction (AiC) Ontology - Reification pattern for statement-scoped metadata" style="width:800px; height:auto; display: inline-block; margin: 10px 0" />
+               <figcaption style="margin-top: 0.5em; margin-bottom: 1.5em; font-style: italic;">
+                  <strong>Figure 3:</strong> RDF 1.1 (top) and RDF 1.2 (bottom) compliant reification of AiC statements using the <code>aic:InformationID</code> class
                </figcaption>
             </figure>
 
-            <p>Each <code>aic:InformationID</code> can capture temporal validity via three properties that describe when the reified statement holds. These temporal properties describe the validity of the statement itself (as reified by <code>rdf:Statement</code>), not the time when the data was entered into the knowledge base (i.e. transaction time).</p>
+            <p>
+               Expressing temporal validity is central to the <b>AiC</b> ontology. The object properties <code>aic:validAt</code>, <code>aic:validFrom</code> and <code>aic:validUntil</code> allow each assertion to be qualified by an instant or interval during which it holds.</p>
+
             <ul>
                <li><code>aic:validAt</code> - an instant at which the statement is valid.</li>
                <li><code>aic:validFrom</code> - the start of an interval during which the statement is valid.</li>
                <li><code>aic:validUntil</code> - the end of that interval.</li>
             </ul>
-            <p>Beyond temporal validity, <code>aic:InformationID</code> can be used to attach additional contextual metadata to the same statement, such as:</p>
-            <ul>
-               <li><code>aic:informationDimension</code> - the dimension of the information (e.g., <i>planned</i>, <i>simulated</i>, or <i>performed</i>).</li>
-               <li><code>aic:generatedOn</code> - the time at which the information was generated.</li>
-               <li><code>aic:generatedBy</code> - the entity or system that created it.</li>
-            </ul>
-            <p>This provides a unified mechanism for expressing provenance, data-quality categories, workflow stages, and similar annotations about a statement.</p>
 
-
-            <p>RDF 1.2 introduces triple terms and quoted triples - formerly known as RDF-star - which allow triples to be used directly as subjects or objects of other triples. This enables attaching metadata such as temporal validity or provenance directly to quoted triples, without using explicit reification structures.</p>
-
-            <figure style="text-align: center;">
-               <img src="resources/AiC-Ontology_RDF-1-2-Reification.jpg" alt="Agents in Construction (AiC) Ontology - Visual representation of RDF 1.2 compliant reification" style="max-width: 100%; width:800px; height:auto; display: inline-block; border:1px solid #ccc;" />
-               <figcaption style="margin-top: 0.5em; font-style: italic;">
-                  <strong>Visual overview:</strong> RDF 1.2 compliant reification of AiC statements using the <code>aic:InformationID</code> class
-               </figcaption>
-            </figure>
-
-            <p>When the <b>AiC</b> ontology was designed, RDF 1.2 was still a W3C Working Draft and support for triple terms and SPARQL 1.2 quoted triple syntax was not yet consistent across RDF stores, SPARQL engines, and OWL reasoners. To ensure interoperability with existing RDF 1.1 tools, <b>AiC</b> therefore provides the <code>aic:reifiesStatement</code> object property to model bespoke RDF 1.1 reification.</p>
-
-            <p>In tools that fully support RDF 1.2 and SPARQL 1.2, the reification structures used in <b>AiC</b> can be systematically mapped to quoted triples (RDF-star syntax). In that case, a <code>aic:InformationID</code> instance refers to a triple term using the <code>rdf:reifies</code> object property. This yields more concise data and often simpler SPARQL queries. The two representations are intended to be semantically equivalent and can be transformed into one another where tooling permits.</p>
+            <p>
+               For instance, a statement that a construction agent <code>aic:operatatesIn</code> a particular <code>aic:Zone</code> might be valid only for a certain period. Several construction agents can focus on the same process at different times and in different ways. Because these temporal constraints attach to <code>aic:InformationID</code> rather than to <code>aic:ConstructionAgent</code> or <code>aic:Process</code>, AiC supports multiple concurrent temporal perspectives on the same underlying entities (e.g., overlapping assignments, interruptions, or revisions) without duplicating domain-level structures. 
+            </p>
+            <p>
+               Another important design feature of the AiC ontology is its explicit separation of domain semantics from epistemic and lifecycle context. Rather than introducing dimension-specific predicates for planned or performed data, AiC annotates reified assertions using <code>aic:hasInformationDimension</code>, classifying the underlying statement as <code>aic:Planned</code>, <code>aic:Simulated</code>, or <code>aic:Performed</code>. This preserves semantic continuity across viewpoints: identical classes and properties capture intent, prediction, and observation, while the dimension annotation makes each assertion’s contextual status explicit. By externalizing perspective as metadata, the approach supports reusable query patterns, simplifies mappings, and reduces schema drift across lifecycle stages. Provenance is captured through <code>aic:generatedBy</code> (to an <code>aic:Creator</code>) and <code>aic:generatedOn</code>, enabling the graph to retain traceable origins for statement-level claims.
+            </p>
+            <p>
+               For example, this metadata can be used to express more context about the situation shown in <a href="#aicScene">Figure 1</a>: The statements “Worker 2 is in the operation mode transporting” and “Worker 2 uses Wheelbarrow 2” are valid only from 08:13 to 08:15, were generated by an on-site computer vision system, and describe the situation as it was “performed”.
+            </p>
 
             <!-- <p>A list of RDF frameworks and triple stores that already support RDF 1.2 can be found here: [].</p> -->
          </div>
 
       </div>
+
 
 
       <!--CROSSREF SECTION-->
@@ -638,8 +637,8 @@
                <li><a href="#Element" title="https://w3id.org/aic#Element">Element</a></li>
                <li><a href="#Equipment" title="https://w3id.org/aic#Equipment">Equipment</a></li>
                <li><a href="#Indicator" title="https://w3id.org/aic#Indicator">Indicator</a></li>
-               <li><a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a></li>
                <li><a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a></li>
+               <li><a href="#InformationID" title="https://w3id.org/aic#InformationID">Information ID</a></li>
                <li><a href="#Material" title="https://w3id.org/aic#Material">Material</a></li>
                <li><a href="#ModeMetric" title="https://w3id.org/aic#ModeMetric">Mode Metric</a></li>
                <li><a href="#ModeSet" title="https://w3id.org/aic#ModeSet">Mode Set</a></li>
@@ -715,7 +714,7 @@
                      is in domain of
                   </dt>
                   <dd>
-                     <a href="#consumes" title="https://w3id.org/aic#consumes">consumes</a> <sup class="type-op" title="object property">op</sup>, <a href="#focusesOnElement" title="https://w3id.org/aic#focusesOnElement">focuses on element</a> <sup class="type-op" title="object property">op</sup>, <a href="#focusesOnProcess" title="https://w3id.org/aic#focusesOnProcess">focuses on process</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCapability" title="https://w3id.org/aic#hasCapability">has capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDescribedBy" title="https://w3id.org/aic#isDescribedBy">is described by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInOperationMode" title="https://w3id.org/aic#isInOperationMode">is in operation mode</a> <sup class="type-op" title="object property">op</sup>, <a href="#isOperatingIn" title="https://w3id.org/aic#isOperatingIn">is operating in</a> <sup class="type-op" title="object property">op</sup>, <a href="#requestsResource" title="https://w3id.org/aic#requestsResource">requests resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#requestsZone" title="https://w3id.org/aic#requestsZone">requests zone</a> <sup class="type-op" title="object property">op</sup>, <a href="#supplies" title="https://w3id.org/aic#supplies">supplies</a> <sup class="type-op" title="object property">op</sup>, <a href="#uses" title="https://w3id.org/aic#uses">uses</a> <sup class="type-op" title="object property">op</sup>
+                     <a href="#consumes" title="https://w3id.org/aic#consumes">consumes</a> <sup class="type-op" title="object property">op</sup>, <a href="#focusesOnElement" title="https://w3id.org/aic#focusesOnElement">focuses on element</a> <sup class="type-op" title="object property">op</sup>, <a href="#focusesOnProcess" title="https://w3id.org/aic#focusesOnProcess">focuses on process</a> <sup class="type-op" title="object property">op</sup>, <a href="#focusesOnResource" title="https://w3id.org/aic#focusesOnResource">focuses on resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#hasCapability" title="https://w3id.org/aic#hasCapability">has capability</a> <sup class="type-op" title="object property">op</sup>, <a href="#isDescribedBy" title="https://w3id.org/aic#isDescribedBy">is described by</a> <sup class="type-op" title="object property">op</sup>, <a href="#isInOperationMode" title="https://w3id.org/aic#isInOperationMode">is in operation mode</a> <sup class="type-op" title="object property">op</sup>, <a href="#isOperatingIn" title="https://w3id.org/aic#isOperatingIn">is operating in</a> <sup class="type-op" title="object property">op</sup>, <a href="#requestsResource" title="https://w3id.org/aic#requestsResource">requests resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#requestsZone" title="https://w3id.org/aic#requestsZone">requests zone</a> <sup class="type-op" title="object property">op</sup>, <a href="#supplies" title="https://w3id.org/aic#supplies">supplies</a> <sup class="type-op" title="object property">op</sup>, <a href="#uses" title="https://w3id.org/aic#uses">uses</a> <sup class="type-op" title="object property">op</sup>
                   </dd>
                   <dt>
                      is in range of
@@ -836,21 +835,6 @@
                   </dd>
                </dl>
             </div>
-            <div class="entity" id="InformationID">
-               <h3>Information ID<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
-               <p><strong>IRI:</strong> https://w3id.org/aic#InformationID</p>
-               <div class="comment">
-                  <span class="markdown">Functional class that can be used to reify a statement and link metadata.</span>
-               </div>
-               <dl class="description">
-                  <dt>
-                     is in domain of
-                  </dt>
-                  <dd>
-                     <a href="#generatedBy" title="https://w3id.org/aic#generatedBy">generated by</a> <sup class="type-op" title="object property">op</sup>, <a href="#generatedOn" title="https://w3id.org/aic#generatedOn">generated on</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasInformationDimension" title="https://w3id.org/aic#hasInformationDimension">has information dimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#reifiesStatement" title="https://w3id.org/aic#reifiesStatement">reifies statement</a> <sup class="type-op" title="object property">op</sup>, <a href="#validAt" title="https://w3id.org/aic#validAt">valid at</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#validFrom" title="https://w3id.org/aic#validFrom">valid from</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#validUntil" title="https://w3id.org/aic#validUntil">valid until</a> <sup class="type-dp" title="data property">dp</sup>
-                  </dd>
-               </dl>
-            </div>
             <div class="entity" id="InformationDimension">
                <h3>Information Dimension<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
                <p><strong>IRI:</strong> https://w3id.org/aic#InformationDimension</p>
@@ -869,6 +853,21 @@
                   </dt>
                   <dd>
                      <a href="#Performed" title="https://w3id.org/aic#Performed">Performed</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Planned" title="https://w3id.org/aic#Planned">Planned</a> <sup class="type-ni" title="named individual">ni</sup>, <a href="#Simulated" title="https://w3id.org/aic#Simulated">Simulated</a> <sup class="type-ni" title="named individual">ni</sup>
+                  </dd>
+               </dl>
+            </div>
+            <div class="entity" id="InformationID">
+               <h3>Information ID<sup class="type-c" title="class">c</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#classes">Class ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#InformationID</p>
+               <div class="comment">
+                  <span class="markdown">Functional class that can be used to reify a statement and link metadata.</span>
+               </div>
+               <dl class="description">
+                  <dt>
+                     is in domain of
+                  </dt>
+                  <dd>
+                     <a href="#generatedBy" title="https://w3id.org/aic#generatedBy">generated by</a> <sup class="type-op" title="object property">op</sup>, <a href="#generatedOn" title="https://w3id.org/aic#generatedOn">generated on</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#hasInformationDimension" title="https://w3id.org/aic#hasInformationDimension">has information dimension</a> <sup class="type-op" title="object property">op</sup>, <a href="#reifiesStatement" title="https://w3id.org/aic#reifiesStatement">reifies statement</a> <sup class="type-op" title="object property">op</sup>, <a href="#validAt" title="https://w3id.org/aic#validAt">valid at</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#validFrom" title="https://w3id.org/aic#validFrom">valid from</a> <sup class="type-dp" title="data property">dp</sup>, <a href="#validUntil" title="https://w3id.org/aic#validUntil">valid until</a> <sup class="type-dp" title="data property">dp</sup>
                   </dd>
                </dl>
             </div>
@@ -1090,7 +1089,7 @@
                      is in range of
                   </dt>
                   <dd>
-                     <a href="#requestsResource" title="https://w3id.org/aic#requestsResource">requests resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresResource" title="https://w3id.org/aic#requiresResource">requires resource</a> <sup class="type-op" title="object property">op</sup>
+                     <a href="#focusesOnResource" title="https://w3id.org/aic#focusesOnResource">focuses on resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#requestsResource" title="https://w3id.org/aic#requestsResource">requests resource</a> <sup class="type-op" title="object property">op</sup>, <a href="#requiresResource" title="https://w3id.org/aic#requiresResource">requires resource</a> <sup class="type-op" title="object property">op</sup>
                   </dd>
                   <dt>
                      is disjoint with
@@ -1249,15 +1248,16 @@
                <li><a href="#correspondsTo" title="https://w3id.org/aic#correspondsTo">corresponds to</a></li>
                <li><a href="#focusesOnElement" title="https://w3id.org/aic#focusesOnElement">focuses on element</a></li>
                <li><a href="#focusesOnProcess" title="https://w3id.org/aic#focusesOnProcess">focuses on process</a></li>
+               <li><a href="#focusesOnResource" title="https://w3id.org/aic#focusesOnResource">focuses on resource</a></li>
                <li><a href="#generatedBy" title="https://w3id.org/aic#generatedBy">generated by</a></li>
                <li><a href="#hasCapability" title="https://w3id.org/aic#hasCapability">has capability</a></li>
                <li><a href="#hasElement" title="https://w3id.org/aic#hasElement">has element</a></li>
                <li><a href="#hasInformationDimension" title="https://w3id.org/aic#hasInformationDimension">has information dimension</a></li>
+               <li><a href="#hasModeMetric" title="https://w3id.org/aic#hasModeMetric">has mode metric</a></li>
                <li><a href="#hasPredecessor" title="https://w3id.org/aic#hasPredecessor">has predecessor</a></li>
                <li><a href="#hasProcessMetric" title="https://w3id.org/aic#hasProcessMetric">has process metric</a></li>
                <li><a href="#hasQuantity" title="https://w3id.org/aic#hasQuantity">has quantity</a></li>
                <li><a href="#hasResourceType" title="https://w3id.org/aic#hasResourceType">has resource type</a></li>
-               <li><a href="#hasModeMetric" title="https://w3id.org/aic#hasModeMetric">has mode metric</a></li>
                <li><a href="#hasSuccessor" title="https://w3id.org/aic#hasSuccessor">has successor</a></li>
                <li><a href="#isAssignedTo" title="https://w3id.org/aic#isAssignedTo">is assigned to</a></li>
                <li><a href="#isDescribedBy" title="https://w3id.org/aic#isDescribedBy">is described by</a></li>
@@ -1446,6 +1446,30 @@
                   </dl>
                </div>
             </div>
+            <div class="entity" id="focusesOnResource">
+               <h3>focuses on resource<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#focusesOnResource</p>
+               <div class="comment">
+                  <span class="markdown">Indicates that a construction agent is dedicating its current operation to a specific resource.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#ConstructionAgent" title="https://w3id.org/aic#ConstructionAgent">Construction Agent</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#Resource" title="https://w3id.org/aic#Resource">Resource</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
             <div class="entity" id="generatedBy">
                <h3>generated by<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
                <p><strong>IRI:</strong> https://w3id.org/aic#generatedBy</p>
@@ -1538,6 +1562,30 @@
                      </dt>
                      <dd>
                         <a href="#InformationDimension" title="https://w3id.org/aic#InformationDimension">Information Dimension</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                  </dl>
+               </div>
+            </div>
+            <div class="entity" id="hasModeMetric">
+               <h3>has mode metric<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
+               <p><strong>IRI:</strong> https://w3id.org/aic#hasModeMetric</p>
+               <div class="comment">
+                  <span class="markdown">Connects an operation mode with a mode metric that describes the effect of the operation mode.</span>
+               </div>
+               <div class="description">
+                  <p><strong>has characteristics: </strong> asymmetric</p>
+                  <dl>
+                     <dt>
+                        has domain
+                     </dt>
+                     <dd>
+                        <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a> <sup class="type-c" title="class">c</sup>
+                     </dd>
+                     <dt>
+                        has range
+                     </dt>
+                     <dd>
+                        <a href="#ModeMetric" title="https://w3id.org/aic#ModeMetric">Mode Metric</a> <sup class="type-c" title="class">c</sup>
                      </dd>
                   </dl>
                </div>
@@ -1640,30 +1688,6 @@
                      </dt>
                      <dd>
                         <a href="#ResourceType" title="https://w3id.org/aic#ResourceType">Resource Type</a> <sup class="type-c" title="class">c</sup>
-                     </dd>
-                  </dl>
-               </div>
-            </div>
-            <div class="entity" id="hasModeMetric">
-               <h3>has mode metric<sup class="type-op" title="object property">op</sup> <span class="backlink"> back to <a href="#toc">ToC</a> or <a href="#objectproperties">Object Property ToC</a> </span></h3>
-               <p><strong>IRI:</strong> https://w3id.org/aic#hasModeMetric</p>
-               <div class="comment">
-                  <span class="markdown">Connects an operation mode with a mode metric that describes the effect of the operation mode.</span>
-               </div>
-               <div class="description">
-                  <p><strong>has characteristics: </strong> asymmetric</p>
-                  <dl>
-                     <dt>
-                        has domain
-                     </dt>
-                     <dd>
-                        <a href="#OperationMode" title="https://w3id.org/aic#OperationMode">Operation Mode</a> <sup class="type-c" title="class">c</sup>
-                     </dd>
-                     <dt>
-                        has range
-                     </dt>
-                     <dd>
-                        <a href="#ModeMetric" title="https://w3id.org/aic#ModeMetric">Mode Metric</a> <sup class="type-c" title="class">c</sup>
                      </dd>
                   </dl>
                </div>
@@ -2333,13 +2357,307 @@
       </div>
 
 
-      <!--REFERENCES SECTION-->
-      <!-- <div id="references">
-         <h2 id="ref" class="list">References <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
-         <span class="markdown">
-            Add your references here. It is recommended to have them as a list.</span>
 
-      </div> -->
+     <div id="alignment-modules">
+    <h2 id="ali" class="list">
+        Alignment modules
+        <span class="backlink"> back to <a href="#toc">ToC</a></span>
+    </h2>
+
+    <p>
+        The following alignment modules provide mappings between the <b>AiC</b> Ontology and other relevant (AECO) ontologies. Each module can be used independently depending on the required interoperability context.
+    </p>
+
+    <table>
+
+            <colgroup>
+    <col style="width: 35%">
+    <col style="width: 15%">
+    <col style="width: 20%">
+    <col style="width: 10%">
+    <col style="width: 10%">
+    <col style="width: 10%">
+  </colgroup>
+        <thead>
+            <tr>
+                <th>Ontology</th>
+                <th>Prefix</th>
+                <th>Version</th>
+                <th>AiC Version</th>
+                <th>Alignment Version</th>
+                <th>Files</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <strong>Building Element Ontology</strong><br />
+                    <code>https://pi.pauwel.be/voc/buildingelement#</code>
+                </td>
+                <td><code>beo</code></td>
+                <td><code>0.1.0</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/beo-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/beo-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/beo-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>Basic Formal Ontology (BFO)</strong><br />
+                    <code>http://purl.obolibrary.org/obo/</code>
+                </td>
+                <td><code>bfo</code></td>
+                <td><code>2.0</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/bfo-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/bfo-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/bfo-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>Building Topology Ontology</strong><br />
+                    <code>https://w3id.org/bot#</code>
+                </td>
+                <td><code>bot</code></td>
+                <td><code>0.3.2</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/bot-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/bot-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/bot-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>cSite Ontology</strong><br />
+                    <code>https://w3id.org/cSite#</code>
+                </td>
+                <td><code>csite</code></td>
+                <td><code>1.22.1</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/csite-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/csite-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/csite-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>CTO: Construction Tasks Ontology</strong><br />
+                    <code>https://w3id.org/cto#</code>
+                </td>
+                <td><code>cto</code></td>
+                <td><code>0.0.1</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/cto-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/cto-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/cto-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>Digital Construction Ontologies (DiCon) - Agents</strong><br />
+                    <code>https://w3id.org/digitalconstruction/0.5/Agents#</code>
+                </td>
+                <td><code>dica</code></td>
+                <td><code>0.5</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/dica-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/dica-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/dica-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>Digital Construction Ontologies (DiCon) - Entities</strong><br />
+                    <code>https://w3id.org/digitalconstruction/0.5/Entities#</code>
+                </td>
+                <td><code>dice</code></td>
+                <td><code>0.5</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/dice-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/dice-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/dice-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>Digital Construction Ontologies (DiCon) - Materials</strong><br />
+                    <code>https://w3id.org/digitalconstruction/0.5/Materials#</code>
+                </td>
+                <td><code>dicm</code></td>
+                <td><code>0.5</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/dicm-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/dicm-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/dicm-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>Digital Construction Ontologies (DiCon) - Processes</strong><br />
+                    <code>https://w3id.org/digitalconstruction/0.5/Processes#</code>
+                </td>
+                <td><code>dicp</code></td>
+                <td><code>0.5</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/dicp-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/dicp-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/dicp-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>Digital Twin Construction Ontology</strong><br />
+                    <code>https://dtc-ontology.cms.ed.tum.de/ontology/v2#</code>
+                </td>
+                <td><code>dtc</code></td>
+                <td><code>2</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/dtc-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/dtc-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/dtc-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>Internet of Construction Process Ontology (ioc)</strong><br />
+                    <code>http://w3id.org/ioc#</code>
+                </td>
+                <td><code>ioc</code></td>
+                <td><code>0.5</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/ioc-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/ioc-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/ioc-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+             <tr>
+                <td>
+                    <strong>NEN 2660 - Rules for information modelling of the built environment</strong><br />
+                    <code>https://w3id.org/nen2660/def#</code>
+                </td>
+                <td><code>nen2660</code></td>
+                <td><code>NEN 2660-2:2022</code></td>
+                <td><code>1.1.0</code></td>
+                <td><code>1.0.0</code></td>
+                <td class="serialization-badges">
+                    <a href="alignments/nen2660-alignment-1-0-0.ttl" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
+                    </a>
+                    <a href="alignments/nen2660-alignment-1-0-0.rdf" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
+                    </a>
+                    <a href="alignments/nen2660-alignment-1-0-0.jsonld" target="_blank">
+                        <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
+                    </a>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+</div>
+
+
       <div id="acknowledgments">
          <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
          <p>

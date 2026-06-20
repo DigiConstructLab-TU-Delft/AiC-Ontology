@@ -1,0 +1,206 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/aic/dtc-alignment#"
+     xml:base="https://w3id.org/aic/dtc-alignment"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:ns="http://www.w3.org/2003/06/sw-vocab-status/ns#"
+     xmlns:aic="https://w3id.org/aic#"
+     xmlns:dtc="https://dtc-ontology.cms.ed.tum.de/ontology/v2#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:foaf="http://xmlns.com/foaf/0.1/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:vann="http://purl.org/vocab/vann/"
+     xmlns:terms="http://purl.org/dc/terms/">
+    <owl:Ontology rdf:about="https://w3id.org/aic/dtc-alignment">
+        <owl:versionIRI rdf:resource="https://w3id.org/aic/dtc-alignment/1.0.0"/>
+        <owl:imports rdf:resource="https://dtc-ontology.cms.ed.tum.de/ontology/v2"/>
+        <owl:imports rdf:resource="https://w3id.org/aic/1.1.0"/>
+        <terms:contributor>Daniel Hall</terms:contributor>
+        <terms:contributor>Hans Wamelink</terms:contributor>
+        <terms:contributor>Pieter Pauwels</terms:contributor>
+        <terms:creator>Irfan Čustović</terms:creator>
+        <terms:creator>Jianpeng Cao</terms:creator>
+        <terms:creator>Ranjith Soman</terms:creator>
+        <terms:description xml:lang="en">Alignment module mapping selected classes from DTC V2 to AiC v1.1.0 .</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified>2026-06-20</terms:modified>
+        <terms:title xml:lang="en">DTC to AIC alignment</terms:title>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPerformedEquipment -->
+
+    <rdf:Description rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPerformedEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Equipment"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPerformedMaterial -->
+
+    <rdf:Description rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPerformedMaterial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Material"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPerformedTemporaryEquipment -->
+
+    <rdf:Description rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPerformedTemporaryEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Equipment"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPerformedWorker -->
+
+    <rdf:Description rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPerformedWorker">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPlannedEquipment -->
+
+    <rdf:Description rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPlannedEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Equipment"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPlannedMaterial -->
+
+    <rdf:Description rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPlannedMaterial">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Material"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPlannedTemporaryEquipment -->
+
+    <rdf:Description rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPlannedTemporaryEquipment">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Equipment"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPlannedWorker -->
+
+    <rdf:Description rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/v2#AsPlannedWorker">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://dtc-ontology.cms.ed.tum.de/ontology/v2#Process -->
+
+    <rdf:Description rdf:about="https://dtc-ontology.cms.ed.tum.de/ontology/v2#Process">
+        <owl:equivalentClass rdf:resource="https://w3id.org/aic#Process"/>
+    </rdf:Description>
+    
+
+
+    <!-- https://w3id.org/aic#ConstructionAgent -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#ConstructionAgent"/>
+    
+
+
+    <!-- https://w3id.org/aic#Equipment -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#Equipment"/>
+    
+
+
+    <!-- https://w3id.org/aic#Material -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#Material"/>
+    
+
+
+    <!-- https://w3id.org/aic#Process -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#Process"/>
+    
+
+
+    <!-- https://w3id.org/aic#WorkingZone -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#WorkingZone">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Zone"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Zone -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#Zone"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
