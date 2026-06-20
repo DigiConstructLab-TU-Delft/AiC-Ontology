@@ -1,0 +1,177 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="https://w3id.org/aic/nen2260-alignment#"
+     xml:base="https://w3id.org/aic/nen2260-alignment"
+     xmlns:dc="http://purl.org/dc/elements/1.1/"
+     xmlns:sp="http://spinrdf.org/sp#"
+     xmlns:aic="https://w3id.org/aic#"
+     xmlns:arg="http://spinrdf.org/arg#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:spl="http://spinrdf.org/spl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:prov="http://www.w3.org/ns/prov#"
+     xmlns:qudt="http://qudt.org/schema/qudt/"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+     xmlns:spin="http://spinrdf.org/spin#"
+     xmlns:vaem="http://www.linkedmodel.org/schema/vaem#"
+     xmlns:dtype="http://www.linkedmodel.org/schema/dtype#"
+     xmlns:shacl="http://www.w3.org/ns/shacl#"
+     xmlns:terms="http://purl.org/dc/terms/"
+     xmlns:nen2660="https://w3id.org/nen2660/def#">
+    <owl:Ontology rdf:about="https://w3id.org/aic/nen2260-alignment">
+        <owl:versionIRI rdf:resource="https://w3id.org/aic/nen2260-alignment/1.0.0"/>
+        <owl:imports rdf:resource="https://w3id.org/aic/1.1.0"/>
+        <owl:imports rdf:resource="https://w3id.org/nen2660/def"/>
+        <terms:contributor>Daniel Hall</terms:contributor>
+        <terms:contributor>Hans Wamelink</terms:contributor>
+        <terms:contributor>Pieter Pauwels</terms:contributor>
+        <terms:creator>Irfan Čustović</terms:creator>
+        <terms:creator>Jianpeng Cao</terms:creator>
+        <terms:creator>Ranjith Soman</terms:creator>
+        <terms:description xml:lang="en">Alignment module mapping selected classes from NEN2660 (NEN 2660-2:2022) to AiC v1.1.0 .</terms:description>
+        <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+        <terms:modified>2026-06-20</terms:modified>
+        <terms:title xml:lang="en">NEN2660 to AIC alignment</terms:title>
+        <owl:versionInfo>1.0.0</owl:versionInfo>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://purl.org/dc/terms/contributor -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/creator -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/description -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/license -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/modified -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
+    
+
+
+    <!-- http://purl.org/dc/terms/title -->
+
+    <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/aic#hasElement -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasElement">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/nen2660/def#contains"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- https://w3id.org/aic#targets -->
+
+    <owl:ObjectProperty rdf:about="https://w3id.org/aic#targets">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/nen2660/def#transforms"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/aic#ConstructionAgent -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#ConstructionAgent">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/nen2660/def#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Element -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#Element">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/nen2660/def#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#OperationMode -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#OperationMode">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/nen2660/def#State"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Process -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#Process">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/nen2660/def#Activity"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#ProcessState -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#ProcessState">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/nen2660/def#State"/>
+    </owl:Class>
+    
+
+
+    <!-- https://w3id.org/aic#Resource -->
+
+    <owl:Class rdf:about="https://w3id.org/aic#Resource">
+        <rdfs:subClassOf rdf:resource="https://w3id.org/nen2660/def#Entity"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+

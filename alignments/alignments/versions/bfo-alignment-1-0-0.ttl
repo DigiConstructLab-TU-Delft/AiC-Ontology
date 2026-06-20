@@ -1,0 +1,75 @@
+@prefix : <https://w3id.org/aic/bfo-alignment#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix aic: <https://w3id.org/aic#> .
+@prefix bfo: <http://purl.obolibrary.org/obo/> .
+@base <https://w3id.org/aic/bfo-alignment#> .
+
+<https://w3id.org/aic/bfo-alignment> rdf:type owl:Ontology ;
+                                      owl:versionIRI <https://w3id.org/aic/bfo-alignment/1.0.0> ;
+                                      owl:imports <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl> ,
+                                                  <https://w3id.org/aic/1.1.0> ;
+                                      terms:contributor "Daniel Hall" ,
+                                                        "Hans Wamelink" ,
+                                                        "Pieter Pauwels" ;
+                                      terms:creator "Irfan Čustović" ,
+                                                    "Jianpeng Cao" ,
+                                                    "Ranjith Soman" ;
+                                      terms:description "Alignment module mapping selected classes from BFO v2.0 to AiC v1.1.0 ."@en ;
+                                      terms:license <https://creativecommons.org/licenses/by/4.0/> ;
+                                      terms:modified "2026-06-20" ;
+                                      terms:title "BFO to AIC alignment"@en ;
+                                      owl:versionInfo "1.0.0" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/terms/contributor
+terms:contributor rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+terms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+#aic:operatesInZone rdfs:subPropertyOf bfo:0000210 .
+#aic:targets rdfs:subPropertyOf bfo:0000055 .
+#aic:hasSuccessor rdfs:subPropertyOf bfo:0000063 .
+#aic:validFrom rdfs:subPropertyOf bfo:0000108 .
+#aic:validAt rdfs:subPropertyOf bfo:0000108 .
+#aic:validUntil rdfs:subPropertyOf bfo:0000108 .
+
+#################################################################
+#    Classes
+#################################################################
+
+aic:ConstructionAgent rdfs:subClassOf bfo:0000023 . 
+aic:Process rdfs:subClassOf bfo:0000015 . 
+aic:Zone rdfs:subClassOf bfo:0000006 . 
+aic:Resource rdfs:subClassOf bfo:0000040 .
+
