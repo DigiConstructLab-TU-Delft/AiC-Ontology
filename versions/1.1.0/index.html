@@ -587,7 +587,7 @@
             <h3>Including metadata about AiC statements (<i>temporal validity, planned vs. performed, creators, ...</i>) </h3>
 
 
-            <p>The <b>AiC</b> ontology formalizes statement-level metadata management through the class <code>aic:InformationID</code>, which acts as a reification construct linking factual assertions to contextual and provenance information. Each <code>aic:InformationID</code> instance links to a reified RDF statement via <code>aic:reifiesStatement</code>, where the statement itself follows standard RDF 1.1 reification using rdf:Statement with its <code>rdf:subject</code>, <code>rdf:predicate</code>, and <code>rdf:object</code> properties (see <a href="#reification">Figure 3</a>, top). The <b>AiC</b> ontology supports statement-level metadata in a way that remains compatible with both RDF 1.1 toolchains and emerging RDF 1.2 features. RDF 1.2 introduces triple terms (quoted triples, previously known as ‘RDF-star’), which allow a triple to be referenced directly as the object of another triple. At the time when <b>AiC</b> was designed, RDF 1.2 and SPARQL 1.2 standardization was still maturing and not yet consistently implemented across RDF stores, SPARQL processors and OWL reasoning infrastructures [78]. While preserving a systematic mapping to RDF 1.2 quoted triples using <code>rdf:reifies</code> where supported (see <a href="#reification">Figure 3</a>, bottom), the <b>AiC</b> ontology also allows <code>aic:reifiesStatement</code> to serve as a stable attachment point for statement-scoped metadata in RDF 1.1.</p>
+            <p>The <b>AiC</b> ontology formalizes statement-level metadata management through the class <code>aic:InformationID</code>, which acts as a reification construct linking factual assertions to contextual and provenance information. Each <code>aic:InformationID</code> instance links to a reified RDF statement via <code>aic:reifiesStatement</code>, where the statement itself follows standard RDF 1.1 reification using rdf:Statement with its <code>rdf:subject</code>, <code>rdf:predicate</code>, and <code>rdf:object</code> properties (see <a href="#reification">Figure 3</a>, top). The <b>AiC</b> ontology supports statement-level metadata in a way that remains compatible with both RDF 1.1 toolchains and emerging RDF 1.2 features. RDF 1.2 introduces triple terms (quoted triples, previously known as ‘RDF-star’), which allow a triple to be referenced directly as the object of another triple. At the time when this version of the <b>AiC</b> ontology was released, RDF 1.2 had reached ‘Candidate Recommendation Snapshot’ status, but had not yet become an official W3C standard <a href="#bib-rdf12-concepts" title="RDF 1.2 Concepts and Abstract Data Model">[RDF12-CONCEPTS]</a>. While preserving a systematic mapping to RDF 1.2 quoted triples using <code>rdf:reifies</code> where supported (see <a href="#reification">Figure 3</a>, bottom), the <b>AiC</b> ontology also allows <code>aic:reifiesStatement</code> to serve as a stable attachment point for statement-scoped metadata in RDF 1.1.</p>
 
             <figure style="text-align: center;" id="reification">
                <img src="resources/AiC-Ontology_Reification.jpg" alt="Agents in Construction (AiC) Ontology - Reification pattern for statement-scoped metadata" style="width:800px; height:auto; display: inline-block; margin: 10px 0" />
@@ -2399,13 +2399,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/beo-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/beo-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/beo-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/beo-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/beo-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/beo-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2421,13 +2421,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/bfo-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/bfo-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/bfo-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/bfo-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/bfo-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/bfo-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2443,13 +2443,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/bot-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/bot-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/bot-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/bot-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/bot-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/bot-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2465,13 +2465,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/csite-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/csite-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/csite-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/csite-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/csite-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/csite-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2487,13 +2487,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/cto-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/cto-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/cto-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/cto-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/cto-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/cto-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2509,13 +2509,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/dica-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/dica-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/dica-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/dica-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/dica-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/dica-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2531,13 +2531,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/dice-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/dice-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/dice-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/dice-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/dice-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/dice-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2553,13 +2553,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/dicm-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/dicm-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/dicm-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/dicm-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/dicm-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/dicm-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2575,13 +2575,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/dicp-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/dicp-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/dicp-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/dicp-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/dicp-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/dicp-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2597,13 +2597,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/dtc-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/dtc-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/dtc-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/dtc-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/dtc-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/dtc-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2619,13 +2619,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/ioc-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/ioc-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/ioc-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/ioc-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/ioc-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/ioc-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2641,13 +2641,13 @@
                 <td><code>1.1.0</code></td>
                 <td><code>1.0.0</code></td>
                 <td class="serialization-badges">
-                    <a href="alignments/nen2660-alignment-1-0-0.ttl" target="_blank">
+                    <a href="alignments/nen2660-alignment.ttl" target="_blank">
                         <img src="https://img.shields.io/badge/Format-TTL-blue.svg" alt="TTL" />
                     </a>
-                    <a href="alignments/nen2660-alignment-1-0-0.rdf" target="_blank">
+                    <a href="alignments/nen2660-alignment.rdf" target="_blank">
                         <img src="https://img.shields.io/badge/Format-RDF%2FXML-blue.svg" alt="RDF/XML" />
                     </a>
-                    <a href="alignments/nen2660-alignment-1-0-0.jsonld" target="_blank">
+                    <a href="alignments/nen2660-alignment.jsonld" target="_blank">
                         <img src="https://img.shields.io/badge/Format-JSON--LD-blue.svg" alt="JSON-LD" />
                     </a>
                 </td>
@@ -2656,7 +2656,6 @@
         </tbody>
     </table>
 </div>
-
 
       <div id="acknowledgments">
          <h2 id="ack" class="list">Acknowledgments <span class="backlink"> back to <a href="#toc">ToC</a></span></h2>
@@ -2668,9 +2667,20 @@
             The authors would like to thank <a href="http://www.essepuntato.it/">Silvio Peroni</a> for developing <a href="http://www.essepuntato.it/lode">LODE</a>, a Live OWL Documentation Environment, which is used for representing the Cross Referencing Section of this document and <a href="https://w3id.org/people/dgarijo">Daniel Garijo</a> for developing <a href="https://github.com/dgarijo/Widoco">Widoco</a>, the program used to create the template used in this documentation.
          </p>
       </div>
-
+   <div id="references">
+      <h2 id="ref" class="list">References
+         <span class="backlink"> back to <a href="#toc">ToC</a></span>
+      </h2>
+      <dl class="bibliography">
+         <dt id="bib-rdf12-concepts">[RDF12-CONCEPTS]</dt>
+         <dd>
+            <a href="https://www.w3.org/TR/2026/CR-rdf12-concepts-20260407/"><cite>RDF 1.2 Concepts and Abstract Syntax</cite></a>. Andy Seaborne; Gregg Kellogg; Olaf Hartig; Pierre-Antoine Champin. W3C. 7 April 2026. W3C Candidate Recommendation. URL: <a href="https://www.w3.org/TR/2026/CR-rdf12-concepts-20260407/">https://www.w3.org/TR/2026/CR-rdf12-concepts-20260407/</a>
+      </dl>
+</div>
 
    </div>
+
+
 </body>
 
 </html>
