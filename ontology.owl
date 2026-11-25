@@ -9,8 +9,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/aic">
-        <owl:versionIRI rdf:resource="https://w3id.org/aic/1.1.0"/>
-        <terms:bibliographicCitation>Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.1.0</terms:bibliographicCitation>
+        <owl:versionIRI rdf:resource="https://w3id.org/aic/1.2.0"/>
+        <terms:bibliographicCitation>Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.2.0</terms:bibliographicCitation>
         <terms:contributor>Daniel Hall</terms:contributor>
         <terms:contributor>Hans Wamelink</terms:contributor>
         <terms:contributor>Pieter Pauwels</terms:contributor>
@@ -19,12 +19,12 @@
         <terms:creator>Ranjith Soman</terms:creator>
         <terms:description xml:lang="en">The Agents in Construction (AiC) ontology is a lightweight semantic model for coordinating on-site production in construction. It represents construction agents (human workers, robots, and other autonomous hardware) and their state as they operate on a site: the processes they carry out, the elements they modify, the resources they handle, and the operational modes and metrics used to assess their performance and impact. To express how agents&apos; operations evolve over time, AiC introduces meta-properties that specify when a statement holds (at an instant or over an interval), what dimension of information it represents (planned, simulated, or performed), and who generated it. The ontology emphasizes generic, trade-agnostic concepts to ensure broad applicability across project types and delivery methods.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified>2026-06-20</terms:modified>
+        <terms:modified>2026-11-25</terms:modified>
         <terms:title xml:lang="en">Agents in Construction (AiC) Ontology</terms:title>
         <vann:preferredNamespacePrefix>aic</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/aic#"/>
-        <owl:priorVersion rdf:resource="https://w3id.org/aic/1.0.0"/>
-        <owl:versionInfo>1.1.0</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://w3id.org/aic/1.1.0"/>
+        <owl:versionInfo>1.2.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -206,7 +206,6 @@
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#correspondsTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#OperationMode"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#OperationMode"/>
         <rdfs:comment xml:lang="en">Links two operation modes from different mode sets to each other to express equivalence.</rdfs:comment>
@@ -483,8 +482,8 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#releasesReusableMaterial">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
-        <rdfs:range rdf:resource="https://w3id.org/aic#ReusabeMaterial"/>
-        <rdfs:comment xml:lang="en">Connects a process to a resource that a construction agent makes available during execution of the process.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ReusableMaterial"/>
+        <rdfs:comment xml:lang="en">Connects a process to a reusable material that a construction agent makes available during execution of the process.</rdfs:comment>
         <rdfs:label xml:lang="en">releases reusable material</rdfs:label>
     </owl:ObjectProperty>
     
@@ -523,7 +522,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#AgentCapability"/>
-        <rdfs:comment xml:lang="en">Connects a process to a capability that a constructionn agent needs to possess in order to execute the process.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Connects a process to a capability that a construction agent needs to possess in order to execute the process.</rdfs:comment>
         <rdfs:label xml:lang="en">requires capability</rdfs:label>
     </owl:ObjectProperty>
     
@@ -548,7 +547,7 @@
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#supplies">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
-        <rdfs:range rdf:resource="https://w3id.org/aic#ReusabeMaterial"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ReusableMaterial"/>
         <rdfs:comment xml:lang="en">Defines the link between a construction agent and a reusable material that it handles and thereby returns back to the pool of available resources.</rdfs:comment>
         <rdfs:label xml:lang="en">supplies</rdfs:label>
     </owl:ObjectProperty>
@@ -727,7 +726,7 @@
 
     <owl:Class rdf:about="https://w3id.org/aic#ConsumableMaterial">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Material"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/aic#ReusabeMaterial"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#ReusableMaterial"/>
         <rdfs:comment xml:lang="en">Material that becomes part of the building structure or becomes wasted during a process and cannot be re-used in another process.</rdfs:comment>
         <rdfs:label xml:lang="en">Consumable Material</rdfs:label>
     </owl:Class>
@@ -908,10 +907,10 @@
     
 
 
-    <!-- https://w3id.org/aic#ReusabeMaterial -->
+    <!-- https://w3id.org/aic#ReusableMaterial -->
 
 
-    <owl:Class rdf:about="https://w3id.org/aic#ReusabeMaterial">
+    <owl:Class rdf:about="https://w3id.org/aic#ReusableMaterial">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Material"/>
         <rdfs:comment xml:lang="en">Material that can be re-used in another process.</rdfs:comment>
         <rdfs:label xml:lang="en">Reusable Material</rdfs:label>

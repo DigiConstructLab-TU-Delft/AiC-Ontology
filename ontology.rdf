@@ -9,8 +9,8 @@
      xmlns:vann="http://purl.org/vocab/vann/"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/aic">
-        <owl:versionIRI rdf:resource="https://w3id.org/aic/1.1.0"/>
-        <terms:bibliographicCitation>Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.1.0</terms:bibliographicCitation>
+        <owl:versionIRI rdf:resource="https://w3id.org/aic/1.2.0"/>
+        <terms:bibliographicCitation>Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.2.0</terms:bibliographicCitation>
         <terms:contributor>Daniel Hall</terms:contributor>
         <terms:contributor>Hans Wamelink</terms:contributor>
         <terms:contributor>Pieter Pauwels</terms:contributor>
@@ -19,12 +19,12 @@
         <terms:creator>Ranjith Soman</terms:creator>
         <terms:description xml:lang="en">The Agents in Construction (AiC) ontology is a lightweight semantic model for coordinating on-site production in construction. It represents construction agents (human workers, robots, and other autonomous hardware) and their state as they operate on a site: the processes they carry out, the elements they modify, the resources they handle, and the operational modes and metrics used to assess their performance and impact. To express how agents&apos; operations evolve over time, AiC introduces meta-properties that specify when a statement holds (at an instant or over an interval), what dimension of information it represents (planned, simulated, or performed), and who generated it. The ontology emphasizes generic, trade-agnostic concepts to ensure broad applicability across project types and delivery methods.</terms:description>
         <terms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-        <terms:modified>2026-06-20</terms:modified>
+        <terms:modified>2026-11-25</terms:modified>
         <terms:title xml:lang="en">Agents in Construction (AiC) Ontology</terms:title>
         <vann:preferredNamespacePrefix>aic</vann:preferredNamespacePrefix>
         <vann:preferredNamespaceUri rdf:resource="https://w3id.org/aic#"/>
-        <owl:priorVersion rdf:resource="https://w3id.org/aic/1.0.0"/>
-        <owl:versionInfo>1.1.0</owl:versionInfo>
+        <owl:priorVersion rdf:resource="https://w3id.org/aic/1.1.0"/>
+        <owl:versionInfo>1.2.0</owl:versionInfo>
     </owl:Ontology>
     
 
@@ -37,10 +37,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://purl.org/dc/terms/bibliographicCitation -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/bibliographicCitation"/>
     
@@ -48,11 +50,13 @@
 
     <!-- http://purl.org/dc/terms/contributor -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/contributor"/>
     
 
 
     <!-- http://purl.org/dc/terms/creator -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/creator"/>
     
@@ -60,11 +64,13 @@
 
     <!-- http://purl.org/dc/terms/description -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/description"/>
     
 
 
     <!-- http://purl.org/dc/terms/license -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/license"/>
     
@@ -72,11 +78,13 @@
 
     <!-- http://purl.org/dc/terms/modified -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/modified"/>
     
 
 
     <!-- http://purl.org/dc/terms/title -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/title"/>
     
@@ -84,11 +92,13 @@
 
     <!-- http://purl.org/vocab/vann/preferredNamespacePrefix -->
 
+
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespacePrefix"/>
     
 
 
     <!-- http://purl.org/vocab/vann/preferredNamespaceUri -->
+
 
     <owl:AnnotationProperty rdf:about="http://purl.org/vocab/vann/preferredNamespaceUri"/>
     
@@ -102,10 +112,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#object -->
+
 
     <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#object">
         <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
@@ -117,6 +129,7 @@
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#predicate">
         <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -127,6 +140,7 @@
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#subject -->
 
+
     <owl:ObjectProperty rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#subject">
         <rdfs:domain rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
@@ -136,6 +150,7 @@
 
 
     <!-- https://w3id.org/aic#belongsTo -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#belongsTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -149,6 +164,7 @@
 
     <!-- https://w3id.org/aic#consumes -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#consumes">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
@@ -160,6 +176,7 @@
 
 
     <!-- https://w3id.org/aic#containsActivity -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#containsActivity">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -173,6 +190,7 @@
 
     <!-- https://w3id.org/aic#containsTask -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#containsTask">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Activity"/>
@@ -185,9 +203,9 @@
 
     <!-- https://w3id.org/aic#correspondsTo -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#correspondsTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#OperationMode"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#OperationMode"/>
         <rdfs:comment xml:lang="en">Links two operation modes from different mode sets to each other to express equivalence.</rdfs:comment>
@@ -197,6 +215,7 @@
 
 
     <!-- https://w3id.org/aic#focusesOnElement -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#focusesOnElement">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -210,6 +229,7 @@
 
     <!-- https://w3id.org/aic#focusesOnProcess -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#focusesOnProcess">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
@@ -221,6 +241,7 @@
 
 
     <!-- https://w3id.org/aic#focusesOnResource -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#focusesOnResource">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -234,6 +255,7 @@
 
     <!-- https://w3id.org/aic#generatedBy -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#generatedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
@@ -245,6 +267,7 @@
 
 
     <!-- https://w3id.org/aic#hasCapability -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasCapability">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -258,6 +281,7 @@
 
     <!-- https://w3id.org/aic#hasElement -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasElement">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Zone"/>
@@ -269,6 +293,7 @@
 
 
     <!-- https://w3id.org/aic#hasInformationDimension -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasInformationDimension">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -282,6 +307,7 @@
 
     <!-- https://w3id.org/aic#hasModeMetric -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasModeMetric">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#OperationMode"/>
@@ -293,6 +319,7 @@
 
 
     <!-- https://w3id.org/aic#hasPredecessor -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasPredecessor">
         <owl:inverseOf rdf:resource="https://w3id.org/aic#hasSuccessor"/>
@@ -307,6 +334,7 @@
 
     <!-- https://w3id.org/aic#hasProcessMetric -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasProcessMetric">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
@@ -318,6 +346,7 @@
 
 
     <!-- https://w3id.org/aic#hasQuantity -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasQuantity">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -331,6 +360,7 @@
 
     <!-- https://w3id.org/aic#hasResourceType -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasResourceType">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Resource"/>
@@ -342,6 +372,7 @@
 
 
     <!-- https://w3id.org/aic#hasSuccessor -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#hasSuccessor">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
@@ -355,6 +386,7 @@
 
     <!-- https://w3id.org/aic#isAssignedTo -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#isAssignedTo">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
@@ -366,6 +398,7 @@
 
 
     <!-- https://w3id.org/aic#isDescribedBy -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#isDescribedBy">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -379,6 +412,7 @@
 
     <!-- https://w3id.org/aic#isInOperationMode -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#isInOperationMode">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
@@ -390,6 +424,7 @@
 
 
     <!-- https://w3id.org/aic#isInProcessState -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#isInProcessState">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -403,6 +438,7 @@
 
     <!-- https://w3id.org/aic#isLocatedIn -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#isLocatedIn">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Resource"/>
@@ -415,6 +451,7 @@
 
     <!-- https://w3id.org/aic#isOperatingIn -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#isOperatingIn">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
@@ -426,6 +463,7 @@
 
 
     <!-- https://w3id.org/aic#reifiesStatement -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#reifiesStatement">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
@@ -440,17 +478,19 @@
 
     <!-- https://w3id.org/aic#releasesReusableMaterial -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#releasesReusableMaterial">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
-        <rdfs:range rdf:resource="https://w3id.org/aic#ReusabeMaterial"/>
-        <rdfs:comment xml:lang="en">Connects a process to a resource that a construction agent makes available during execution of the process.</rdfs:comment>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ReusableMaterial"/>
+        <rdfs:comment xml:lang="en">Connects a process to a reusable material that a construction agent makes available during execution of the process.</rdfs:comment>
         <rdfs:label xml:lang="en">releases reusable material</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/aic#requestsResource -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#requestsResource">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -464,6 +504,7 @@
 
     <!-- https://w3id.org/aic#requestsZone -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#requestsZone">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
@@ -476,17 +517,19 @@
 
     <!-- https://w3id.org/aic#requiresCapability -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#requiresCapability">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#Process"/>
         <rdfs:range rdf:resource="https://w3id.org/aic#AgentCapability"/>
-        <rdfs:comment xml:lang="en">Connects a process to a capability that a constructionn agent needs to possess in order to execute the process.</rdfs:comment>
+        <rdfs:comment xml:lang="en">Connects a process to a capability that a construction agent needs to possess in order to execute the process.</rdfs:comment>
         <rdfs:label xml:lang="en">requires capability</rdfs:label>
     </owl:ObjectProperty>
     
 
 
     <!-- https://w3id.org/aic#requiresResource -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#requiresResource">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -500,10 +543,11 @@
 
     <!-- https://w3id.org/aic#supplies -->
 
+
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#supplies">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
         <rdfs:domain rdf:resource="https://w3id.org/aic#ConstructionAgent"/>
-        <rdfs:range rdf:resource="https://w3id.org/aic#ReusabeMaterial"/>
+        <rdfs:range rdf:resource="https://w3id.org/aic#ReusableMaterial"/>
         <rdfs:comment xml:lang="en">Defines the link between a construction agent and a reusable material that it handles and thereby returns back to the pool of available resources.</rdfs:comment>
         <rdfs:label xml:lang="en">supplies</rdfs:label>
     </owl:ObjectProperty>
@@ -511,6 +555,7 @@
 
 
     <!-- https://w3id.org/aic#targets -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#targets">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -523,6 +568,7 @@
 
 
     <!-- https://w3id.org/aic#uses -->
+
 
     <owl:ObjectProperty rdf:about="https://w3id.org/aic#uses">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
@@ -542,10 +588,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- https://w3id.org/aic#generatedOn -->
+
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/aic#generatedOn">
         <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
@@ -558,6 +606,7 @@
 
     <!-- https://w3id.org/aic#hasUnit -->
 
+
     <owl:DatatypeProperty rdf:about="https://w3id.org/aic#hasUnit">
         <rdfs:domain rdf:resource="https://w3id.org/aic#Indicator"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
@@ -568,6 +617,7 @@
 
 
     <!-- https://w3id.org/aic#hasValue -->
+
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/aic#hasValue">
         <rdfs:domain rdf:resource="https://w3id.org/aic#Indicator"/>
@@ -580,6 +630,7 @@
 
     <!-- https://w3id.org/aic#validAt -->
 
+
     <owl:DatatypeProperty rdf:about="https://w3id.org/aic#validAt">
         <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -591,6 +642,7 @@
 
     <!-- https://w3id.org/aic#validFrom -->
 
+
     <owl:DatatypeProperty rdf:about="https://w3id.org/aic#validFrom">
         <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
@@ -601,6 +653,7 @@
 
 
     <!-- https://w3id.org/aic#validUntil -->
+
 
     <owl:DatatypeProperty rdf:about="https://w3id.org/aic#validUntil">
         <rdfs:domain rdf:resource="https://w3id.org/aic#InformationID"/>
@@ -619,10 +672,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement -->
+
 
     <owl:Class rdf:about="http://www.w3.org/1999/02/22-rdf-syntax-ns#Statement">
         <rdfs:label xml:lang="en">Reified RDF 1.1 statement</rdfs:label>
@@ -631,6 +686,7 @@
 
 
     <!-- https://w3id.org/aic#Activity -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#Activity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Process"/>
@@ -642,6 +698,7 @@
 
     <!-- https://w3id.org/aic#AgentCapability -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#AgentCapability">
         <owl:disjointWith rdf:resource="https://w3id.org/aic#ResourceType"/>
         <rdfs:comment xml:lang="en">Ability or skill of a construction agent to perform certain work.</rdfs:comment>
@@ -651,6 +708,7 @@
 
 
     <!-- https://w3id.org/aic#ConstructionAgent -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#ConstructionAgent">
         <owl:disjointWith rdf:resource="https://w3id.org/aic#Element"/>
@@ -665,9 +723,10 @@
 
     <!-- https://w3id.org/aic#ConsumableMaterial -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#ConsumableMaterial">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Material"/>
-        <owl:disjointWith rdf:resource="https://w3id.org/aic#ReusabeMaterial"/>
+        <owl:disjointWith rdf:resource="https://w3id.org/aic#ReusableMaterial"/>
         <rdfs:comment xml:lang="en">Material that becomes part of the building structure or becomes wasted during a process and cannot be re-used in another process.</rdfs:comment>
         <rdfs:label xml:lang="en">Consumable Material</rdfs:label>
     </owl:Class>
@@ -675,6 +734,7 @@
 
 
     <!-- https://w3id.org/aic#Creator -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#Creator">
         <rdfs:comment xml:lang="en">Entity or system responsible for generating the information that is represented by a triple statement.</rdfs:comment>
@@ -684,6 +744,7 @@
 
 
     <!-- https://w3id.org/aic#Element -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#Element">
         <owl:disjointWith rdf:resource="https://w3id.org/aic#Process"/>
@@ -697,6 +758,7 @@
 
     <!-- https://w3id.org/aic#Equipment -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#Equipment">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Resource"/>
         <owl:disjointWith rdf:resource="https://w3id.org/aic#Material"/>
@@ -708,6 +770,7 @@
 
     <!-- https://w3id.org/aic#Indicator -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#Indicator">
         <rdfs:comment xml:lang="en">Numeric value used to quantify an entity.</rdfs:comment>
         <rdfs:label xml:lang="en">Indicator</rdfs:label>
@@ -716,6 +779,7 @@
 
 
     <!-- https://w3id.org/aic#InformationDimension -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#InformationDimension">
         <rdfs:comment xml:lang="en">Defines the dimension of the information that the Information ID reifies. Allows for specifying that a reified statement belongs to the planned, simulated or performed dimension.</rdfs:comment>
@@ -726,6 +790,7 @@
 
     <!-- https://w3id.org/aic#InformationID -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#InformationID">
         <rdfs:comment xml:lang="en">Functional class that can be used to reify a statement and link metadata.</rdfs:comment>
         <rdfs:label xml:lang="en">Information ID</rdfs:label>
@@ -734,6 +799,7 @@
 
 
     <!-- https://w3id.org/aic#Material -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#Material">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Resource"/>
@@ -745,6 +811,7 @@
 
     <!-- https://w3id.org/aic#ModeMetric -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#ModeMetric">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Indicator"/>
         <rdfs:comment xml:lang="en">Numeric value used to describe the effect of an operation mode. Includes cost, energy consumption, noise, ...</rdfs:comment>
@@ -754,6 +821,7 @@
 
 
     <!-- https://w3id.org/aic#ModeSet -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#ModeSet">
         <owl:disjointWith rdf:resource="https://w3id.org/aic#OperationMode"/>
@@ -765,6 +833,7 @@
 
     <!-- https://w3id.org/aic#OperationMode -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#OperationMode">
         <owl:disjointWith rdf:resource="https://w3id.org/aic#ProcessState"/>
         <rdfs:comment xml:lang="en">A specific operational condition or behavior of a construction agent. Each mode represents a distinct, mutually recognizable mode, such as operating, idle, charging, or moving.</rdfs:comment>
@@ -774,6 +843,7 @@
 
 
     <!-- https://w3id.org/aic#Process -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#Process">
         <owl:disjointWith rdf:resource="https://w3id.org/aic#Resource"/>
@@ -786,6 +856,7 @@
 
     <!-- https://w3id.org/aic#ProcessMetric -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#ProcessMetric">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Indicator"/>
         <rdfs:comment xml:lang="en">Numeric value used to describe how a process is being performed.</rdfs:comment>
@@ -796,6 +867,7 @@
 
     <!-- https://w3id.org/aic#ProcessState -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#ProcessState">
         <rdfs:comment xml:lang="en">A formal representation of a condition in which a process is in.</rdfs:comment>
         <rdfs:label xml:lang="en">Process State</rdfs:label>
@@ -804,6 +876,7 @@
 
 
     <!-- https://w3id.org/aic#Resource -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#Resource">
         <owl:disjointWith rdf:resource="https://w3id.org/aic#Zone"/>
@@ -815,6 +888,7 @@
 
     <!-- https://w3id.org/aic#ResourceQuantity -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#ResourceQuantity">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Indicator"/>
         <rdfs:comment xml:lang="en">Numeric value that describes the amount of a resource or size of a resource batch.</rdfs:comment>
@@ -825,6 +899,7 @@
 
     <!-- https://w3id.org/aic#ResourceType -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#ResourceType">
         <rdfs:comment xml:lang="en">Describes a group of resources with equal characteristics.</rdfs:comment>
         <rdfs:label xml:lang="en">Resource Type</rdfs:label>
@@ -832,9 +907,10 @@
     
 
 
-    <!-- https://w3id.org/aic#ReusabeMaterial -->
+    <!-- https://w3id.org/aic#ReusableMaterial -->
 
-    <owl:Class rdf:about="https://w3id.org/aic#ReusabeMaterial">
+
+    <owl:Class rdf:about="https://w3id.org/aic#ReusableMaterial">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Material"/>
         <rdfs:comment xml:lang="en">Material that can be re-used in another process.</rdfs:comment>
         <rdfs:label xml:lang="en">Reusable Material</rdfs:label>
@@ -843,6 +919,7 @@
 
 
     <!-- https://w3id.org/aic#Task -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#Task">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Process"/>
@@ -854,6 +931,7 @@
 
     <!-- https://w3id.org/aic#WorkPackage -->
 
+
     <owl:Class rdf:about="https://w3id.org/aic#WorkPackage">
         <rdfs:subClassOf rdf:resource="https://w3id.org/aic#Process"/>
         <rdfs:comment xml:lang="en">A high-level subdivision of a process representing a manageable collection of activities. Work packages define work at a coarse level of detail, suitable for monthly / weekly planning, resource allocation, and monitoring.</rdfs:comment>
@@ -863,6 +941,7 @@
 
 
     <!-- https://w3id.org/aic#Zone -->
+
 
     <owl:Class rdf:about="https://w3id.org/aic#Zone">
         <rdfs:comment xml:lang="en">Dedicated area on the construction site or in the building structure.</rdfs:comment>
@@ -879,10 +958,12 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
+
     
 
 
     <!-- https://w3id.org/aic#Performed -->
+
 
     <owl:NamedIndividual rdf:about="https://w3id.org/aic#Performed">
         <rdf:type rdf:resource="https://w3id.org/aic#InformationDimension"/>
@@ -894,6 +975,7 @@
 
     <!-- https://w3id.org/aic#Planned -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/aic#Planned">
         <rdf:type rdf:resource="https://w3id.org/aic#InformationDimension"/>
         <rdfs:comment xml:lang="en">Categorizes statements that convey information about events or situations that have been planned, i.e., should happen.</rdfs:comment>
@@ -904,6 +986,7 @@
 
     <!-- https://w3id.org/aic#Simulated -->
 
+
     <owl:NamedIndividual rdf:about="https://w3id.org/aic#Simulated">
         <rdf:type rdf:resource="https://w3id.org/aic#InformationDimension"/>
         <rdfs:comment xml:lang="en">Categorizes statements that convey information about events or situations that have been simulated, i.e., might happen.</rdfs:comment>
@@ -913,5 +996,6 @@
 
 
 
-<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
 

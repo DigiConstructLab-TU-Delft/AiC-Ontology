@@ -2,7 +2,7 @@
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix foaf: <http://xmlns.com/foaf/0.1/> .
 @prefix : <> .
-<https://w3id.org/aic/1.1.0> a prov:Entity;
+<https://w3id.org/aic/1.2.0> a prov:Entity;
 	 dc:title "Agents in Construction (AiC) Ontology";
 	 prov:wasAttributedTo :agent0;
 	 prov:wasAttributedTo :agent1;
@@ -12,8 +12,8 @@
 	 prov:wasAttributedTo :agent5;
 	 prov:wasAttributedTo <https://github.com/dgarijo/Widoco/>,<http://www.essepuntato.it/lode/>;
 	 prov:specializationOf <https://w3id.org/aic#>;
-	 prov:wasRevisionOf <https://w3id.org/aic/1.0.0>;
-	 prov:wasGeneratedAt "20.06.2026";
+	 prov:wasRevisionOf <https://w3id.org/aic/1.1.0>;
+	 prov:wasGeneratedAt "25.11.2026";
 .
 :agent0 a prov:Agent; foaf:name "Irfan Čustović".
 :agent1 a prov:Agent; foaf:name "Jianpeng Cao".

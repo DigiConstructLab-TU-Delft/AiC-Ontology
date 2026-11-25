@@ -49,7 +49,7 @@ AiC-Ontology/
 If you use the AiC ontology in academic or commercial work and software, please cite as:
 
 ```text
-Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology – Version 1.1.0
+Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology – Version 1.2.0
 ```
 
 BibTeX:
@@ -57,7 +57,7 @@ BibTeX:
 ```bibtex
 @misc{Custovic2026AiC,
   author       = {Irfan {\v{C}}ustovi{\'c} and Jianpeng Cao and Ranjith Soman},
-  title        = {Agents in Construction (AiC) Ontology -- Version 1.1.0},
+  title        = {Agents in Construction (AiC) Ontology -- Version 1.2.0},
   year         = {2026},
   howpublished = {\url{https://w3id.org/aic}},
   note         = {Ontology specification and documentation. Licensed under CC BY 4.0.}

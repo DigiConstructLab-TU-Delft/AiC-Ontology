@@ -1,0 +1,178 @@
+.container {
+    max-width: 1000px;
+}
+
+caption {
+  padding-bottom: 10px
+}
+
+.title-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.title-logo {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+div.title-row h1 {
+  margin-top: 15px;
+}
+
+#abstract p,
+#introduction p,
+#description p {
+	line-height: 1.5;
+}
+
+#abstract p code {
+	font-family: monospace;
+	font-size: 16px;
+	padding: 2px 4px 1px;
+	background: #e4e4e4;
+	border-radius: 5px;
+	color:  #000000;
+}
+
+#description code {
+	font-family: monospace;
+	font-size: 14px;
+	padding: 1px 4px 0px;
+	background: #e4e4e4;
+	border-radius: 5px;
+	color: #000000;
+}
+
+#deliverable {
+	line-height: 40px;
+}
+
+#deliverable img {
+	width: 40px;
+	height: auto;
+	padding: 0 5px;
+	vertical-align: middle;
+}
+
+.smf4infraLabel {
+	padding: 4px 5px 2px;
+	background: #ffffff;
+	font-weight: bold;
+	border-radius: 5px;
+}
+
+/* ---------- Generic Widoco table styling ---------- */
+
+.container table {
+  width: 100%;
+  min-width: 900px;
+  margin: 1.5em 0;
+  border-collapse: separate;
+  border-spacing: 0;
+  background: #ffffff;
+  color: #24292f;
+  border: 1px solid #d8dee4;
+  border-radius: 8px;
+  overflow: hidden;
+  font-size: 0.95em;
+  table-layout: auto;
+}
+
+.container table th,
+.container table td {
+  padding: 0.75em 1em;
+  border-bottom: 1px solid #d8dee4;
+  vertical-align: top;
+  line-height: 1.45;
+  overflow-wrap: normal;
+  word-break: normal;
+}
+
+.container table th {
+  background: #f6f8fa;
+  color: #24292f;
+  font-weight: 600;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.container table tr:last-child td {
+  border-bottom: none;
+}
+
+.container table tbody tr:nth-child(even) {
+  background: #fbfbfc;
+}
+
+.container table tbody tr:hover {
+  background: #f3f8ff;
+}
+
+.container table a {
+  color: #0969da;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.container table a:hover {
+  text-decoration: underline;
+}
+
+.container table code {
+  background: #eef1f4;
+  color: #24292f;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.container table td a,
+.container table td code {
+  overflow-wrap: anywhere;
+}
+
+.container {
+  overflow-x: auto;
+}
+
+
+/* ---------- Dark mode table styling ---------- */
+
+@media (prefers-color-scheme: dark) {
+  .container table {
+    background: #161b22;
+    color: #e6edf3;
+    border-color: #30363d;
+  }
+
+  .container table th,
+  .container table td {
+    border-bottom-color: #30363d;
+  }
+
+  .container table th {
+    background: #21262d;
+    color: #f0f6fc;
+  }
+
+  .container table tbody tr:nth-child(even) {
+    background: #1c2128;
+  }
+
+  .container table tbody tr:hover {
+    background: #263340;
+  }
+
+  .container table a {
+    color: #58a6ff;
+  }
+
+  .container table code {
+    background: #30363d;
+    color: #f0f6fc;
+  }
+}

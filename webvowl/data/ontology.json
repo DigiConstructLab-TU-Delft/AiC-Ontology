@@ -7,8 +7,8 @@
       "en" : "Agents in Construction (AiC) Ontology"
     },
     "iri" : "https://w3id.org/aic",
-    "version" : "1.1.0",
-    "author" : ["Irfan Čustović", "Jianpeng Cao", "Ranjith Soman"],
+    "version" : "1.2.0",
+    "author" : [ "Irfan Čustović", "Ranjith Soman", "Jianpeng Cao" ],
     "description" : {
       "en" : "The Agents in Construction (AiC) ontology is a lightweight semantic model for coordinating on-site production in construction. It represents construction agents (human workers, robots, and other autonomous hardware) and their state as they operate on a site: the processes they carry out, the elements they modify, the resources they handle, and the operational modes and metrics used to assess their performance and impact. To express how agents' operations evolve over time, AiC introduces meta-properties that specify when a statement holds (at an instant or over an interval), what dimension of information it represents (planned, simulated, or performed), and who generated it. The ontology emphasizes generic, trade-agnostic concepts to ensure broad applicability across project types and delivery methods."
     },
@@ -22,7 +22,7 @@
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://w3id.org/aic/1.0.0",
+        "value" : "https://w3id.org/aic/1.1.0",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -33,23 +33,23 @@
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Jianpeng Cao",
+        "value" : "Ranjith Soman",
         "type" : "label"
       }, {
         "identifier" : "creator",
         "language" : "undefined",
-        "value" : "Ranjith Soman",
+        "value" : "Jianpeng Cao",
         "type" : "label"
-      } ],
+      }],
       "contributor" : [ {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Pieter Pauwels",
+        "value" : "Hans Wamelink",
         "type" : "label"
       }, {
         "identifier" : "contributor",
         "language" : "undefined",
-        "value" : "Hans Wamelink",
+        "value" : "Pieter Pauwels",
         "type" : "label"
       }, {
         "identifier" : "contributor",
@@ -66,7 +66,13 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-06-20",
+        "value" : "2026-11-25",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.2.0",
         "type" : "label"
       } ],
       "preferredNamespaceUri" : [ {
@@ -78,13 +84,7 @@
       "bibliographicCitation" : [ {
         "identifier" : "bibliographicCitation",
         "language" : "undefined",
-        "value" : "Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.1.0",
-        "type" : "label"
-      } ],
-      "versionInfo" : [ {
-        "identifier" : "versionInfo",
-        "language" : "undefined",
-        "value" : "1.1.0",
+        "value" : "Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.2.0",
         "type" : "label"
       } ],
       "title" : [ {
@@ -106,7 +106,7 @@
     "id" : "32",
     "type" : "rdfs:Datatype"
   }, {
-    "id" : "36",
+    "id" : "34",
     "type" : "owl:Class"
   }, {
     "id" : "44",
@@ -128,6 +128,9 @@
     "type" : "owl:Class"
   }, {
     "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
     "type" : "owl:Class"
   }, {
     "id" : "21",
@@ -181,9 +184,6 @@
     "id" : "25",
     "type" : "owl:Class"
   }, {
-    "id" : "34",
-    "type" : "owl:Class"
-  }, {
     "id" : "52",
     "type" : "owl:Class"
   }, {
@@ -230,7 +230,7 @@
     "comment" : {
       "en" : "Material that becomes part of the building structure or becomes wasted during a process and cannot be re-used in another process."
     },
-    "id" : "36",
+    "id" : "34",
     "superClasses" : [ "23" ]
   }, {
     "iri" : "http://www.w3.org/2001/XMLSchema#dateTime",
@@ -292,6 +292,19 @@
       "en" : "Human worker, robot or other kinds of autonomous hardware that can execute work on a construction site."
     },
     "id" : "12"
+  }, {
+    "iri" : "https://w3id.org/aic#ReusableMaterial",
+    "baseIri" : "https://w3id.org/aic",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ReusableMaterial",
+      "en" : "Reusable Material"
+    },
+    "comment" : {
+      "en" : "Material that can be re-used in another process."
+    },
+    "id" : "36",
+    "superClasses" : [ "23" ]
   }, {
     "iri" : "https://w3id.org/aic#InformationDimension",
     "baseIri" : "https://w3id.org/aic",
@@ -535,19 +548,6 @@
     },
     "id" : "25",
     "superClasses" : [ "6" ]
-  }, {
-    "iri" : "https://w3id.org/aic#ReusabeMaterial",
-    "baseIri" : "https://w3id.org/aic",
-    "instances" : 0,
-    "label" : {
-      "IRI-based" : "ReusabeMaterial",
-      "en" : "Reusable Material"
-    },
-    "comment" : {
-      "en" : "Material that can be re-used in another process."
-    },
-    "id" : "34",
-    "superClasses" : [ "23" ]
   }, {
     "iri" : "https://w3id.org/aic#ModeSet",
     "baseIri" : "https://w3id.org/aic",
@@ -987,7 +987,7 @@
   }, {
     "iri" : "https://w3id.org/aic#supplies",
     "baseIri" : "https://w3id.org/aic",
-    "range" : "34",
+    "range" : "36",
     "label" : {
       "IRI-based" : "supplies",
       "en" : "supplies"
@@ -1018,7 +1018,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "48"
   }, {
-    "range" : "6",
+    "range" : "7",
     "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
     "id" : "49"
@@ -1028,7 +1028,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "51"
   }, {
-    "range" : "7",
+    "range" : "6",
     "domain" : "4",
     "attributes" : [ "object", "anonymous" ],
     "id" : "54"
@@ -1132,7 +1132,7 @@
     },
     "domain" : "4",
     "comment" : {
-      "en" : "Connects a process to a capability that a constructionn agent needs to possess in order to execute the process."
+      "en" : "Connects a process to a capability that a construction agent needs to possess in order to execute the process."
     },
     "attributes" : [ "object", "asymmetric" ],
     "id" : "65"
@@ -1167,14 +1167,14 @@
   }, {
     "iri" : "https://w3id.org/aic#releasesReusableMaterial",
     "baseIri" : "https://w3id.org/aic",
-    "range" : "34",
+    "range" : "36",
     "label" : {
       "IRI-based" : "releasesReusableMaterial",
       "en" : "releases reusable material"
     },
     "domain" : "4",
     "comment" : {
-      "en" : "Connects a process to a resource that a construction agent makes available during execution of the process."
+      "en" : "Connects a process to a reusable material that a construction agent makes available during execution of the process."
     },
     "attributes" : [ "object", "asymmetric" ],
     "id" : "67"
@@ -1190,7 +1190,7 @@
     "comment" : {
       "en" : "Links two operation modes from different mode sets to each other to express equivalence."
     },
-    "attributes" : [ "object", "transitive", "symmetric" ],
+    "attributes" : [ "symmetric", "object" ],
     "id" : "68"
   }, {
     "range" : "2",
@@ -1374,32 +1374,32 @@
     "attributes" : [ "object", "asymmetric" ],
     "id" : "83"
   }, {
-    "range" : "6",
+    "range" : "7",
     "domain" : "12",
     "attributes" : [ "object", "anonymous" ],
     "id" : "84"
   }, {
-    "range" : "47",
+    "range" : "4",
     "domain" : "12",
     "attributes" : [ "object", "anonymous" ],
     "id" : "85"
   }, {
-    "range" : "4",
+    "range" : "47",
     "domain" : "12",
     "attributes" : [ "object", "anonymous" ],
     "id" : "86"
   }, {
-    "range" : "34",
-    "domain" : "36",
+    "range" : "36",
+    "domain" : "34",
     "attributes" : [ "object", "anonymous" ],
     "id" : "87"
   }, {
-    "range" : "7",
+    "range" : "4",
     "domain" : "47",
     "attributes" : [ "object", "anonymous" ],
     "id" : "88"
   }, {
-    "range" : "4",
+    "range" : "6",
     "domain" : "47",
     "attributes" : [ "object", "anonymous" ],
     "id" : "89"
@@ -1418,7 +1418,7 @@
     "attributes" : [ "object", "asymmetric" ],
     "id" : "90"
   }, {
-    "range" : "6",
+    "range" : "7",
     "domain" : "47",
     "attributes" : [ "object", "anonymous" ],
     "id" : "91"
@@ -1433,7 +1433,7 @@
     "attributes" : [ "object", "anonymous" ],
     "id" : "93"
   }, {
-    "range" : "7",
+    "range" : "6",
     "domain" : "12",
     "attributes" : [ "object", "anonymous" ],
     "id" : "94"
@@ -1491,7 +1491,7 @@
     "comment" : {
       "en" : "Links an information ID to the statement that is being reified."
     },
-    "attributes" : [ "object", "functional", "asymmetric" ],
+    "attributes" : [ "object", "asymmetric", "functional" ],
     "id" : "98"
   } ]
 }

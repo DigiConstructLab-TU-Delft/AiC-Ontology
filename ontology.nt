@@ -1,6 +1,6 @@
 <https://w3id.org/aic> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Ontology> .
-<https://w3id.org/aic> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/aic/1.1.0> .
-<https://w3id.org/aic> <http://purl.org/dc/terms/bibliographicCitation> "Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.1.0" .
+<https://w3id.org/aic> <http://www.w3.org/2002/07/owl#versionIRI> <https://w3id.org/aic/1.2.0> .
+<https://w3id.org/aic> <http://purl.org/dc/terms/bibliographicCitation> "Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.2.0" .
 <https://w3id.org/aic> <http://purl.org/dc/terms/contributor> "Daniel Hall" .
 <https://w3id.org/aic> <http://purl.org/dc/terms/contributor> "Hans Wamelink" .
 <https://w3id.org/aic> <http://purl.org/dc/terms/contributor> "Pieter Pauwels" .
@@ -9,12 +9,12 @@
 <https://w3id.org/aic> <http://purl.org/dc/terms/creator> "Ranjith Soman" .
 <https://w3id.org/aic> <http://purl.org/dc/terms/description> "The Agents in Construction (AiC) ontology is a lightweight semantic model for coordinating on-site production in construction. It represents construction agents (human workers, robots, and other autonomous hardware) and their state as they operate on a site: the processes they carry out, the elements they modify, the resources they handle, and the operational modes and metrics used to assess their performance and impact. To express how agents' operations evolve over time, AiC introduces meta-properties that specify when a statement holds (at an instant or over an interval), what dimension of information it represents (planned, simulated, or performed), and who generated it. The ontology emphasizes generic, trade-agnostic concepts to ensure broad applicability across project types and delivery methods."@en .
 <https://w3id.org/aic> <http://purl.org/dc/terms/license> <https://creativecommons.org/licenses/by/4.0/> .
-<https://w3id.org/aic> <http://purl.org/dc/terms/modified> "2026-06-20" .
+<https://w3id.org/aic> <http://purl.org/dc/terms/modified> "2026-11-25" .
 <https://w3id.org/aic> <http://purl.org/dc/terms/title> "Agents in Construction (AiC) Ontology"@en .
 <https://w3id.org/aic> <http://purl.org/vocab/vann/preferredNamespacePrefix> "aic" .
 <https://w3id.org/aic> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/aic#> .
 <https://w3id.org/aic> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/aic/1.0.0> .
-<https://w3id.org/aic> <http://www.w3.org/2002/07/owl#versionInfo> "1.1.0" .
+<https://w3id.org/aic> <http://www.w3.org/2002/07/owl#versionInfo> "1.2.0" .
 # 
 # 
 # #################################################################
@@ -113,7 +113,6 @@
 # https://w3id.org/aic#correspondsTo
 <https://w3id.org/aic#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/aic#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#SymmetricProperty> .
-<https://w3id.org/aic#correspondsTo> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#TransitiveProperty> .
 <https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#OperationMode> .
 <https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#OperationMode> .
 <https://w3id.org/aic#correspondsTo> <http://www.w3.org/2000/01/rdf-schema#comment> "Links two operation modes from different mode sets to each other to express equivalence."@en .
@@ -285,8 +284,8 @@
 <https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
-<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ReusabeMaterial> .
-<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process to a resource that a construction agent makes available during execution of the process."@en .
+<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ReusableMaterial> .
+<https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process to a reusable material that a construction agent makes available during execution of the process."@en .
 <https://w3id.org/aic#releasesReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "releases reusable material"@en .
 # 
 # https://w3id.org/aic#requestsResource
@@ -310,7 +309,7 @@
 <https://w3id.org/aic#requiresCapability> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#Process> .
 <https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#AgentCapability> .
-<https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process to a capability that a constructionn agent needs to possess in order to execute the process."@en .
+<https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#comment> "Connects a process to a capability that a construction agent needs to possess in order to execute the process."@en .
 <https://w3id.org/aic#requiresCapability> <http://www.w3.org/2000/01/rdf-schema#label> "requires capability"@en .
 # 
 # https://w3id.org/aic#requiresResource
@@ -325,7 +324,7 @@
 <https://w3id.org/aic#supplies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
 <https://w3id.org/aic#supplies> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#AsymmetricProperty> .
 <https://w3id.org/aic#supplies> <http://www.w3.org/2000/01/rdf-schema#domain> <https://w3id.org/aic#ConstructionAgent> .
-<https://w3id.org/aic#supplies> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ReusabeMaterial> .
+<https://w3id.org/aic#supplies> <http://www.w3.org/2000/01/rdf-schema#range> <https://w3id.org/aic#ReusableMaterial> .
 <https://w3id.org/aic#supplies> <http://www.w3.org/2000/01/rdf-schema#comment> "Defines the link between a construction agent and a reusable material that it handles and thereby returns back to the pool of available resources."@en .
 <https://w3id.org/aic#supplies> <http://www.w3.org/2000/01/rdf-schema#label> "supplies"@en .
 # 
@@ -433,7 +432,7 @@
 # https://w3id.org/aic#ConsumableMaterial
 <https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Material> .
-<https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#ReusabeMaterial> .
+<https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/2002/07/owl#disjointWith> <https://w3id.org/aic#ReusableMaterial> .
 <https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Material that becomes part of the building structure or becomes wasted during a process and cannot be re-used in another process."@en .
 <https://w3id.org/aic#ConsumableMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Consumable Material"@en .
 # 
@@ -531,11 +530,11 @@
 <https://w3id.org/aic#ResourceType> <http://www.w3.org/2000/01/rdf-schema#comment> "Describes a group of resources with equal characteristics."@en .
 <https://w3id.org/aic#ResourceType> <http://www.w3.org/2000/01/rdf-schema#label> "Resource Type"@en .
 # 
-# https://w3id.org/aic#ReusabeMaterial
-<https://w3id.org/aic#ReusabeMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://w3id.org/aic#ReusabeMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Material> .
-<https://w3id.org/aic#ReusabeMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Material that can be re-used in another process."@en .
-<https://w3id.org/aic#ReusabeMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Reusable Material"@en .
+# https://w3id.org/aic#ReusableMaterial
+<https://w3id.org/aic#ReusableMaterial> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://w3id.org/aic#ReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://w3id.org/aic#Material> .
+<https://w3id.org/aic#ReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#comment> "Material that can be re-used in another process."@en .
+<https://w3id.org/aic#ReusableMaterial> <http://www.w3.org/2000/01/rdf-schema#label> "Reusable Material"@en .
 # 
 # https://w3id.org/aic#Task
 <https://w3id.org/aic#Task> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .

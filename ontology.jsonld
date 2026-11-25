@@ -75,7 +75,7 @@
   "@id" : "https://w3id.org/aic",
   "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
   "http://purl.org/dc/terms/bibliographicCitation" : [ {
-    "@value" : "Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.1.0"
+    "@value" : "Čustović, I., Cao, J., Soman, R. (2026). Agents in Construction (AiC) Ontology - Version 1.2.0"
   } ],
   "http://purl.org/dc/terms/contributor" : [ {
     "@value" : "Daniel Hall"
@@ -99,7 +99,7 @@
     "@id" : "https://creativecommons.org/licenses/by/4.0/"
   } ],
   "http://purl.org/dc/terms/modified" : [ {
-    "@value" : "2026-06-20"
+    "@value" : "2026-11-25"
   } ],
   "http://purl.org/dc/terms/title" : [ {
     "@language" : "en",
@@ -115,10 +115,10 @@
     "@id" : "https://w3id.org/aic/1.0.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
-    "@id" : "https://w3id.org/aic/1.1.0"
+    "@id" : "https://w3id.org/aic/1.2.0"
   } ],
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
-    "@value" : "1.1.0"
+    "@value" : "1.2.0"
   } ]
 }, {
   "@id" : "https://w3id.org/aic#Activity",
@@ -183,7 +183,7 @@
     "@id" : "https://w3id.org/aic#Material"
   } ],
   "http://www.w3.org/2002/07/owl#disjointWith" : [ {
-    "@id" : "https://w3id.org/aic#ReusabeMaterial"
+    "@id" : "https://w3id.org/aic#ReusableMaterial"
   } ]
 }, {
   "@id" : "https://w3id.org/aic#Creator",
@@ -429,7 +429,7 @@
     "@value" : "Resource Type"
   } ]
 }, {
-  "@id" : "https://w3id.org/aic#ReusabeMaterial",
+  "@id" : "https://w3id.org/aic#ReusableMaterial",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
@@ -565,7 +565,7 @@
   } ]
 }, {
   "@id" : "https://w3id.org/aic#correspondsTo",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty", "http://www.w3.org/2002/07/owl#TransitiveProperty" ],
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#SymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
     "@value" : "Links two operation modes from different mode sets to each other to express equivalence."
@@ -979,7 +979,7 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty", "http://www.w3.org/2002/07/owl#AsymmetricProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
     "@language" : "en",
-    "@value" : "Connects a process to a resource that a construction agent makes available during execution of the process."
+    "@value" : "Connects a process to a reusable material that a construction agent makes available during execution of the process."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
     "@id" : "https://w3id.org/aic#Process"
@@ -989,7 +989,7 @@
     "@value" : "releases reusable material"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/aic#ReusabeMaterial"
+    "@id" : "https://w3id.org/aic#ReusableMaterial"
   } ]
 }, {
   "@id" : "https://w3id.org/aic#requestsResource",
@@ -1074,7 +1074,7 @@
     "@value" : "supplies"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://w3id.org/aic#ReusabeMaterial"
+    "@id" : "https://w3id.org/aic#ReusableMaterial"
   } ]
 }, {
   "@id" : "https://w3id.org/aic#targets",
