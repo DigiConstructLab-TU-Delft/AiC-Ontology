@@ -17,19 +17,25 @@
   "@id" : "http://purl.org/dc/terms/title",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "https://w3id.org/aic#Element",
+  "@id" : "http://www.owl-ontologies.com/cSite#Element",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/cSite#Element"
+    "@id" : "https://w3id.org/aic#Element"
   } ]
 }, {
-  "@id" : "https://w3id.org/aic#WorkPackage",
+  "@id" : "http://www.owl-ontologies.com/cSite#Workpackage",
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "https://w3id.org/cSite#Workpackage"
+    "@id" : "https://w3id.org/aic#WorkPackage"
+  } ]
+}, {
+  "@id" : "http://www.owl-ontologies.com/cSite#hasObject",
+  "http://www.w3.org/2002/07/owl#equivalentProperty" : [ {
+    "@id" : "https://w3id.org/aic#targets"
   } ]
 }, {
   "@id" : "https://w3id.org/aic#isAssignedTo",
   "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "https://w3id.org/cSite#hasPerson"
+    "@id" : "http://www.owl-ontologies.com/cSite#hasPerson"
   } ]
 }, {
   "@id" : "https://w3id.org/aic/csite-alignment",
@@ -73,13 +79,4 @@
   "http://www.w3.org/2002/07/owl#versionInfo" : [ {
     "@value" : "1.1.0"
   } ]
-}, {
-  "@id" : "https://w3id.org/cSite#Element",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/cSite#Workpackage",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
-}, {
-  "@id" : "https://w3id.org/cSite#hasPerson",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
 } ]

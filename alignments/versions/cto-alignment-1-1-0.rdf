@@ -15,8 +15,8 @@
      xmlns:schema="http://schema.org/">
     <owl:Ontology rdf:about="https://w3id.org/aic/cto-alignment">
         <owl:versionIRI rdf:resource="https://w3id.org/aic/cto-alignment/1.1.0"/>
-        <owl:imports rdf:resource="https://w3id.org/cto"/>
         <owl:imports rdf:resource="https://w3id.org/aic/1.2.0"/>
+        <owl:imports rdf:resource="https://w3id.org/cto/cto.rdf"/>
         <terms:contributor>Daniel Hall</terms:contributor>
         <terms:contributor>Hans Wamelink</terms:contributor>
         <terms:contributor>Pieter Pauwels</terms:contributor>
@@ -82,6 +82,25 @@
     <!-- 
     ///////////////////////////////////////////////////////////////////////////////////////
     //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- https://w3id.org/cto#afterFinishedTask -->
+
+    <rdf:Description rdf:about="https://w3id.org/cto#afterFinishedTask">
+        <rdfs:subPropertyOf rdf:resource="https://w3id.org/aic#hasPredecessor"/>
+    </rdf:Description>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
     // Classes
     //
     ///////////////////////////////////////////////////////////////////////////////////////
@@ -92,9 +111,9 @@
 
     <!-- https://w3id.org/aic#Task -->
 
-    <owl:Class rdf:about="https://w3id.org/aic#Task">
+    <rdf:Description rdf:about="https://w3id.org/aic#Task">
         <owl:equivalentClass rdf:resource="https://w3id.org/cto#Task"/>
-    </owl:Class>
+    </rdf:Description>
 </rdf:RDF>
 
 

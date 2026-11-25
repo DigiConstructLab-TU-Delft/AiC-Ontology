@@ -11,7 +11,7 @@
 
 <https://w3id.org/aic/cto-alignment> rdf:type owl:Ontology ;
                                       owl:versionIRI <https://w3id.org/aic/cto-alignment/1.1.0> ;
-                                      owl:imports <https://w3id.org/cto> ,
+                                      owl:imports <https://w3id.org/cto/cto.ttl> ,
                                                   <https://w3id.org/aic/1.2.0> ;
                                       terms:contributor "Daniel Hall" ,
                                                         "Hans Wamelink" ,
@@ -57,7 +57,7 @@ terms:title rdf:type owl:AnnotationProperty .
 #    Object Properties
 #################################################################
 
-aic:hasPredecessor owl:equivalentProperty cto:afterFinishedTask . 
+cto:afterFinishedTask rdfs:subPropertyOf aic:hasPredecessor . 
 
 #################################################################
 #    Classes

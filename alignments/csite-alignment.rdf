@@ -9,7 +9,7 @@
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
      xmlns:vann="http://purl.org/vocab/vann/"
-     xmlns:csite="https://w3id.org/cSite#"
+     xmlns:csite="http://www.owl-ontologies.com/cSite#"
      xmlns:terms="http://purl.org/dc/terms/">
     <owl:Ontology rdf:about="https://w3id.org/aic/csite-alignment">
         <owl:versionIRI rdf:resource="https://w3id.org/aic/csite-alignment/1.1.0"/>
@@ -88,17 +88,19 @@
     
 
 
-    <!-- https://w3id.org/aic#isAssignedTo -->
+    <!-- http://www.owl-ontologies.com/cSite#hasObject -->
 
-    <rdf:Description rdf:about="https://w3id.org/aic#isAssignedTo">
-        <rdfs:subPropertyOf rdf:resource="https://w3id.org/cSite#hasPerson"/>
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/cSite#hasObject">
+        <owl:equivalentProperty rdf:resource="https://w3id.org/aic#targets"/>
     </rdf:Description>
     
 
 
-    <!-- https://w3id.org/cSite#hasPerson -->
+    <!-- https://w3id.org/aic#isAssignedTo -->
 
-    <owl:ObjectProperty rdf:about="https://w3id.org/cSite#hasPerson"/>
+    <rdf:Description rdf:about="https://w3id.org/aic#isAssignedTo">
+        <rdfs:subPropertyOf rdf:resource="http://www.owl-ontologies.com/cSite#hasPerson"/>
+    </rdf:Description>
     
 
 
@@ -113,31 +115,19 @@
     
 
 
-    <!-- https://w3id.org/aic#Element -->
+    <!-- http://www.owl-ontologies.com/cSite#Element -->
 
-    <rdf:Description rdf:about="https://w3id.org/aic#Element">
-        <owl:equivalentClass rdf:resource="https://w3id.org/cSite#Element"/>
+    <owl:Class rdf:about="http://www.owl-ontologies.com/cSite#Element">
+        <owl:equivalentClass rdf:resource="https://w3id.org/aic#Element"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.owl-ontologies.com/cSite#Workpackage -->
+
+    <rdf:Description rdf:about="http://www.owl-ontologies.com/cSite#Workpackage">
+        <owl:equivalentClass rdf:resource="https://w3id.org/aic#WorkPackage"/>
     </rdf:Description>
-    
-
-
-    <!-- https://w3id.org/aic#WorkPackage -->
-
-    <rdf:Description rdf:about="https://w3id.org/aic#WorkPackage">
-        <owl:equivalentClass rdf:resource="https://w3id.org/cSite#Workpackage"/>
-    </rdf:Description>
-    
-
-
-    <!-- https://w3id.org/cSite#Element -->
-
-    <owl:Class rdf:about="https://w3id.org/cSite#Element"/>
-    
-
-
-    <!-- https://w3id.org/cSite#Workpackage -->
-
-    <owl:Class rdf:about="https://w3id.org/cSite#Workpackage"/>
 </rdf:RDF>
 
 

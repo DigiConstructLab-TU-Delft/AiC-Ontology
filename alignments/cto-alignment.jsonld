@@ -18,9 +18,13 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
   "@id" : "https://w3id.org/aic#Task",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
     "@id" : "https://w3id.org/cto#Task"
+  } ]
+}, {
+  "@id" : "https://w3id.org/cto#afterFinishedTask",
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/aic#hasPredecessor"
   } ]
 }, {
   "@id" : "https://w3id.org/aic/cto-alignment",
@@ -54,9 +58,9 @@
     "@value" : "CTO to AIC alignment"
   } ],
   "http://www.w3.org/2002/07/owl#imports" : [ {
-    "@id" : "https://w3id.org/cto"
-  }, {
     "@id" : "https://w3id.org/aic/1.2.0"
+  }, {
+    "@id" : "https://w3id.org/cto/cto.jsonld"
   } ],
   "http://www.w3.org/2002/07/owl#versionIRI" : [ {
     "@id" : "https://w3id.org/aic/cto-alignment/1.1.0"

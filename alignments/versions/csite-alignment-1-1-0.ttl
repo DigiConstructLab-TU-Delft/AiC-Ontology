@@ -6,7 +6,7 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix terms: <http://purl.org/dc/terms/> .
 @prefix aic: <https://w3id.org/aic#> .
-@prefix csite: <https://w3id.org/cSite#> .
+@prefix csite: <http://www.owl-ontologies.com/cSite#> .
 @base <https://w3id.org/aic/csite-alignment#> .
 
 <https://w3id.org/aic/csite-alignment> rdf:type owl:Ontology ;
@@ -64,5 +64,5 @@ aic:isAssignedTo rdfs:subPropertyOf csite:hasPerson .
 #    Classes
 #################################################################
 
-aic:Element owl:equivalentClass csite:Element . 
+csite:Element owl:equivalentClass aic:Element . 
 aic:WorkPackage owl:equivalentClass csite:Workpackage . 
