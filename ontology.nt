@@ -13,7 +13,7 @@
 <https://w3id.org/aic> <http://purl.org/dc/terms/title> "Agents in Construction (AiC) Ontology"@en .
 <https://w3id.org/aic> <http://purl.org/vocab/vann/preferredNamespacePrefix> "aic" .
 <https://w3id.org/aic> <http://purl.org/vocab/vann/preferredNamespaceUri> <https://w3id.org/aic#> .
-<https://w3id.org/aic> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/aic/1.0.0> .
+<https://w3id.org/aic> <http://www.w3.org/2002/07/owl#priorVersion> <https://w3id.org/aic/1.1.0> .
 <https://w3id.org/aic> <http://www.w3.org/2002/07/owl#versionInfo> "1.2.0" .
 # 
 # 

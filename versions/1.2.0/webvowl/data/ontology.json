@@ -22,7 +22,7 @@
       "priorVersion" : [ {
         "identifier" : "priorVersion",
         "language" : "undefined",
-        "value" : "https://w3id.org/aic/1.0.0",
+        "value" : "https://w3id.org/aic/1.1.0",
         "type" : "iri"
       } ],
       "creator" : [ {
@@ -66,7 +66,7 @@
       "modified" : [ {
         "identifier" : "modified",
         "language" : "undefined",
-        "value" : "2026-06-20",
+        "value" : "2026-11-25",
         "type" : "label"
       } ],
       "versionInfo" : [ {
@@ -1132,7 +1132,7 @@
     },
     "domain" : "4",
     "comment" : {
-      "en" : "Connects a process to a capability that a constructionn agent needs to possess in order to execute the process."
+      "en" : "Connects a process to a capability that a construction agent needs to possess in order to execute the process."
     },
     "attributes" : [ "object", "asymmetric" ],
     "id" : "65"
@@ -1174,7 +1174,7 @@
     },
     "domain" : "4",
     "comment" : {
-      "en" : "Connects a process to a resource that a construction agent makes available during execution of the process."
+      "en" : "Connects a process to a reusable material that a construction agent makes available during execution of the process."
     },
     "attributes" : [ "object", "asymmetric" ],
     "id" : "67"
