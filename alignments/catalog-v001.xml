@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog prefer="public" xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+    <group id="Folder Repository, directory=, recursive=true, Auto-Update=true, version=2" prefer="public" xml:base="">
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/beo-alignment" uri="beo-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/bfo-alignment" uri="bfo-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/bot-alignment" uri="bot-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/csite-alignment" uri="csite-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/cto-alignment" uri="cto-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/dica-alignment" uri="dica-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/dice-alignment" uri="dice-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/dicm-alignment" uri="dicm-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/dicp-alignment" uri="dicp-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/dtc-alignment" uri="dtc-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/ioc-alignment" uri="ioc-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/nen2260-alignment" uri="versions/nen2660-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="https://w3id.org/aic/nen2660-alignment" uri="nen2660-alignment-1-1-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/beo-alignment" uri="versions/beo-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/bfo-alignment" uri="versions/bfo-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/bot-alignment" uri="versions/bot-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/csite-alignment" uri="versions/csite-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/cto-alignment" uri="versions/cto-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/dica-alignment" uri="versions/dica-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/dice-alignment" uri="versions/dice-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/dicm-alignment" uri="versions/dicm-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/dicp-alignment" uri="versions/dicp-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/dtc-alignment" uri="versions/dtc-alignment-1-0-0.rdf"/>
+        <uri id="Automatically generated entry, Timestamp=1795647206101" name="shadowed:https://w3id.org/aic/ioc-alignment" uri="versions/ioc-alignment-1-0-0.rdf"/>
+    </group>
+</catalog>
